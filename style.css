@@ -1,0 +1,80 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Detalle en nueva ventana */
+.detalle {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.detalle img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.detalle h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.detalle .modelo {
+  color: #7f8fa6;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.detalle .precio {
+  font-size: 1.4rem;
+  color: #27ae60;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.detalle p {
+  color: #555;
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filtros select {
+    width: 100%;
+    max-width: 250px;
+    margin: 0.5rem 0;
+    display: block;
+    margin: 0 auto 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .filtros select {
+    max-width: 100%;
+  }
+}
