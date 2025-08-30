@@ -57,7 +57,7 @@ export default function ProductoCard({ producto }) {
         e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)';
       }}
     > 
-      <a href={`http://www.google.com`} target='_blank' >
+      <a href={`product/${producto.id}`} target='_blank' >
          {/* href={`product/${product.id}`} */}
         <img
           src={producto.imagen}
