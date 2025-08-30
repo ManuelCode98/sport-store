@@ -1,5 +1,5 @@
 // src/components/ProductosGrid.jsx
-import ProductoCard from './ProductoCard';
+import ProductoCard from './ProductCard/ProductoCard';
 
 export default function ProductosGrid({ productos }) {
   return (

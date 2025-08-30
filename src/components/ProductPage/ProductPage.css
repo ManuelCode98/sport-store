@@ -1,0 +1,138 @@
+/* === FUENTE ELEGANTE (añade esto en tu <head> o CDN) === */
+/* Asegúrate de tener en tu HTML: */
+/* <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"> */
+
+/* === ESTILOS EXISTENTES (sin cambios en layout ni posición) === */
+
+.container-show-product {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    margin: 0 auto;
+    width: 80%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.container-product {
+    display: grid;
+    grid-template-columns: 25% 60%;
+}
+
+.product-page-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.product-features {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+    justify-items: center;
+    justify-content: center;
+}
+
+.container-data {
+    margin-left: 2rem;
+}
+
+/* === MEJORAS DE TIPOGRAFÍA Y COLOR (sin cambiar estructura) === */
+
+/* Fuente elegante y moderna para todo el contenido */
+.container-data {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.home-page-product-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.5px;
+}
+
+.home-page-model {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    margin: 0.2rem 0;
+    margin-bottom: 0.5rem;
+}
+
+.home-page-gender {
+    text-transform: lowercase;
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0.2rem 0;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.home-page-gender::first-letter {
+    text-transform: uppercase;
+}
+
+/* Estrellas de rating */
+.rating {
+    color: black;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 1rem;
+}
+
+.rating i {
+    color: #f59e0b; /* Estrellas doradas */
+    margin-bottom: 0.5rem;
+}
+
+/* Precio */
+.home-page-sale-price {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #333;
+    /* margin: 0.8rem 0; */
+    margin-bottom: 2rem;
+}
+
+.home-page-sale-price span {
+    color: #2e7d32; /* Verde profesional para el número */
+}
+
+/* === BOTÓN COMPRAR (estilo elegante con tu color #7A5CFA) === */
+/* Este estilo asume que ya tienes el CSS del botón aplicado a .button-name-buy */
+
+.container-button-buy {
+    display: inline-block;
+}
+
+.button-name-buy {
+    padding: 12px 28px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #7A5CFA;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(122, 92, 250, 0.2);
+    transition: all 0.25s ease;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.button-name-buy:hover {
+    background-color: #6a4dfb;
+    box-shadow: 0 6px 14px rgba(122, 92, 250, 0.3);
+    transform: translateY(-2px);
+}
+
+.button-name-buy:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(122, 92, 250, 0.15);
+}

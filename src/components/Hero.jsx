@@ -1,11 +1,14 @@
 // src/components/Hero.jsx
 export default function Hero() {
+
+  const subtitle = 'Descubre nuestra colección de ropa deportiva diseñada para mujeres y hombres que buscan comodidad, elegancia y funcionalidad.'
+
   return (
     <section style={{
       height: '70vh',
       background: `
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(https://detqhtv6m6lzl.cloudfront.net/HCLContenido/Departament_DEPORTES/deportivo05May25/Mob/702x702-accesorios.webp) center center / cover
+        url(https://i.ibb.co/n84d1ztZ/fitness-mati-portada.jpg) center center / cover
       `,
       display: 'flex',
       alignItems: 'center',
@@ -27,7 +30,7 @@ export default function Hero() {
           margin: '0 auto',
           lineHeight: '1.6'
         }}>
-          Descubre nuestra colección de ropa deportiva diseñada para mujeres activas que buscan comodidad, elegancia y funcionalidad.
+          { subtitle }
         </p>
         
       </div>

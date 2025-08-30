@@ -10,7 +10,7 @@ export default function Header() {
       fontWeight: '500'
     }}>
       <h2 style={{ color: '#7a5cfa', margin: 0 }}>
-        Moda Deportiva Dama
+        FITNESS MATI
       </h2>
     </header>
   );
