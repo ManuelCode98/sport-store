@@ -20,6 +20,22 @@ const ProductPage = () => {
     precio : ''
   })
     
+  const changeImage = ( {currentTarget} )=>{
+
+    // Aca seleccionamos todos las imagenes por su clase y le borramos la clase "opacity"
+    const images = document.querySelectorAll('.image-model');
+    images.forEach( (image)=>(
+      image.classList.add('opacity')
+    ))
+    
+    // Aca le agregamos la clase solo al elemento que se clico
+    currentTarget.classList.remove('opacity');
+
+    setProductState( { ...productState, imagen:currentTarget.src }  )
+    
+
+  }
+
     useEffect(()=>{
         
         const getId = currentPaht.split('/product/');
@@ -34,42 +50,56 @@ const ProductPage = () => {
 
   },[])  
 
-  console.log(productState)
 
   return (
-    <div className="container-show-product">{ productState.id > 0 && 
-        <div key={ productState.id } className='container-product' >
+    <>
+      <div className="container-show-product">{ productState.id > 0 && 
+          <div key={ productState.id } className='container-product' >
 
-          <img className='product-page-photo' src={ productState.imagen } />
+            <img className='product-page-photo' src={ productState.imagen } />
 
-          <div className='product-features'>
-            <div className='container-data'>
-                <h4 className='home-page-product-name'>{ productState.nombre }</h4>
-                <h4 className='home-page-model'>{ productState.modelo }</h4>
-                <h4 className='home-page-gender'>{ productState.genero }</h4>
+            <div className='product-features'>
+              <div className='container-data'>
+                  <h4 className='home-page-product-name'>{ productState.nombre }</h4>
+                  <h4 className='home-page-model'>{ productState.modelo }</h4>
+                  <h4 className='home-page-gender'>{ productState.genero }</h4>
 
-                <div className="rating" aria-label="Calificación: 4.5 de 5 estrellas">
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star"></i>
-                    <i className="fas fa-star-half-alt"></i>
-                    <span className="rating-text">{/*4.5*/}</span>
-                </div>
+                  <div className="rating" aria-label="Calificación: 4.5 de 5 estrellas">
+                      <i className="fas fa-star"></i>
+                      <i className="fas fa-star"></i>
+                      <i className="fas fa-star"></i>
+                      <i className="fas fa-star"></i>
+                      <i className="fas fa-star-half-alt"></i>
+                      <span className="rating-text">{/*4.5*/}</span>
+                  </div>
 
-                <h4 className='home-page-model'>{ productState.descripcion }</h4>
-                
-                <h4 className='home-page-sale-price'>Cop <span style={{ 'color':'green' }}>{ productState.precio }</span> </h4>
+                  <h4 className='home-page-model'>{ productState.descripcion }</h4>
+                  
+                  <h4 className='home-page-sale-price'>Cop <span style={{ 'color':'green' }}>{ productState.precio }</span> </h4>
 
-                <div className='container-button-buy' >
-                  <span className='button-name-buy' >Comprar</span>
-                </div>
+                  <div className='container-button-buy' >
+                    <span className='button-name-buy' >Añadir al carrito</span>
+                  </div>
+              </div>
             </div>
-          </div>
 
-        </div>
-      }
-    </div>
+          </div>
+        }
+      </div>
+      <div className='container-model'>
+        {
+          productState.imagen.map( (img)=>(
+            <img
+              key={img}
+              src={img}
+              className={`image-model ${index !== 0 ? 'opacity' : ''}`}
+              onClick={(e) => changeImage(e)}
+            />  
+          ))
+        
+        }
+      </div>
+    </>
   );
 }
 
