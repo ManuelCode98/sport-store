@@ -22,7 +22,7 @@ export default function ProductoCard({ producto }) {
       <body>
         <div class="container">
           <div class="detalle">
-            <img src="${producto.imagen}" alt="${producto.nombre}" />
+            <img src="${producto.currentImage}" alt="${producto.nombre}" />
             <h2>${producto.nombre}</h2>
             <div class="modelo">Modelo: ${producto.modelo}</div>
             <div class="precio">USD $${producto.precio.toFixed(2)}</div>
@@ -60,7 +60,7 @@ export default function ProductoCard({ producto }) {
       <a href={`product/${producto.id}`} target='_blank' >
          {/* href={`product/${product.id}`} */}
         <img
-          src={producto.imagen}
+          src={producto.currentImage}
           alt={producto.nombre}
           style={{
             width: '100%',
