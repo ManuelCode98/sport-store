@@ -7,7 +7,13 @@ export const productos = [
     genero: "dama",
     precio: 45.99,
     descripcion: "Top deportivo con soporte medio, ideal para entrenamientos cardio y yoga. Tejido transpirable y anti-olor.",
-    imagen: "https://phantom-telva.unidadeditorial.es/4ddb7e2bd88922a93dca136bc61e17ab/resize/1200/f/jpg/assets/multimedia/imagenes/2021/05/31/16224683859370.jpg"
+    currentImage: 'https://phantom-telva.unidadeditorial.es/4ddb7e2bd88922a93dca136bc61e17ab/resize/1200/f/jpg/assets/multimedia/imagenes/2021/05/31/16224683859370.jpg',
+    imagenes: [
+      'https://phantom-telva.unidadeditorial.es/4ddb7e2bd88922a93dca136bc61e17ab/resize/1200/f/jpg/assets/multimedia/imagenes/2021/05/31/16224683859370.jpg',
+      'https://www.mangooutlet.com/assets/rcs/pics/static/T7/fotos/S/77050628_81_B.jpg?imwidth=2048&imdensity=1&ts=1713792911177',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnAVrXd39_alOEz-YPB_IcFmunLQ6MPhPK8w&s',
+      'https://www.mangooutlet.com/assets/rcs/pics/static/T7/fotos/S/77024016_99_B.jpg?imwidth=2048&imdensity=1&ts=1731935054322'
+    ]
   },
   {
     id: 2,

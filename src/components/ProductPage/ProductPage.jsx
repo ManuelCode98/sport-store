@@ -14,13 +14,15 @@ const ProductPage = () => {
     descripcion: '',
     genero: '',
     id: 0,
-    imagen: '',
+    currentImage: '',
+    imagenes: '',
     modelo: '',
     nombre : '',
     precio : ''
   })
     
   const changeImage = ( {currentTarget} )=>{
+
 
     // Aca seleccionamos todos las imagenes por su clase y le borramos la clase "opacity"
     const images = document.querySelectorAll('.image-model');
@@ -31,7 +33,7 @@ const ProductPage = () => {
     // Aca le agregamos la clase solo al elemento que se clico
     currentTarget.classList.remove('opacity');
 
-    setProductState( { ...productState, imagen:currentTarget.src }  )
+    setProductState( { ...productState, currentImage: currentTarget.src } );
     
 
   }
@@ -50,13 +52,12 @@ const ProductPage = () => {
 
   },[])  
 
-
   return (
     <>
       <div className="container-show-product">{ productState.id > 0 && 
           <div key={ productState.id } className='container-product' >
 
-            <img className='product-page-photo' src={ productState.imagen } />
+            <img className='product-page-photo' src={ productState.currentImage } />
 
             <div className='product-features'>
               <div className='container-data'>
@@ -88,11 +89,11 @@ const ProductPage = () => {
       </div>
       <div className='container-model'>
         {
-          productState.imagen.map( (img)=>(
+          productState.imagenes.length > 0 && productState.imagenes.map( ( image, index )=>(
             <img
-              key={img}
-              src={img}
-              className={`image-model ${index !== 0 ? 'opacity' : ''}`}
+              key={image}
+              src={image}
+              className={`image-model ${ index === 0 ? '' : 'opacity' }`}
               onClick={(e) => changeImage(e)}
             />  
           ))
