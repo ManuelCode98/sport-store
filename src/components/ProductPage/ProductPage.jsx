@@ -66,10 +66,22 @@ const ProductPage = ({ setProducts }) => {
   const addToCart = ( { currentTarget }, product, productUnits )=>{
 
     // console.log(currentTarget)
-    // console.log(product)
+    // console.log(product.currentImage)
     // console.log(productUnits)
 
-    setProducts( prevProducts => [ ...prevProducts, product ] )
+    const color = product.currentImage
+    .split('/').pop() 
+    .split('.')[0]              
+    .split('-').slice(1).join(' '); 
+
+    setProducts( prevProducts => [ ...prevProducts, {
+      ...product,
+      amount : amountProductState,
+      color 
+      }  
+    ]);
+    
+    setAmountProductState( 1 );
 
   }
 

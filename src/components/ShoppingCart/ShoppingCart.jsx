@@ -20,20 +20,23 @@ const ShoppingCart = ({ products }) => {
     
   }
 
-  const placeAnOrderOnWhatsApp = ( currentProducts )=>{
+  const placeAnOrderOnWhatsApp = async ( currentProducts )=>{
 
-    const numberWhatsapp = '573157382433'
+    const numberWhatsapp = '573157382433';
+    
     let message = `Hola quiero hacer este pedido: \n\n`;
     //Todo debemos de encargarnos de no mandar el precio de compra del producto
     currentProducts.forEach( ( product, index ) => {
-      message += `${ index + 1 }) ${ product.nombre } ${ product.modelo } para ${ product.genero } valor ${ product.precio } cantidad: No definida color: No definido \n`;
+      message += `${ index + 1 }) ${ product.nombre } ${ product.modelo } para ${ product.genero } valor: ${ product.precio } cantidad: ${ product.amount } color: ${ product.color } \n`;
     });
 
-    const urlWhatsApp = `https://wa.me/${numberWhatsapp}?text=${message}`;
+    // Formatiamos el mensaje
+    const formatMessage = encodeURIComponent(message); 
 
+    const urlWhatsApp = `https://wa.me/${numberWhatsapp}?text=${ formatMessage }`;
+    
     window.open(urlWhatsApp, '_blank');
-
-    // return encodeURIComponent(mensaje)
+    
   }
 
 
