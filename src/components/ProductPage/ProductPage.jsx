@@ -77,7 +77,7 @@ const ProductPage = () => {
                   <h4 className='home-page-model'>{ productState.descripcion }</h4>
                   
                   <h4 className='home-page-sale-price'>Cop <span style={{ 'color':'green' }}>{ productState.precio }</span> </h4>
-
+                  {/* Aca debo de hacer la funcion para agregar los productos al carrito */}
                   <div className='container-button-buy' >
                     <span className='button-name-buy' >Añadir al carrito</span>
                   </div>
