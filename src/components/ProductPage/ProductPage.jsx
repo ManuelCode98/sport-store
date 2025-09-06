@@ -7,8 +7,9 @@ import './ProductPage.css';
 
 const ProductPage = () => {
 
-    const localtion = useLocation();
-    const currentPaht = localtion.pathname;
+  const localtion = useLocation();
+  const currentPaht = localtion.pathname;
+  const [ windowImageOpen, setWindowImageOpen ] = useState(false);
 
   const [ productState, setProductState ] = useState({
     descripcion: '',
@@ -52,12 +53,24 @@ const ProductPage = () => {
 
   },[])  
 
+  const showImage = ( { currentTarget } )=>{
+
+    console.log(currentTarget.className)
+    console.log(currentTarget.src)
+
+  }
+
   return (
     <>
+      {/* { windowImageOpen &&  } */}
       <div className="container-show-product">{ productState.id > 0 && 
           <div key={ productState.id } className='container-product' >
 
-            <img className='product-page-photo' src={ productState.currentImage } />
+            <img 
+              className='product-page-photo' 
+              src={ productState.currentImage } 
+              onClick={ (e)=> showImage(e) }
+            />
 
             <div className='product-features'>
               <div className='container-data'>

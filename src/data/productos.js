@@ -3,15 +3,22 @@ const enterizos = '/assets/catalogo/enterizos';
 const busos = '/assets/catalogo/busos';
 const shorts = '/assets/catalogo/shorts';
 const blusas = '/assets/catalogo/blusas';
+const blusones = '/assets/catalogo/blusones';
 const shortMastop = '/assets/catalogo/short+top';
+const licraMastop = '/assets/catalogo/licra+top';
 
 const pushUp = 'push-up';
 const enV = 'en-v';
 const bolsillo = 'bolsillo-suplex';
+const plus = 'plus';
 
 const botaAncha = 'bota-ancha';
+const cortoEla = 'corto-ela';
 const mangaLarga = 'manga-larga';
 const martina = 'martina';
+const capriati = 'capriati';
+const talego = 'talego';
+const sinPushUp = 'sin-push-up';
 
 const basicas = 'basicas'
 
@@ -52,7 +59,7 @@ export const productos = [
     nombre: "Enterizo",
     modelo: "Push-up bota ancha",
     genero: "dama",
-    precio: 80000,
+    precio: 70000,
     precio_compra: 48500,
     descripcion: "Rojo, Negro, Verde Militar, Lila, Habano",
     currentImage: `${enterizos}/${pushUp}/${botaAncha}/delante-negro.jpg`,
@@ -158,7 +165,7 @@ export const productos = [
     genero: "dama",
     precio: 46000,
     precio_compra: 23000,
-    descripcion: "Tela suplex",
+    descripcion: "Tela suplex polimida",
     currentImage: `${shortMastop}/${bolsillo}/delante-habano-claro.jpg`,
     imagenes: [
       `${shortMastop}/${bolsillo}/delante-habano-claro.jpg`,
@@ -170,62 +177,77 @@ export const productos = [
       `${shortMastop}/${bolsillo}/atras-habano-oscuro.jpg`,
     ]
   },
-  // {
-  //   id: 9,
-  //   nombre: "Short+Top",
-  //   modelo: "short bolsillo+top poliamida",
-  //   genero: "dama",
-  //   precio: 38000,
-  //   descripcion: "",
-  //   currentImage: '/assets/images/short-bolsillo-poli.jpeg',
-  //   imagenes: [
-  //     '/assets/images/short-bolsillo-poli.jpeg',
-  //     '/assets/images/short-bolsillo-atras.jpeg',
-  //     '/assets/images/short-bolsillo-azul-petrolio.jpeg',
-  //   ]
-  // },
-  // {
-  //   id: 10,
-  //   nombre: "Short+Top",
-  //   modelo: "short bolsillo+top poliamida",
-  //   genero: "dama",
-  //   precio: 38000,
-  //   descripcion: "",
-  //   currentImage: '/assets/images/short-bolsillo-poli.jpeg',
-  //   imagenes: [
-  //     '/assets/images/short-bolsillo-poli.jpeg',
-  //     '/assets/images/short-bolsillo-atras.jpeg',
-  //     '/assets/images/short-bolsillo-azul-petrolio.jpeg',
-  //   ]
-  // },
-  // {
-  //   id: 11,
-  //   nombre: "Short+Top",
-  //   modelo: "short bolsillo+top poliamida",
-  //   genero: "dama",
-  //   precio: 38000,
-  //   descripcion: "",
-  //   currentImage: '/assets/images/short-bolsillo-poli.jpeg',
-  //   imagenes: [
-  //     '/assets/images/short-bolsillo-poli.jpeg',
-  //     '/assets/images/short-bolsillo-atras.jpeg',
-  //     '/assets/images/short-bolsillo-azul-petrolio.jpeg',
-  //   ]
-  // },
-  // {
-  //   id: 12,
-  //   nombre: "Short+Top",
-  //   modelo: "short bolsillo+top poliamida",
-  //   genero: "dama",
-  //   precio: 38000,
-  //   descripcion: "",
-  //   currentImage: '/assets/images/short-bolsillo-poli.jpeg',
-  //   imagenes: [
-  //     '/assets/images/short-bolsillo-poli.jpeg',
-  //     '/assets/images/short-bolsillo-atras.jpeg',
-  //     '/assets/images/short-bolsillo-azul-petrolio.jpeg',
-  //   ]
-  // },
+  {
+    id: 9,
+    nombre: "Licra + Top",
+    modelo: "Falta definir",
+    genero: "dama",
+    precio: 46000,
+    precio_compra: 23000,
+    descripcion: "Talla Plus",
+    currentImage: `${licraMastop}/${plus}/delante-negro.jpg`,
+    imagenes: [
+      `${licraMastop}/${plus}/delante-negro.jpg`,
+      `${licraMastop}/${plus}/atras-rojo.jpg`,
+      `${licraMastop}/${plus}/muestra-azul-rey.jpg`,
+      `${licraMastop}/${plus}/muestra-azul-oscuro.jpg`,
+    ]
+  },
+  {
+    id: 10,
+    nombre: "Enterizo",
+    modelo: "Push-up Corto Ela",
+    genero: "dama",
+    precio: 80000,
+    precio_compra: 41500,
+    descripcion: "Rojo, Negro, Verde Militar, Lila, Azul Bebe, Cocoa, Vainilla",
+    currentImage: `${enterizos}/${pushUp}/${cortoEla}/delante-rojo.jpg`,
+    imagenes: [
+      `${enterizos}/${pushUp}/${cortoEla}/delante-rojo.jpg`,
+    ]
+  },
+  {
+    id: 11,
+    nombre: "Bluson",
+    modelo: "Capriati",
+    genero: "dama",
+    precio: 32000,
+    precio_compra: 16000,
+    descripcion: "Negro, Verde, Gris, Fucsia",
+    currentImage: `${blusones}/${capriati}/delante-fucsia-claro.jpg`,
+    imagenes: [
+      `${blusones}/${capriati}/delante-fucsia-claro.jpg`,
+      `${blusones}/${capriati}/delante-fucsia-oscuro.jpg`,
+      `${blusones}/${capriati}/delante-negro.jpg`,
+      `${blusones}/${capriati}/delante-gris.jpg`,
+      `${blusones}/${capriati}/delante-blanco.jpg`,
+      `${blusones}/${capriati}/delante-verde-bosque.jpg`,
+      `${blusones}/${capriati}/delante-verde-claro.jpg`,
+      `${blusones}/${capriati}/delante-verde-manzana.jpg`,
+      `${blusones}/${capriati}/delante-rosado.jpg`,
+    ]
+  },
+  {
+    id: 12,
+    nombre: "Enterizo",
+    modelo: "Sin Push-up Talego",
+    genero: "dama",
+    precio: 65000,
+    precio_compra: 37500,
+    descripcion: "Tela nylon power",
+    currentImage: `${enterizos}/${sinPushUp}/${talego}/delante-rojo.jpg`,
+    imagenes: [
+      `${enterizos}/${sinPushUp}/${talego}/delante-rojo.jpg`,
+      `${enterizos}/${sinPushUp}/${talego}/delante-negro.jpg`,
+      `${enterizos}/${sinPushUp}/${talego}/atras-azul-rey.jpg`,
+      `${enterizos}/${sinPushUp}/${talego}/atras-naranja.jpg`,
+      `${enterizos}/${sinPushUp}/${talego}/delante-lila.jpg`,
+      `${enterizos}/${sinPushUp}/${talego}/atras-terracota.jpg`,
+      `${enterizos}/${sinPushUp}/${talego}/delante-azul-claro.jpg`,
+      `${enterizos}/${sinPushUp}/${talego}/atras-verde-claro.jpg`,
+      `${enterizos}/${sinPushUp}/${talego}/delante-rosado.jpg`,
+    ]
+  },
   // {
   //   id: 13,
   //   nombre: "Short+Top",
