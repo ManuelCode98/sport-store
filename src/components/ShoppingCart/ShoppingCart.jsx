@@ -1,12 +1,41 @@
+import { useEffect, useState } from "react";
+import './ShoppingCart.css';
 
+const ShoppingCart = ({ products }) => {
 
-const ShoppingCart = () => {
+  const [ numberProductState, setNumberProductState ] = useState(0);
+  const [ openCartState, setOpenCartState ] = useState(false);
 
-  const [ numberProductState, setNumberProductState ] = ueState(0);
+  useEffect(() => {
+    
+    setNumberProductState( products.length );
 
-  // const addToCard = (  )=>{
+  }, [ products ]);
 
-  // }
+  const openCart = (  )=>{
+
+    if( !openCartState ) return setOpenCartState( true )
+
+    setOpenCartState( false );
+    
+  }
+
+  const placeAnOrderOnWhatsApp = ( currentProducts )=>{
+
+    const numberWhatsapp = '573157382433'
+    let message = `Hola quiero hacer este pedido: \n\n`;
+    //Todo debemos de encargarnos de no mandar el precio de compra del producto
+    currentProducts.forEach( ( product, index ) => {
+      message += `${ index + 1 }) ${ product.nombre } ${ product.modelo } para ${ product.genero } valor ${ product.precio } cantidad: No definida color: No definido \n`;
+    });
+
+    const urlWhatsApp = `https://wa.me/${numberWhatsapp}?text=${message}`;
+
+    window.open(urlWhatsApp, '_blank');
+
+    // return encodeURIComponent(mensaje)
+  }
+
 
   return (
     <div className='container-shopping-card'>
@@ -16,9 +45,31 @@ const ShoppingCart = () => {
         width={50}
         height={50}
         // Todo Esta funcion debe de mostar los productos que estan agreados
-        // onClick={  }
+        onClick={ ()=> openCart() }
         />
-        <span>{numberProductState}</span>
+        <span className="number-products-cart">{numberProductState}</span>
+        { 
+          openCartState 
+            ? 
+              <>
+                <div className="container-products-cart">
+                  {
+                    products
+                      ? products.map( product => (
+                        <div>{product.nombre}</div>
+                      ))
+                      : ''
+                  }
+                  <button 
+                    className="button-place-an-order"
+                    onClick={ () => placeAnOrderOnWhatsApp( products ) }
+                  >Hacer Pedido</button>
+                </div>
+                
+              </>
+            : ''
+
+        }
     </div>
   )
 }

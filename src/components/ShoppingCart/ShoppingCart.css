@@ -1,0 +1,38 @@
+.container-shopping-card {
+    position: fixed;
+    z-index: 2;
+    top: 5%;
+    right: 5%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+}
+
+.photo-shopping-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.number-products-cart {
+    position: absolute;
+    color: red;
+    font-weight: bold;
+}
+
+.container-products-cart {
+    width: 250px;
+    height: 40vh;
+    border: 1px solid red;
+    position: fixed;;
+    z-index: 2;
+    top: 15%;
+    right: 5%;
+    background: white;
+}
+
+.button-place-an-order {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}

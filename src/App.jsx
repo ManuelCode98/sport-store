@@ -9,13 +9,17 @@ import ProductPage from './components/ProductPage/ProductPage';
 import { productos } from './data/productos';
 import ButtonWhatsapp from './components/ButtonWhatsapp/ButtonWhatsapp';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ShoppingCart from './components/ShoppingCart/ShoppingCart';
+// import { ProductsCartProvider, useProducts } from './context/ProductsCartContext';
 
 // import '../styles.css';
+
 
 export default function App() {
   const [genero, setGenero] = useState('');
   const [nombre, setNombre] = useState('');
   const [modelo, setModelo] = useState('');
+  const [ productsCartState, setProductsCartState ] = useState([]);
 
   // Importamos los productos
 
@@ -27,9 +31,12 @@ export default function App() {
     );
   });
 
+
   return (
-    <>
     <BrowserRouter>
+      <ShoppingCart 
+        products={productsCartState}
+      />
       <Routes>
         <Route path='/' element={
           <>
@@ -49,10 +56,13 @@ export default function App() {
             <ButtonWhatsapp/>
           </>
         }/>
-        <Route path='/product/:id' element={<ProductPage/>} />
+        <Route path='/product/:id' element={
+          <ProductPage  
+            setProducts={setProductsCartState} 
+            />
+          } 
+        />
       </Routes>
     </BrowserRouter>
-    
-    </>
   );
 }

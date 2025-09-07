@@ -5,11 +5,14 @@ import './ProductPage.css';
 
 
 
-const ProductPage = () => {
+
+
+const ProductPage = ({ setProducts }) => {
 
   const localtion = useLocation();
   const currentPaht = localtion.pathname;
   const [ windowImageOpen, setWindowImageOpen ] = useState(false);
+  const [ amountProductState, setAmountProductState ] = useState(1);
 
   const [ productState, setProductState ] = useState({
     descripcion: '',
@@ -60,9 +63,37 @@ const ProductPage = () => {
 
   }
 
+  const addToCart = ( { currentTarget }, product, productUnits )=>{
+
+    // console.log(currentTarget)
+    // console.log(product)
+    // console.log(productUnits)
+
+    setProducts( prevProducts => [ ...prevProducts, product ] )
+
+  }
+
+  const amountProduct = ( { currentTarget } )=>{
+
+    if( currentTarget.innerText === '-' && amountProductState === 1 ) return
+    if( currentTarget.innerText === '+' ){
+      setAmountProductState( amountProductState + 1 )
+    }
+    if( currentTarget.innerText === '-' ){
+      setAmountProductState( amountProductState - 1 )
+    }
+
+  }
+
+
   return (
     <>
       {/* { windowImageOpen &&  } */}
+      {/* <ShoppingCart 
+        products={products} 
+        setProducts={setProducts}
+      /> */}
+
       <div className="container-show-product">{ productState.id > 0 && 
           <div key={ productState.id } className='container-product' >
 
@@ -92,7 +123,14 @@ const ProductPage = () => {
                   <h4 className='home-page-sale-price'>Cop <span style={{ 'color':'green' }}>{ productState.precio }</span> </h4>
                   {/* Aca debo de hacer la funcion para agregar los productos al carrito */}
                   <div className='container-button-buy' >
-                    <span className='button-name-buy' >Añadir al carrito</span>
+                    <span 
+                      className='button-name-buy' 
+                      // Aca debe de ir agregando productos al carro
+                      onClick={ (e)=> addToCart(e, productState, amountProductState ) }
+                    >Añadir al carrito</span>
+                    <button onClick={ (e)=> amountProduct(e) }>-</button>
+                    <span>{amountProductState}</span>
+                    <button onClick={ (e)=> amountProduct(e) }>+</button>
                   </div>
               </div>
             </div>
