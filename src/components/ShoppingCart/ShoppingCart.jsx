@@ -42,15 +42,37 @@ const ShoppingCart = ({ products }) => {
 
   return (
     <div className='container-shopping-card'>
-      <img 
+      {/* {
+        openCartState
+         ?
+           <>
+            <button 
+              className="empty-cart"
+              // onClick={ () => placeAnOrderOnWhatsApp( products ) }
+            >
+              Vaciar Carrito
+            </button>
+            <button 
+              className="button-place-an-order"
+              onClick={ () => placeAnOrderOnWhatsApp( products ) }
+            >
+              Hacer Pedido
+            </button>
+           </>
+         : ''
+      } */}
+      <span className="number-products-cart">{numberProductState}</span>
+      <button
         className="photo-shopping-card" 
-        src='https://media.istockphoto.com/id/1987775073/es/vector/icono-de-dibujo-de-l%C3%ADnea-negra-del-carrito-de-la-compra.jpg?s=612x612&w=0&k=20&c=_zNOhjCgZf82ZJlE1-eU-8XV5Zc6qeQp0_eMPJszj7Q='
-        width={50}
-        height={50}
         // Todo Esta funcion debe de mostar los productos que estan agreados
         onClick={ ()=> openCart() }
-        />
-        <span className="number-products-cart">{numberProductState}</span>
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6H2L1 3H5M6 6H19L17 18H8L6 6Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <circle cx="9" cy="21" r="1" fill="currentColor"/>
+          <circle cx="18" cy="21" r="1" fill="currentColor"/>
+        </svg>
+      </button>
         { 
           openCartState 
             ? 
@@ -59,17 +81,35 @@ const ShoppingCart = ({ products }) => {
                   {
                     products
                       ? products.map( product => (
-                        <div>{product.nombre}</div>
+                        <div className="products-cart">
+                          <img className="product-photo-cart" src={product.currentImage} />
+                          <div>
+                            {product.nombre} {product.modelo} Cant: {product.amount} Color: {product.color} Precio: <span style={{ color: 'green' }}>{product.precio}</span>
+                          </div>
+                        </div>
                       ))
                       : ''
                   }
-                  <button 
-                    className="button-place-an-order"
-                    onClick={ () => placeAnOrderOnWhatsApp( products ) }
-                  >Hacer Pedido</button>
+                  
                 </div>
-                
-              </>
+
+           <div>
+               <button 
+              className="empty-cart"
+              // onClick={ () => placeAnOrderOnWhatsApp( products ) }
+            >
+              Vaciar Carrito
+            </button>
+            <button 
+              className="button-place-an-order"
+              onClick={ () => placeAnOrderOnWhatsApp( products ) }
+            >
+              Hacer Pedido
+            </button>
+           </div>
+
+
+           </>
             : ''
 
         }

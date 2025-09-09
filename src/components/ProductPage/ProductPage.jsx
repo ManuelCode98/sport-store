@@ -135,14 +135,19 @@ const ProductPage = ({ setProducts }) => {
                   <h4 className='home-page-sale-price'>Cop <span style={{ 'color':'green' }}>{ productState.precio }</span> </h4>
                   {/* Aca debo de hacer la funcion para agregar los productos al carrito */}
                   <div className='container-button-buy' >
+                    <div className='container-button-handle-amount'>
+                      <button className='button-handle-amount' onClick={ (e)=> amountProduct(e) }>-</button>
+                        <span>{amountProductState}</span>
+                      <button className='button-handle-amount' onClick={ (e)=> amountProduct(e) }>+</button>
+                    </div>
+
                     <span 
                       className='button-name-buy' 
                       // Aca debe de ir agregando productos al carro
                       onClick={ (e)=> addToCart(e, productState, amountProductState ) }
-                    >Añadir al carrito</span>
-                    <button onClick={ (e)=> amountProduct(e) }>-</button>
-                    <span>{amountProductState}</span>
-                    <button onClick={ (e)=> amountProduct(e) }>+</button>
+                    >
+                      Añadir al carrito
+                    </span>
                   </div>
               </div>
             </div>

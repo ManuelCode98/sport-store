@@ -138,6 +138,60 @@
     box-shadow: 0 3px 6px rgba(122, 92, 250, 0.15);
 }
 
+/* Inicio de los estilos de los botonos de sumar o restar cantidad de productos*/
+
+/* Contenedor de los botones de cantidad */
+.container-button-handle-amount {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2rem; /* Ajusta según dónde lo pongas */
+
+}
+
+/* Botones + y - */
+.button-handle-amount {
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #7A5CFA;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 8px rgba(122, 92, 250, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.button-handle-amount:hover {
+  background-color: #6a4dfb;
+  box-shadow: 0 5px 12px rgba(122, 92, 250, 0.35);
+  transform: translateY(-1px);
+}
+
+.button-handle-amount:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(122, 92, 250, 0.2);
+}
+
+/* Número central */
+.container-button-handle-amount > span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* Fin de los estilos de los botonos de sumar o restar cantidad de productos*/
+
+
 /* Aca van los modelos que se pueden comprar */
 .container-model {
     display: flex;
