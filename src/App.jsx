@@ -36,6 +36,7 @@ export default function App() {
     <BrowserRouter>
       <ShoppingCart 
         products={productsCartState}
+        setProducts={setProductsCartState}
       />
       <Routes>
         <Route path='/' element={
