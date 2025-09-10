@@ -6,21 +6,18 @@ const ShoppingCart = ({ products, setProducts }) => {
   const [ numberProductState, setNumberProductState ] = useState(0);
   const [ openCartState, setOpenCartState ] = useState(false);
 
-  // Todo debemos de arreglar estar parte porque se reenderiza muchas veces
-  // Todo y necesitamos que cargue los productos al carro desde el local storage
-  // Todo con esto veremos si arreglamos el problema de cargar el estado en el componente principal
-  // useEffect(() =>{
+  
+  useEffect(() =>{
 
-  //   if( localStorage.getItem( 'products' ) !== null ){
+    const existsProductsLocalStorage = localStorage.getItem( 'products' );
 
-  //     // setProducts( localStorage.getItem( 'products' ) )
+    if( existsProductsLocalStorage === null ) return
 
-  //     console.log(localStorage.getItem( 'products' ))
+    const getProductsLocalStorage = JSON.parse( localStorage.getItem( 'products' ) );
 
-  //   }
+    setProducts( getProductsLocalStorage );
 
-  //   // setProducts(  )
-  // }, []);
+  }, []);
 
   useEffect(() => {
     
@@ -62,6 +59,8 @@ const ShoppingCart = ({ products, setProducts }) => {
   
   const emptyCart = (  )=>{
 
+    // Borrar el localStorage
+    localStorage.removeItem('products');
     setNumberProductState( 0 );
     setProducts([]);
 
@@ -72,8 +71,10 @@ const ShoppingCart = ({ products, setProducts }) => {
     const newArrayProducts = [...products];
     newArrayProducts.splice( index, 1 );
 
+    // Borrar el localStorage y luego guardar los productos en el localStorage
     localStorage.removeItem('products');
     localStorage.setItem( 'products', JSON.stringify( newArrayProducts ) );
+
     setProducts( newArrayProducts );
   }
 

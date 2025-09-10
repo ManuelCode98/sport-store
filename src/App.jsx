@@ -59,6 +59,7 @@ export default function App() {
         }/>
         <Route path='/product/:id' element={
           <ProductPage  
+            products={productsCartState}
             setProducts={setProductsCartState} 
             />
           } 

@@ -7,7 +7,7 @@ import './ProductPage.css';
 
 
 
-const ProductPage = ({ setProducts }) => {
+const ProductPage = ({ products, setProducts }) => {
 
   const localtion = useLocation();
   const currentPaht = localtion.pathname;
@@ -82,6 +82,18 @@ const ProductPage = ({ setProducts }) => {
     ]);
     
     setAmountProductState( 1 );
+
+    // Creo una copia del array de products y luego le agrego agrego el producto que viene en la funcion 
+    const newArrayProducts = products;
+    newArrayProducts.push( {
+      ...product, 
+        amount : amountProductState, 
+        color 
+    } );
+
+    // Borrar el localStorage y luego guardar los productos en el localStorage
+    localStorage.removeItem('products');
+    localStorage.setItem( 'products', JSON.stringify( newArrayProducts ) );
 
   }
 
