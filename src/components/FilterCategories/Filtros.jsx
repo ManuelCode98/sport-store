@@ -7,14 +7,7 @@ export default function Filtros({ genero, setGenero, nombre, setNombre, modelo, 
   const modelosUnicos = [...new Set(productos.map(p => p.modelo))];
 
   return (
-    <section className="filtros" 
-    //   style={{
-    //   padding: '2rem 0',
-    //   backgroundColor: '#fff',
-    //   borderBottom: '1px solid #eee',
-    //   textAlign: 'center'
-    // }}
-    >
+    <section className="filters" >
       <select
         value={genero}
         onChange={(e) => setGenero(e.target.value)}
@@ -49,15 +42,3 @@ export default function Filtros({ genero, setGenero, nombre, setNombre, modelo, 
     </section>
   );
 }
-
-// Estilo reutilizable para selects
-const selectStyle = {
-  padding: '0.7rem 1rem',
-  margin: '0 0.5rem',
-  border: '1px solid #ddd',
-  borderRadius: '8px',
-  fontSize: '1rem',
-  minWidth: '180px',
-  transition: 'all 0.3s ease',
-  backgroundColor: 'white'
-};

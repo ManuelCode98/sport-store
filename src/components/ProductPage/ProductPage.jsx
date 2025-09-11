@@ -112,12 +112,6 @@ const ProductPage = ({ products, setProducts }) => {
 
   return (
     <>
-      {/* { windowImageOpen &&  } */}
-      {/* <ShoppingCart 
-        products={products} 
-        setProducts={setProducts}
-      /> */}
-
       <div className="container-show-product">{ productState.id > 0 && 
           <div key={ productState.id } className='container-product' >
 

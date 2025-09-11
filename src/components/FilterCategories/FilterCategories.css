@@ -1,11 +1,11 @@
-section {
+.filters {
     padding: 2rem 0;
     background-color: #fff;
     border-bottom: 1px solid #eee;
     text-align: center;
 }
 
-select {
+.filters > select {
     padding: 0.7rem 1rem;
     margin: 0 0.5rem;
     border: 1px solid #ddd;
@@ -16,12 +16,26 @@ select {
 }
 
 @media (max-width:660px){
-    select {
+    .filters > select {
         width: 28%;
         padding: 0;
         padding-top: 0.7rem;
         padding-bottom: 0.7rem;
         text-align: center;
     }
+
+}
+
+@media ( max-width: 430px ){
+    .filters > select {
+        /* padding: 0.7rem 1rem; */
+        width: 30%;
+        padding: 0;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+        margin: 0 0.3rem;
+        font-size: 0.8rem;
+    }
+
 
 }

@@ -31,7 +31,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     justify-items: center;
     justify-content: center;
 }
@@ -195,7 +195,7 @@
 /* Aca van los modelos que se pueden comprar */
 .container-model {
     display: flex;
-    width: 25%;
+    width: 80%;
     position: absolute;
     top: 86%;
     left: 20%;
@@ -214,4 +214,68 @@
 
 .opacity {
     opacity: 0.5;
+}
+
+@media ( max-width: 768px) {
+
+    .container-show-product {
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 75vh;
+    }
+
+    .container-product {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media ( max-width: 550px) {
+
+    .container-product {
+        grid-template-columns: 35% 60%;
+    }
+}
+
+@media ( max-width: 430px) {
+
+    .container-show-product {
+        top: 5%;
+        left: 5%;
+        /* border: 1px solid red; */
+    }
+
+    .container-product {
+        grid-template-columns: 50% 50%;
+    }
+
+    .container-model {
+        left: 5%;
+        width: 90%;
+        overflow-x: scroll;
+    }
+
+    .container-data {
+        margin-left: 1rem;
+    }
+
+    .container-button-handle-amount {
+        margin-bottom: 3rem;
+
+    }
+
+    .button-name-buy {
+        padding: 15px 10px;
+        font-size: 1rem;
+
+    }
+}
+
+@media ( max-width: 430px) {
+
+    .button-name-buy {
+        padding: 15px 5px;
+        font-size: 0.8rem;
+    }
+
 }
