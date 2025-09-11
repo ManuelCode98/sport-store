@@ -14,4 +14,24 @@
 
 .producto-card > a > img {
     color: #2c3e50;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-card-name {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #2c3e50;
+}
+
+.product-card-model {
+    color: #7f8fa6;
+    font-size: 0.9rem;
+}
+
+.product-card-price {
+    font-weight: bold;
+    color: #27ae60;
+    font-size: 1.1rem;
 }

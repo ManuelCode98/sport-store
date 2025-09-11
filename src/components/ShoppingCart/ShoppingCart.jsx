@@ -37,18 +37,24 @@ const ShoppingCart = ({ products, setProducts }) => {
     
   }
 
-  const placeAnOrderOnWhatsApp = async ( currentProducts )=>{
+  const placeAnOrderOnWhatsApp = async ( shoppingCartProducts )=>{
 
     const numberWhatsapp = '573157382433';
     
-    let message = `Hola quiero hacer este pedido: \n\n`;
+    const result = shoppingCartProducts.reduce( ( acumulator, currentProduct ) => acumulator + currentProduct.precio, 0 );
+    const totalToPay = result.toLocaleString('es-CO',
+      { style: 'currency', currency: 'COP' }
+    )
+
+    let message = `Hola quiero hacer este pedido: \n\n\n`;
     //Todo debemos de encargarnos de no mandar el precio de compra del producto
-    currentProducts.forEach( ( product, index ) => {
-      message += `${ index + 1 }) ${ product.nombre } ${ product.modelo } para ${ product.genero } valor: ${ product.precio } cantidad: ${ product.amount } color: ${ product.color } \n`;
+    shoppingCartProducts.forEach( ( product, index ) => {
+      message += `${ index + 1 }) ${ product.nombre } ${ product.modelo } para ${ product.genero } valor: ${ product.precio } cantidad: ${ product.amount } color: ${ product.color } \n\n`;
     });
 
+
     // Formatiamos el mensaje
-    const formatMessage = encodeURIComponent(message); 
+    const formatMessage = encodeURIComponent( `${message} Total a pagar: ${ totalToPay }`); 
 
     const urlWhatsApp = `https://wa.me/${numberWhatsapp}?text=${ formatMessage }`;
     
@@ -68,12 +74,20 @@ const ShoppingCart = ({ products, setProducts }) => {
 
   const deleteProduct = ( index )=>{
 
+    // Creamos una copia del array
     const newArrayProducts = [...products];
+    // Borramos el producto del carrito por su indice
     newArrayProducts.splice( index, 1 );
+
+    // Ahora le quitamos algunas propiedades para que no se guarden en el localStorage
+    const saveProducts = newArrayProducts.map( (product) => {
+      const { precio_compra, imagenes, ...newProduct } = product;
+      return newProduct;
+    } )
 
     // Borrar el localStorage y luego guardar los productos en el localStorage
     localStorage.removeItem('products');
-    localStorage.setItem( 'products', JSON.stringify( newArrayProducts ) );
+    localStorage.setItem( 'products', JSON.stringify( saveProducts ) );
 
     setProducts( newArrayProducts );
   }

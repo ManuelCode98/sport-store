@@ -4,9 +4,6 @@ import { productos } from '../../data/productos';
 import './ProductPage.css';
 
 
-
-
-
 const ProductPage = ({ products, setProducts }) => {
 
   const localtion = useLocation();
@@ -65,10 +62,6 @@ const ProductPage = ({ products, setProducts }) => {
 
   const addToCart = ( { currentTarget }, product, productUnits )=>{
 
-    // console.log(currentTarget)
-    // console.log(product.currentImage)
-    // console.log(productUnits)
-
     const color = product.currentImage
     .split('/').pop() 
     .split('.')[0]              
@@ -83,10 +76,12 @@ const ProductPage = ({ products, setProducts }) => {
     
     setAmountProductState( 1 );
 
+    // Creo una copia del array original y le quito la propieda "precio_compra"
+    const { precio_compra, imagenes, ...newProduct } = product
     // Creo una copia del array de products y luego le agrego agrego el producto que viene en la funcion 
-    const newArrayProducts = products;
+    const newArrayProducts = [...products];
     newArrayProducts.push( {
-      ...product, 
+      ...newProduct, 
         amount : amountProductState, 
         color 
     } );

@@ -57,6 +57,7 @@ export default function App() {
             <ButtonWhatsapp/>
           </>
         }/>
+
         <Route path='/product/:id' element={
           <ProductPage  
             products={productsCartState}
