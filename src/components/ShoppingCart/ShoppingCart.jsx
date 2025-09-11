@@ -41,13 +41,22 @@ const ShoppingCart = ({ products, setProducts }) => {
 
     const numberWhatsapp = '573157382433';
     
-    const result = shoppingCartProducts.reduce( ( acumulator, currentProduct ) => acumulator + currentProduct.precio, 0 );
+    // Solo mapeo las cantidades y los precios para poder multiplicar cade uno de ellos
+    const results = shoppingCartProducts.map( (product)=>{
+
+      const { amount, precio } = product;
+      const result = amount * precio;
+      return result;
+    })
+
+    // Luego los sumo para obtener el valor total a pagar
+    const result = results.reduce( ( acumulator, currentPrice ) => acumulator + currentPrice, 0 );
+    // Lo formateo para que sea en pesos colombianos
     const totalToPay = result.toLocaleString('es-CO',
       { style: 'currency', currency: 'COP' }
     )
 
     let message = `Hola quiero hacer este pedido: \n\n\n`;
-    //Todo debemos de encargarnos de no mandar el precio de compra del producto
     shoppingCartProducts.forEach( ( product, index ) => {
       message += `${ index + 1 }) ${ product.nombre } ${ product.modelo } para ${ product.genero } valor: ${ product.precio } cantidad: ${ product.amount } color: ${ product.color } \n\n`;
     });
