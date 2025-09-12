@@ -4,10 +4,7 @@ import { productos } from '../../data/productos';
 import './ProductPage.css';
 
 
-
-
-
-const ProductPage = ({ setProducts }) => {
+const ProductPage = ({ products, setProducts }) => {
 
   const localtion = useLocation();
   const currentPaht = localtion.pathname;
@@ -65,10 +62,6 @@ const ProductPage = ({ setProducts }) => {
 
   const addToCart = ( { currentTarget }, product, productUnits )=>{
 
-    // console.log(currentTarget)
-    // console.log(product.currentImage)
-    // console.log(productUnits)
-
     const color = product.currentImage
     .split('/').pop() 
     .split('.')[0]              
@@ -82,6 +75,20 @@ const ProductPage = ({ setProducts }) => {
     ]);
     
     setAmountProductState( 1 );
+
+    // Creo una copia del array original y le quito la propieda "precio_compra"
+    const { precio_compra, imagenes, ...newProduct } = product
+    // Creo una copia del array de products y luego le agrego agrego el producto que viene en la funcion 
+    const newArrayProducts = [...products];
+    newArrayProducts.push( {
+      ...newProduct, 
+        amount : amountProductState, 
+        color 
+    } );
+
+    // Borrar el localStorage y luego guardar los productos en el localStorage
+    localStorage.removeItem('products');
+    localStorage.setItem( 'products', JSON.stringify( newArrayProducts ) );
 
   }
 
@@ -100,12 +107,6 @@ const ProductPage = ({ setProducts }) => {
 
   return (
     <>
-      {/* { windowImageOpen &&  } */}
-      {/* <ShoppingCart 
-        products={products} 
-        setProducts={setProducts}
-      /> */}
-
       <div className="container-show-product">{ productState.id > 0 && 
           <div key={ productState.id } className='container-product' >
 
@@ -135,14 +136,19 @@ const ProductPage = ({ setProducts }) => {
                   <h4 className='home-page-sale-price'>Cop <span style={{ 'color':'green' }}>{ productState.precio }</span> </h4>
                   {/* Aca debo de hacer la funcion para agregar los productos al carrito */}
                   <div className='container-button-buy' >
+                    <div className='container-button-handle-amount'>
+                      <button className='button-handle-amount' onClick={ (e)=> amountProduct(e) }>-</button>
+                        <span>{amountProductState}</span>
+                      <button className='button-handle-amount' onClick={ (e)=> amountProduct(e) }>+</button>
+                    </div>
+
                     <span 
                       className='button-name-buy' 
                       // Aca debe de ir agregando productos al carro
                       onClick={ (e)=> addToCart(e, productState, amountProductState ) }
-                    >Añadir al carrito</span>
-                    <button onClick={ (e)=> amountProduct(e) }>-</button>
-                    <span>{amountProductState}</span>
-                    <button onClick={ (e)=> amountProduct(e) }>+</button>
+                    >
+                      Añadir al carrito
+                    </span>
                   </div>
               </div>
             </div>

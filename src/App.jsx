@@ -1,8 +1,8 @@
 // src/App.jsx
 import { useState } from 'react';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Filtros from './components/Filtros';
+import Hero from './components/Hero/Hero';
+import Filtros from './components/FilterCategories/Filtros';
 import ProductosGrid from './components/ProductosGrid';
 import ProductPage from './components/ProductPage/ProductPage';
 // const { productos } = require('./data/productos');
@@ -36,6 +36,7 @@ export default function App() {
     <BrowserRouter>
       <ShoppingCart 
         products={productsCartState}
+        setProducts={setProductsCartState}
       />
       <Routes>
         <Route path='/' element={
@@ -56,8 +57,10 @@ export default function App() {
             <ButtonWhatsapp/>
           </>
         }/>
+
         <Route path='/product/:id' element={
           <ProductPage  
+            products={productsCartState}
             setProducts={setProductsCartState} 
             />
           } 
