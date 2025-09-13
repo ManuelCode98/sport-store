@@ -1,8 +1,42 @@
-/* === FUENTE ELEGANTE (añade esto en tu <head> o CDN) === */
-/* Asegúrate de tener en tu HTML: */
-/* <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"> */
 
-/* === ESTILOS EXISTENTES (sin cambios en layout ni posición) === */
+
+.container-window-model {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden; /* Evita scroll si la imagen es muy grande */
+  cursor: pointer; /* Para que el click funcione en todo el contenedor */
+}
+
+/* Imagen dentro del contenedor */
+.open-photo-model {
+  max-width: 95vw;    /* No ocupa toda la anchura, deja margen */
+  max-height: 95vh;   /* No ocupa toda la altura, deja margen */
+  object-fit: contain; /* ¡Clave! Mantiene la proporción y ajusta dentro del contenedor */
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Opcional: suaviza el zoom */
+}
+
+/* .container-window-model {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.open-photo-model {
+    width: 20%;
+    height: 80vh;
+} */
+
 
 .container-show-product {
     position: absolute;
