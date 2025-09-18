@@ -10,6 +10,7 @@ import { productos } from './data/productos';
 import ButtonWhatsapp from './components/ButtonWhatsapp/ButtonWhatsapp';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ShoppingCart from './components/ShoppingCart/ShoppingCart';
+import ShowModel from './components/ShowModel/ShowModel';
 // import { ProductsCartProvider, useProducts } from './context/ProductsCartContext';
 
 // import '../styles.css';
@@ -60,6 +61,14 @@ export default function App() {
 
         <Route path='/product/:id' element={
           <ProductPage  
+            products={productsCartState}
+            setProducts={setProductsCartState} 
+            />
+          } 
+        />
+
+        <Route path='/product/:id/show-model' element={
+          <ShowModel  
             products={productsCartState}
             setProducts={setProductsCartState} 
             />

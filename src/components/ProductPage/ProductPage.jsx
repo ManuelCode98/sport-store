@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { productos } from '../../data/productos';
 import './ProductPage.css';
 
@@ -129,11 +129,13 @@ const ProductPage = ({ products, setProducts }) => {
             <div className="container-show-product">{ productState.id > 0 && 
               <div key={ productState.id } className='container-product' >
 
+              <Link to={`show-model`}>
                 <img 
                   className='product-page-photo' 
                   src={ productState.currentImage } 
                   onClick={ (e)=> showImage(e) }
                 />
+              </Link>
 
                 <div className='product-features'>
                   <div className='container-data'>
