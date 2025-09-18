@@ -296,8 +296,8 @@ export const productos = [
     nombre: "Top",
     modelo: "",
     genero: "dama",
-    precio: 19000,
-    precio_compra: 11000,
+    precio: 15000,
+    precio_compra: 7000,
     descripcion: "",
     currentImage: `${top}/delante-terracota.jpg`,
     imagenes: [
@@ -309,8 +309,8 @@ export const productos = [
     nombre: "Top",
     modelo: "",
     genero: "dama",
-    precio: 15000,
-    precio_compra: 7000,
+    precio: 19000,
+    precio_compra: 11000,
     descripcion: "",
     currentImage: `${top}/delante-rojo.jpg`,
     imagenes: [
