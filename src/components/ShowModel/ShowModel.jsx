@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './ShowModel.css';
 
-const ShowModel = ({ currentImage, setCurrentImage, currentId }) => {
+const ShowModel = ({ currentImage, currentId }) => {
 
   return (
     <div className='container-window-model'>

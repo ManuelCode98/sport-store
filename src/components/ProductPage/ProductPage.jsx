@@ -55,19 +55,14 @@ const ProductPage = ({ products, setProducts, setCurrentImage, setCurrentId }) =
 
   }
 
-  const showImage = ( { currentTarget } )=>{
+  const showImage = ( { currentTarget }, id )=>{
 
-    console.log(currentTarget.className)
     const currentImage = currentTarget.src;
 
-    if( !showModelState ){
-      setShowModelState( true );
-      setCurrentImage( currentImage );
-      setCurrentId( productState.id );
-      return
-    }
+    setCurrentImage( currentImage );
+    setCurrentId( id );
 
-    setShowModelState( false );
+    return
   }
 
   const addToCart = ( { currentTarget }, product, productUnits )=>{
@@ -117,7 +112,7 @@ const ProductPage = ({ products, setProducts, setCurrentImage, setCurrentId }) =
 
   return (
     <>
-      { showModelState 
+      {/* { showModelState 
         ?
           <div className='container-window-model'>
             <img 
@@ -126,7 +121,7 @@ const ProductPage = ({ products, setProducts, setCurrentImage, setCurrentId }) =
               onClick={ (e)=> showImage(e) }
             />
           </div>
-        :
+        : */}
           <>
             <div className="container-show-product">{ productState.id > 0 && 
               <div key={ productState.id } className='container-product' >
@@ -135,7 +130,7 @@ const ProductPage = ({ products, setProducts, setCurrentImage, setCurrentId }) =
                 <img 
                   className='product-page-photo' 
                   src={ productState.currentImage } 
-                  onClick={ (e)=> showImage(e) }
+                  onClick={ (e)=> showImage(e, productState.id ) }
                 />
               </Link>
 
@@ -193,7 +188,7 @@ const ProductPage = ({ products, setProducts, setCurrentImage, setCurrentId }) =
             }
           </div>
           </>
-      }
+      {/* } */}
     </>
   );
 }

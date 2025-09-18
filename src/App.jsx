@@ -73,8 +73,7 @@ export default function App() {
 
         <Route path='/product/:id/show-model' element={
           <ShowModel  
-            currentImage={currentImageState}
-            setCurrentImage={setCurrentImageState} 
+            currentImage={currentImageState} 
             currentId={currentIdState}
             />
           } 
