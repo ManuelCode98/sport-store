@@ -18,9 +18,11 @@ const enV = 'en-v';
 const bolsillo = 'bolsillo-suplex';
 const plus = 'plus';
 const seamless = 'seamless';
+const corto = 'corto';
+const largo = 'largo';
 
 const botaAncha = 'bota-ancha';
-const cortoEla = 'corto-ela';
+const ela = 'ela';
 const mangaLarga = 'manga-larga';
 const martina = 'martina';
 const capriati = 'capriati';
@@ -29,6 +31,7 @@ const sinPushUp = 'sin-push-up';
 const corazon = 'corazon';
 const picapiedras = 'picapiedras';
 const angie = 'angie';
+const luxury = 'luxury';
 
 const basicas = 'basicas'
 
@@ -72,16 +75,16 @@ export const productos = [
     precio: 70000,
     precio_compra: 48500,
     descripcion: "Rojo, Negro, Verde Militar, Lila, Habano",
-    currentImage: `${enterizos}/${pushUp}/${botaAncha}/delante-negro.jpg`,
+    currentImage: `${enterizos}/${largo}/${pushUp}/${botaAncha}/delante-negro.jpg`,
     imagenes: [
-      `${enterizos}/${pushUp}/${botaAncha}/delante-negro.jpg`,
-      `${enterizos}/${pushUp}/${botaAncha}/atras-negro.jpg`,
-      `${enterizos}/${pushUp}/${botaAncha}/delante-rojo.jpg`,
-      `${enterizos}/${pushUp}/${botaAncha}/atras-rojo.jpg`,
-      `${enterizos}/${pushUp}/${botaAncha}/delante-habano.jpg`,
-      `${enterizos}/${pushUp}/${botaAncha}/atras-habano.jpg`,
-      `${enterizos}/${pushUp}/${botaAncha}/delante-lila.jpg`,
-      `${enterizos}/${pushUp}/${botaAncha}/atras-lila.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${botaAncha}/delante-negro.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${botaAncha}/atras-negro.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${botaAncha}/delante-rojo.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${botaAncha}/atras-rojo.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${botaAncha}/delante-habano.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${botaAncha}/atras-habano.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${botaAncha}/delante-lila.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${botaAncha}/atras-lila.jpg`,
     ]
   },
   {
@@ -159,12 +162,13 @@ export const productos = [
     genero: "dama",
     precio: 60000,
     precio_compra: 40500,
-    descripcion: "Rojo, Negro, Verde Militar, Lila, Habano",
-    currentImage: `${enterizos}/${enV}/delante-negro.jpg`,
+    // descripcion: "Rojo, Negro, Verde Militar, Lila, Habano",
+    descripcion: "",
+    currentImage: `${enterizos}/${largo}/${pushUp}/${enV}/delante-negro.jpg`,
     imagenes: [
-      `${enterizos}/${enV}/delante-negro.jpg`,
-      `${enterizos}/${enV}/atras-negro.jpg`,
-      `${enterizos}/${enV}/atras-azul.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${enV}/delante-negro.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${enV}/atras-negro.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${enV}/atras-azul.jpg`,
     ]
   },
   {
@@ -209,10 +213,11 @@ export const productos = [
     genero: "dama",
     precio: 75000,
     precio_compra: 41500,
-    descripcion: "Rojo, Negro, Verde Militar, Lila, Azul Bebe, Cocoa, Vainilla",
-    currentImage: `${enterizos}/${pushUp}/${cortoEla}/delante-rojo.jpg`,
+    // descripcion: "Rojo, Negro, Verde Militar, Lila, Azul Bebe, Cocoa, Vainilla",
+    descripcion: "",
+    currentImage: `${enterizos}/${corto}/${pushUp}/${ela}/delante-rojo.jpg`,
     imagenes: [
-      `${enterizos}/${pushUp}/${cortoEla}/delante-rojo.jpg`,
+      `${enterizos}/${corto}/${pushUp}/${ela}/delante-rojo.jpg`,
     ]
   },
   {
@@ -239,22 +244,22 @@ export const productos = [
   {
     id: 12,
     nombre: "Enterizo",
-    modelo: "Sin Push-up Talego",
+    modelo: "Corto Sin Push-up Talego",
     genero: "dama",
     precio: 59000,
     precio_compra: 37500,
     descripcion: "Tela nylon power",
-    currentImage: `${enterizos}/${sinPushUp}/${talego}/delante-rojo.jpg`,
+    currentImage: `${enterizos}/${corto}/${sinPushUp}/${talego}/delante-rojo.jpg`,
     imagenes: [
-      `${enterizos}/${sinPushUp}/${talego}/delante-rojo.jpg`,
-      `${enterizos}/${sinPushUp}/${talego}/delante-negro.jpg`,
-      `${enterizos}/${sinPushUp}/${talego}/atras-azul-rey.jpg`,
-      `${enterizos}/${sinPushUp}/${talego}/atras-naranja.jpg`,
-      `${enterizos}/${sinPushUp}/${talego}/delante-lila.jpg`,
-      `${enterizos}/${sinPushUp}/${talego}/atras-terracota.jpg`,
-      `${enterizos}/${sinPushUp}/${talego}/delante-azul-claro.jpg`,
-      `${enterizos}/${sinPushUp}/${talego}/atras-verde-claro.jpg`,
-      `${enterizos}/${sinPushUp}/${talego}/delante-rosado.jpg`,
+      `${enterizos}/${corto}/${sinPushUp}/${talego}/delante-rojo.jpg`,
+      `${enterizos}/${corto}/${sinPushUp}/${talego}/delante-negro.jpg`,
+      `${enterizos}/${corto}/${sinPushUp}/${talego}/atras-azul-rey.jpg`,
+      `${enterizos}/${corto}/${sinPushUp}/${talego}/atras-naranja.jpg`,
+      `${enterizos}/${corto}/${sinPushUp}/${talego}/delante-lila.jpg`,
+      `${enterizos}/${corto}/${sinPushUp}/${talego}/atras-terracota.jpg`,
+      `${enterizos}/${corto}/${sinPushUp}/${talego}/delante-azul-claro.jpg`,
+      `${enterizos}/${corto}/${sinPushUp}/${talego}/atras-verde-claro.jpg`,
+      `${enterizos}/${corto}/${sinPushUp}/${talego}/delante-rosado.jpg`,
     ]
   },
   //
@@ -263,7 +268,7 @@ export const productos = [
     nombre: "Licra (Solo)",
     modelo: "Push Up Corazon",
     genero: "dama",
-    precio: 45000,
+    precio: 38000,
     precio_compra: 24000,
     descripcion: "",
     currentImage: `${licra}/${pushUp}/${corazon}/atras-azul-rey.jpg`,
@@ -276,7 +281,7 @@ export const productos = [
     nombre: "Short (Solo)",
     modelo: "Seamles",
     genero: "dama",
-    precio: 65000,
+    precio: 59000,
     precio_compra: 39000,
     descripcion: "",
     currentImage: `${shorts}/${seamless}/delante-negro.jpg`,
@@ -291,7 +296,7 @@ export const productos = [
     nombre: "Top",
     modelo: "",
     genero: "dama",
-    precio: 20000,
+    precio: 19000,
     precio_compra: 11000,
     descripcion: "",
     currentImage: `${top}/delante-terracota.jpg`,
@@ -304,7 +309,7 @@ export const productos = [
     nombre: "Top",
     modelo: "",
     genero: "dama",
-    precio: 20000,
+    precio: 15000,
     precio_compra: 7000,
     descripcion: "",
     currentImage: `${top}/delante-rojo.jpg`,
@@ -385,20 +390,21 @@ export const productos = [
       `${top}/${unicolor}/${angie}/delante-verde-militar.jpg`,
     ]
   },
-  // {
-  //   id: 20,
-  //   nombre: "Short+Top",
-  //   modelo: "short bolsillo+top poliamida",
-  //   genero: "dama",
-  //   precio: 38000,
-  //   descripcion: "",
-  //   currentImage: '/assets/images/short-bolsillo-poli.jpeg',
-  //   imagenes: [
-  //     '/assets/images/short-bolsillo-poli.jpeg',
-  //     '/assets/images/short-bolsillo-atras.jpeg',
-  //     '/assets/images/short-bolsillo-azul-petrolio.jpeg',
-  //   ]
-  // },
+  {
+    id: 20,
+    nombre: "Enterizo",
+    modelo: "Corto Push-up Luxury",
+    genero: "dama",
+    precio: 60000,
+    precio_compra: 45000,
+    descripcion: "",
+    currentImage: `${enterizos}/${corto}/${pushUp}/${luxury}/delante-rojo.jpg`,
+    imagenes: [
+      `${enterizos}/${corto}/${pushUp}/${luxury}/delante-rojo.jpg`,
+      `${enterizos}/${corto}/${pushUp}/${luxury}/atras-rojo.jpg`,
+      `${enterizos}/${corto}/${pushUp}/${luxury}/atras-azul.jpg`,
+    ]
+  },
   // {
   //   id: 21,
   //   nombre: "Short+Top",

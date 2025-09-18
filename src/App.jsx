@@ -21,6 +21,8 @@ export default function App() {
   const [nombre, setNombre] = useState('');
   const [modelo, setModelo] = useState('');
   const [ productsCartState, setProductsCartState ] = useState([]);
+  const [ currentImageState, setCurrentImageState ] = useState('');
+  const [ currentIdState, setCurrentIdState ] = useState(0);
 
   // Importamos los productos
 
@@ -62,15 +64,18 @@ export default function App() {
         <Route path='/product/:id' element={
           <ProductPage  
             products={productsCartState}
-            setProducts={setProductsCartState} 
+            setProducts={setProductsCartState}
+            setCurrentImage={setCurrentImageState}  
+            setCurrentId={setCurrentIdState}  
             />
           } 
         />
 
         <Route path='/product/:id/show-model' element={
           <ShowModel  
-            products={productsCartState}
-            setProducts={setProductsCartState} 
+            currentImage={currentImageState}
+            setCurrentImage={setCurrentImageState} 
+            currentId={currentIdState}
             />
           } 
         />

@@ -4,7 +4,7 @@ import { productos } from '../../data/productos';
 import './ProductPage.css';
 
 
-const ProductPage = ({ products, setProducts }) => {
+const ProductPage = ({ products, setProducts, setCurrentImage, setCurrentId }) => {
 
   const localtion = useLocation();
   const currentPaht = localtion.pathname;
@@ -58,10 +58,12 @@ const ProductPage = ({ products, setProducts }) => {
   const showImage = ( { currentTarget } )=>{
 
     console.log(currentTarget.className)
-    console.log(currentTarget.src)
+    const currentImage = currentTarget.src;
 
     if( !showModelState ){
       setShowModelState( true );
+      setCurrentImage( currentImage );
+      setCurrentId( productState.id );
       return
     }
 

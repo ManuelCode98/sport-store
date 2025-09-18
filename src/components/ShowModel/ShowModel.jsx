@@ -1,14 +1,16 @@
+import { Link } from 'react-router-dom';
+import './ShowModel.css';
 
+const ShowModel = ({ currentImage, setCurrentImage, currentId }) => {
 
-const ShowModel = ({ products, setProducts }) => {
   return (
     <div className='container-window-model'>
-        <img 
-            src='https://images.unsplash.com/photo-1689308271305-58e75832289b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
-            // src={products.currentImage} 
+        <Link to={`/product/${currentId}`}>
+          <img 
+            src={currentImage} 
             className='open-photo-model'
-            // onClick={ (e)=> showImage(e) }
-        />
+          />
+        </Link>
     </div>
   )
 }
