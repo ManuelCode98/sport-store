@@ -6,11 +6,18 @@ const blusas = '/assets/catalogo/blusas';
 const blusones = '/assets/catalogo/blusones';
 const shortMastop = '/assets/catalogo/short+top';
 const licraMastop = '/assets/catalogo/licra+top';
+const licra = '/assets/catalogo/licra';
+const top = '/assets/catalogo/top';
+const medias = '/assets/catalogo/medias';
+
 
 const pushUp = 'push-up';
+const calentadoras = 'calentadoras';
+const unicolor = 'unicolor';
 const enV = 'en-v';
 const bolsillo = 'bolsillo-suplex';
 const plus = 'plus';
+const seamless = 'seamless';
 
 const botaAncha = 'bota-ancha';
 const cortoEla = 'corto-ela';
@@ -19,6 +26,9 @@ const martina = 'martina';
 const capriati = 'capriati';
 const talego = 'talego';
 const sinPushUp = 'sin-push-up';
+const corazon = 'corazon';
+const picapiedras = 'picapiedras';
+const angie = 'angie';
 
 const basicas = 'basicas'
 
@@ -77,48 +87,48 @@ export const productos = [
   {
     id: 4,
     nombre: "Buso",
-    modelo: "Martina Manga Larga",
+    modelo: "Unicolor Manga Larga",
     genero: "dama",
     precio: 30000,
     precio_compra: 16000,
     descripcion: "",
-    currentImage: `${busos}/${mangaLarga}/${martina}/delante-amarillo-brillante.jpg`,
+    currentImage: `${busos}/${unicolor}/${mangaLarga}/delante-amarillo-brillante.jpg`,
     imagenes: [
-      `${busos}/${mangaLarga}/${martina}/delante-amarillo-brillante.jpg`,
-      `${busos}/${mangaLarga}/${martina}/delante-amarillo-claro.jpg`,
-      `${busos}/${mangaLarga}/${martina}/delante-amarillo-mostaza.jpg`,
-      `${busos}/${mangaLarga}/${martina}/delante-azul-cielo.jpg`,
-      `${busos}/${mangaLarga}/${martina}/delante-azul-oscuro.jpg`,
-      `${busos}/${mangaLarga}/${martina}/delante-azul-rey.jpg`,
-      `${busos}/${mangaLarga}/${martina}/delante-fucsia.jpg`,
-      `${busos}/${mangaLarga}/${martina}/delante-naranja.jpg`,
-      `${busos}/${mangaLarga}/${martina}/delante-negro.jpg`,
-      `${busos}/${mangaLarga}/${martina}/delante-terracota.jpg`,
-      `${busos}/${mangaLarga}/${martina}/delante-verde-bosque.jpg`,
-      `${busos}/${mangaLarga}/${martina}/delante-verde-manzana.jpg`,
-      `${busos}/${mangaLarga}/${martina}/delante-verde-turquesa.jpg`,
+      `${busos}/${unicolor}/${mangaLarga}/delante-amarillo-brillante.jpg`,
+      `${busos}/${unicolor}/${mangaLarga}/delante-amarillo-claro.jpg`,
+      `${busos}/${unicolor}/${mangaLarga}/delante-amarillo-mostaza.jpg`,
+      `${busos}/${unicolor}/${mangaLarga}/delante-azul-cielo.jpg`,
+      `${busos}/${unicolor}/${mangaLarga}/delante-azul-oscuro.jpg`,
+      `${busos}/${unicolor}/${mangaLarga}/delante-azul-rey.jpg`,
+      `${busos}/${unicolor}/${mangaLarga}/delante-fucsia.jpg`,
+      `${busos}/${unicolor}/${mangaLarga}/delante-naranja.jpg`,
+      `${busos}/${unicolor}/${mangaLarga}/delante-negro.jpg`,
+      `${busos}/${unicolor}/${mangaLarga}/delante-terracota.jpg`,
+      `${busos}/${unicolor}/${mangaLarga}/delante-verde-bosque.jpg`,
+      `${busos}/${unicolor}/${mangaLarga}/delante-verde-manzana.jpg`,
+      `${busos}/${unicolor}/${mangaLarga}/delante-verde-turquesa.jpg`,
     ]
   },
   {
     id: 5,
     nombre: "Short (Solo)",
-    modelo: "Push-up",
+    modelo: "Push-up Corazon",
     genero: "dama",
     precio: 29000,
     precio_compra: 16000,
     descripcion: "Azul, Negro, Verde, Gris, Fucsia",
-    currentImage: `${shorts}/${pushUp}/delante-fucsia.jpg`,
+    currentImage: `${shorts}/${pushUp}/${corazon}/delante-fucsia.jpg`,
     imagenes: [
-      `${shorts}/${pushUp}/delante-fucsia.jpg`,
-      `${shorts}/${pushUp}/atras-fucsia.jpg`,
-      `${shorts}/${pushUp}/delante-negro.jpg`,
-      `${shorts}/${pushUp}/atras-negro.jpg`,
-      `${shorts}/${pushUp}/delante-gris-claro.jpg`,
-      `${shorts}/${pushUp}/atras-gris-claro.jpg`,
-      `${shorts}/${pushUp}/delante-azul-oscuro.jpg`,
-      `${shorts}/${pushUp}/atras-azul-oscuro.jpg`,
-      `${shorts}/${pushUp}/delante-verde-bosque.jpg`,
-      `${shorts}/${pushUp}/atras-verde-bosque.jpg`,
+      `${shorts}/${pushUp}/${corazon}/delante-fucsia.jpg`,
+      `${shorts}/${pushUp}/${corazon}/atras-fucsia.jpg`,
+      `${shorts}/${pushUp}/${corazon}/delante-negro.jpg`,
+      `${shorts}/${pushUp}/${corazon}/atras-negro.jpg`,
+      `${shorts}/${pushUp}/${corazon}/delante-gris-claro.jpg`,
+      `${shorts}/${pushUp}/${corazon}/atras-gris-claro.jpg`,
+      `${shorts}/${pushUp}/${corazon}/delante-azul-oscuro.jpg`,
+      `${shorts}/${pushUp}/${corazon}/atras-azul-oscuro.jpg`,
+      `${shorts}/${pushUp}/${corazon}/delante-verde-bosque.jpg`,
+      `${shorts}/${pushUp}/${corazon}/atras-verde-bosque.jpg`,
     ]
   },
 {
@@ -247,104 +257,134 @@ export const productos = [
       `${enterizos}/${sinPushUp}/${talego}/delante-rosado.jpg`,
     ]
   },
-  // {
-  //   id: 13,
-  //   nombre: "Short+Top",
-  //   modelo: "short bolsillo+top poliamida",
-  //   genero: "dama",
-  //   precio: 38000,
-  //   descripcion: "",
-  //   currentImage: '/assets/images/short-bolsillo-poli.jpeg',
-  //   imagenes: [
-  //     '/assets/images/short-bolsillo-poli.jpeg',
-  //     '/assets/images/short-bolsillo-atras.jpeg',
-  //     '/assets/images/short-bolsillo-azul-petrolio.jpeg',
-  //   ]
-  // },
-  // {
-  //   id: 14,
-  //   nombre: "Short+Top",
-  //   modelo: "short bolsillo+top poliamida",
-  //   genero: "dama",
-  //   precio: 38000,
-  //   descripcion: "",
-  //   currentImage: '/assets/images/short-bolsillo-poli.jpeg',
-  //   imagenes: [
-  //     '/assets/images/short-bolsillo-poli.jpeg',
-  //     '/assets/images/short-bolsillo-atras.jpeg',
-  //     '/assets/images/short-bolsillo-azul-petrolio.jpeg',
-  //   ]
-  // },
-  // {
-  //   id: 15,
-  //   nombre: "Short+Top",
-  //   modelo: "short bolsillo+top poliamida",
-  //   genero: "dama",
-  //   precio: 38000,
-  //   descripcion: "",
-  //   currentImage: '/assets/images/short-bolsillo-poli.jpeg',
-  //   imagenes: [
-  //     '/assets/images/short-bolsillo-poli.jpeg',
-  //     '/assets/images/short-bolsillo-atras.jpeg',
-  //     '/assets/images/short-bolsillo-azul-petrolio.jpeg',
-  //   ]
-  // },
-  // {
-  //   id: 16,
-  //   nombre: "Short+Top",
-  //   modelo: "short bolsillo+top poliamida",
-  //   genero: "dama",
-  //   precio: 38000,
-  //   descripcion: "",
-  //   currentImage: '/assets/images/short-bolsillo-poli.jpeg',
-  //   imagenes: [
-  //     '/assets/images/short-bolsillo-poli.jpeg',
-  //     '/assets/images/short-bolsillo-atras.jpeg',
-  //     '/assets/images/short-bolsillo-azul-petrolio.jpeg',
-  //   ]
-  // },
-  // {
-  //   id: 17,
-  //   nombre: "Short+Top",
-  //   modelo: "short bolsillo+top poliamida",
-  //   genero: "dama",
-  //   precio: 38000,
-  //   descripcion: "",
-  //   currentImage: '/assets/images/short-bolsillo-poli.jpeg',
-  //   imagenes: [
-  //     '/assets/images/short-bolsillo-poli.jpeg',
-  //     '/assets/images/short-bolsillo-atras.jpeg',
-  //     '/assets/images/short-bolsillo-azul-petrolio.jpeg',
-  //   ]
-  // },
-  // {
-  //   id: 18,
-  //   nombre: "Short+Top",
-  //   modelo: "short bolsillo+top poliamida",
-  //   genero: "dama",
-  //   precio: 38000,
-  //   descripcion: "",
-  //   currentImage: '/assets/images/short-bolsillo-poli.jpeg',
-  //   imagenes: [
-  //     '/assets/images/short-bolsillo-poli.jpeg',
-  //     '/assets/images/short-bolsillo-atras.jpeg',
-  //     '/assets/images/short-bolsillo-azul-petrolio.jpeg',
-  //   ]
-  // },
-  // {
-  //   id: 19,
-  //   nombre: "Short+Top",
-  //   modelo: "short bolsillo+top poliamida",
-  //   genero: "dama",
-  //   precio: 38000,
-  //   descripcion: "",
-  //   currentImage: '/assets/images/short-bolsillo-poli.jpeg',
-  //   imagenes: [
-  //     '/assets/images/short-bolsillo-poli.jpeg',
-  //     '/assets/images/short-bolsillo-atras.jpeg',
-  //     '/assets/images/short-bolsillo-azul-petrolio.jpeg',
-  //   ]
-  // },
+  //
+  {
+    id: 13,
+    nombre: "Licra (Solo)",
+    modelo: "Push Up Corazon",
+    genero: "dama",
+    precio: 45000,
+    precio_compra: 24000,
+    descripcion: "",
+    currentImage: `${licra}/${pushUp}/${corazon}/atras-azul-rey.jpg`,
+    imagenes: [
+      `${licra}/${pushUp}/${corazon}/atras-azul-rey.jpg`,
+    ]
+  },
+  {
+    id: 14,
+    nombre: "Short (Solo)",
+    modelo: "Seamles",
+    genero: "dama",
+    precio: 65000,
+    precio_compra: 39000,
+    descripcion: "",
+    currentImage: `${shorts}/${seamless}/delante-negro.jpg`,
+    imagenes: [
+      `${shorts}/${seamless}/delante-negro.jpg`,
+      `${shorts}/${seamless}/delante-terracota.jpg`,
+      `${shorts}/${seamless}/delante-rosado.jpg`,
+    ]
+  },
+  {
+    id: 15,
+    nombre: "Top",
+    modelo: "",
+    genero: "dama",
+    precio: 20000,
+    precio_compra: 11000,
+    descripcion: "",
+    currentImage: `${top}/delante-terracota.jpg`,
+    imagenes: [
+      `${top}/delante-terracota.jpg`,
+    ]
+  },
+  {
+    id: 16,
+    nombre: "Top",
+    modelo: "",
+    genero: "dama",
+    precio: 20000,
+    precio_compra: 7000,
+    descripcion: "",
+    currentImage: `${top}/delante-rojo.jpg`,
+    imagenes: [
+      `${top}/delante-rojo.jpg`,
+    ]
+  },
+  {
+    id: 17,
+    nombre: "Medias",
+    modelo: "Calentadoras",
+    genero: "dama",
+    precio: 18000,
+    precio_compra: 9000,
+    descripcion: "",
+    currentImage: `${medias}/${calentadoras}/delante-azul-celeste.jpg`,
+    imagenes: [
+      `${medias}/${calentadoras}/delante-azul-celeste.jpg`,
+      `${medias}/${calentadoras}/delante-azul-rey.jpg`,
+      `${medias}/${calentadoras}/delante-azul-turquesa.jpg`,
+      `${medias}/${calentadoras}/delante-blanco.jpg`,
+      `${medias}/${calentadoras}/delante-gris.jpg`,
+      `${medias}/${calentadoras}/delante-naranja.jpg`,
+      `${medias}/${calentadoras}/delante-negro.jpg`,
+      `${medias}/${calentadoras}/delante-rosado-claro.jpg`,
+      `${medias}/${calentadoras}/delante-rosado-oscuro.jpg`,
+      `${medias}/${calentadoras}/delante-verde-menta.jpg`,
+    ]
+  },
+  {
+    id: 18,
+    nombre: "Top",
+    modelo: "Unicolor Picapiedras",
+    genero: "dama",
+    precio: 20000,
+    precio_compra: 10000,
+    descripcion: "",
+    currentImage: `${top}/${unicolor}/${picapiedras}/delante-fucsia.jpg`,
+    imagenes: [
+      `${top}/${unicolor}/${picapiedras}/delante-fucsia.jpg`,
+      `${top}/${unicolor}/${picapiedras}/delante-amarillo-colombia.jpg`,
+      `${top}/${unicolor}/${picapiedras}/delante-azul-celeste.jpg`,
+      `${top}/${unicolor}/${picapiedras}/delante-amarillo-neon.jpg`,
+      `${top}/${unicolor}/${picapiedras}/delante-azul-turqueza.jpg`,
+      `${top}/${unicolor}/${picapiedras}/delante-azul-turqui.jpg`,
+      `${top}/${unicolor}/${picapiedras}/delante-blanco.jpg`,
+      `${top}/${unicolor}/${picapiedras}/delante-cafe.jpg`,
+      `${top}/${unicolor}/${picapiedras}/delante-cereza.jpg`,
+      `${top}/${unicolor}/${picapiedras}/delante-coral.jpg`,
+      `${top}/${unicolor}/${picapiedras}/delante-gris.jpg`,
+      `${top}/${unicolor}/${picapiedras}/delante-naranja.jpg`,
+      `${top}/${unicolor}/${picapiedras}/delante-terracota.jpg`,
+      `${top}/${unicolor}/${picapiedras}/delante-verde-cali.jpg`,
+      `${top}/${unicolor}/${picapiedras}/delante-verde-militar.jpg`,
+      `${top}/${unicolor}/${picapiedras}/delante-verde-neon.jpg`,
+    ]
+  },
+  {
+    id: 19,
+    nombre: "Top",
+    modelo: "Unicolor Angie",
+    genero: "dama",
+    precio: 20000,
+    precio_compra: 10000,
+    descripcion: "",
+    currentImage: `${top}/${unicolor}/${angie}/delante-verde-cali.jpg`,
+    imagenes: [
+      `${top}/${unicolor}/${angie}/delante-verde-cali.jpg`,
+      `${top}/${unicolor}/${angie}/delante-amarillo-mostaza.jpg`,
+      `${top}/${unicolor}/${angie}/delante-azul-rey.jpg`,
+      `${top}/${unicolor}/${angie}/delante-amarillo-neon.jpg`,
+      `${top}/${unicolor}/${angie}/delante-coral.jpg`,
+      `${top}/${unicolor}/${angie}/delante-azul-turqui.jpg`,
+      `${top}/${unicolor}/${angie}/delante-cafe.jpg`,
+      `${top}/${unicolor}/${angie}/delante-negro.jpg`,
+      `${top}/${unicolor}/${angie}/delante-gris.jpg`,
+      `${top}/${unicolor}/${angie}/delante-terracota.jpg`,
+      `${top}/${unicolor}/${angie}/delante-verde-militar.jpg`,
+    ]
+  },
   // {
   //   id: 20,
   //   nombre: "Short+Top",
