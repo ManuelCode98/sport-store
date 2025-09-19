@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import './ShoppingCart.css';
+import { formatPrices } from "../../helpers/formatPrices";
 
 const ShoppingCart = ({ products, setProducts }) => {
 
   const [ numberProductState, setNumberProductState ] = useState(0);
+  const [ resultsState, setResultsState ] = useState([]);
   const [ openCartState, setOpenCartState ] = useState(false);
 
   
@@ -24,6 +26,9 @@ const ShoppingCart = ({ products, setProducts }) => {
     if (products) {
       
       setNumberProductState( products.length );
+      const prices = products.map( product => product.precio * product.amount );
+      setResultsState( prices );
+     
     }
 
 
@@ -49,21 +54,18 @@ const ShoppingCart = ({ products, setProducts }) => {
       return result;
     })
 
-    // Luego los sumo para obtener el valor total a pagar
+    // Luego los sumo para obtener el valor total a pagar y se lo enviamos a la funcion formatPrice
     const result = results.reduce( ( acumulator, currentPrice ) => acumulator + currentPrice, 0 );
-    // Lo formateo para que sea en pesos colombianos
-    const totalToPay = result.toLocaleString('es-CO',
-      { style: 'currency', currency: 'COP' }
-    )
+
 
     let message = `Hola quiero hacer este pedido: \n\n\n`;
     shoppingCartProducts.forEach( ( product, index ) => {
-      message += `${ index + 1 }) ${ product.nombre } ${ product.modelo } para ${ product.genero } valor: ${ product.precio } cantidad: ${ product.amount } color: ${ product.color } \n\n`;
+      message += `${ index + 1 }) ${ product.nombre } ${ product.modelo } para ${ product.genero } valor: ${ formatPrices( product.precio ) } cantidad: ${ product.amount } color: ${ product.color } total = ${ formatPrices( (product.precio * product.amount) ) } \n\n`;
     });
 
 
     // Formatiamos el mensaje
-    const formatMessage = encodeURIComponent( `${message} Total a pagar: ${ totalToPay }`); 
+    const formatMessage = encodeURIComponent( `${message} Total a pagar: ${ formatPrices( result ) }`); 
 
     const urlWhatsApp = `https://wa.me/${numberWhatsapp}?text=${ formatMessage }`;
     
@@ -99,6 +101,12 @@ const ShoppingCart = ({ products, setProducts }) => {
     localStorage.setItem( 'products', JSON.stringify( saveProducts ) );
 
     setProducts( newArrayProducts );
+  }
+
+  const sumPrices = ( vales )=>{
+
+    const result = vales.reduce( (acc, currentValue)=> acc + currentValue, 0 );
+    return result;
   }
 
   return (
@@ -154,7 +162,7 @@ const ShoppingCart = ({ products, setProducts }) => {
                       <div key={index} className="products-cart">
                         <img className="product-photo-cart" src={product.currentImage} />
                         <div>
-                          {product.nombre} {product.modelo} Cant: {product.amount} Color: {product.color} Precio: <span style={{ color: 'green' }}>{product.precio}</span>
+                          {product.nombre} {product.modelo} <span className="amount-shopping-cart">{product.amount}</span> X <span className="result-shopping-cart">{formatPrices( product.precio )}</span> Color: {product.color} total = <span className="result-shopping-cart">{formatPrices( ( product.precio * product.amount) )}</span>
 
                           <button 
                             className="btn-trash"
@@ -174,6 +182,11 @@ const ShoppingCart = ({ products, setProducts }) => {
                       
                 }
                 
+              </div>
+              <div>
+                Total a pagar : <span className="result-shopping-cart"> 
+                    { formatPrices( sumPrices( resultsState ) )  } 
+                  </span>
               </div>
           </>
           : ''

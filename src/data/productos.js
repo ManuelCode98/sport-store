@@ -1,6 +1,6 @@
 // import enterizos  from '../data./assets/catalog/enterizos';
 const enterizos = '/assets/catalogo/enterizos';
-const busos = '/assets/catalogo/busos';
+const buzos = '/assets/catalogo/buzos';
 const shorts = '/assets/catalogo/shorts';
 const blusas = '/assets/catalogo/blusas';
 const blusones = '/assets/catalogo/blusones';
@@ -9,8 +9,9 @@ const licraMastop = '/assets/catalogo/licra+top';
 const licra = '/assets/catalogo/licra';
 const top = '/assets/catalogo/top';
 const medias = '/assets/catalogo/medias';
+const cinturillas = '/assets/catalogo/cinturillas';
 
-
+const basicas = 'basicas';
 const pushUp = 'push-up';
 const calentadoras = 'calentadoras';
 const unicolor = 'unicolor';
@@ -20,12 +21,14 @@ const plus = 'plus';
 const seamless = 'seamless';
 const corto = 'corto';
 const largo = 'largo';
+const latex = 'latex';
+const powernet = 'powernet';
 
-const botaAncha = 'bota-ancha';
+const serenity = 'serenity';
 const ela = 'ela';
 const mangaLarga = 'manga-larga';
 const martina = 'martina';
-const capriati = 'capriati';
+const oversizeCapriati = 'oversize-capriati';
 const talego = 'talego';
 const sinPushUp = 'sin-push-up';
 const corazon = 'corazon';
@@ -33,7 +36,7 @@ const picapiedras = 'picapiedras';
 const angie = 'angie';
 const luxury = 'luxury';
 
-const basicas = 'basicas'
+const libelula = 'libelula'
 
 export const productos = [
   // {
@@ -70,47 +73,51 @@ export const productos = [
   {
     id: 3,
     nombre: "Enterizo",
-    modelo: "Push-up bota ancha",
+    modelo: "Largo Push-up Serenity",
     genero: "dama",
-    precio: 70000,
+    precio: 100000,
     precio_compra: 48500,
+    precio_anterior:110000,
     descripcion: "Rojo, Negro, Verde Militar, Lila, Habano",
-    currentImage: `${enterizos}/${largo}/${pushUp}/${botaAncha}/delante-negro.jpg`,
+    currentImage: `${enterizos}/${largo}/${pushUp}/${serenity}/delante-negro.jpg`,
     imagenes: [
-      `${enterizos}/${largo}/${pushUp}/${botaAncha}/delante-negro.jpg`,
-      `${enterizos}/${largo}/${pushUp}/${botaAncha}/atras-negro.jpg`,
-      `${enterizos}/${largo}/${pushUp}/${botaAncha}/delante-rojo.jpg`,
-      `${enterizos}/${largo}/${pushUp}/${botaAncha}/atras-rojo.jpg`,
-      `${enterizos}/${largo}/${pushUp}/${botaAncha}/delante-habano.jpg`,
-      `${enterizos}/${largo}/${pushUp}/${botaAncha}/atras-habano.jpg`,
-      `${enterizos}/${largo}/${pushUp}/${botaAncha}/delante-lila.jpg`,
-      `${enterizos}/${largo}/${pushUp}/${botaAncha}/atras-lila.jpg`,
-    ]
+      `${enterizos}/${largo}/${pushUp}/${serenity}/delante-negro.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${serenity}/atras-negro.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${serenity}/delante-rojo.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${serenity}/atras-rojo.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${serenity}/delante-habano.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${serenity}/atras-habano.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${serenity}/delante-lila.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${serenity}/atras-lila.jpg`,
+    ],
+    descuento: true
   },
   {
     id: 4,
-    nombre: "Buso",
+    nombre: "Buzo",
     modelo: "Unicolor Manga Larga",
     genero: "dama",
-    precio: 30000,
+    precio: 35000,
     precio_compra: 16000,
+    precio_anterior:42000,
     descripcion: "",
-    currentImage: `${busos}/${unicolor}/${mangaLarga}/delante-amarillo-brillante.jpg`,
+    currentImage: `${buzos}/${unicolor}/${mangaLarga}/delante-amarillo-brillante.jpg`,
     imagenes: [
-      `${busos}/${unicolor}/${mangaLarga}/delante-amarillo-brillante.jpg`,
-      `${busos}/${unicolor}/${mangaLarga}/delante-amarillo-claro.jpg`,
-      `${busos}/${unicolor}/${mangaLarga}/delante-amarillo-mostaza.jpg`,
-      `${busos}/${unicolor}/${mangaLarga}/delante-azul-cielo.jpg`,
-      `${busos}/${unicolor}/${mangaLarga}/delante-azul-oscuro.jpg`,
-      `${busos}/${unicolor}/${mangaLarga}/delante-azul-rey.jpg`,
-      `${busos}/${unicolor}/${mangaLarga}/delante-fucsia.jpg`,
-      `${busos}/${unicolor}/${mangaLarga}/delante-naranja.jpg`,
-      `${busos}/${unicolor}/${mangaLarga}/delante-negro.jpg`,
-      `${busos}/${unicolor}/${mangaLarga}/delante-terracota.jpg`,
-      `${busos}/${unicolor}/${mangaLarga}/delante-verde-bosque.jpg`,
-      `${busos}/${unicolor}/${mangaLarga}/delante-verde-manzana.jpg`,
-      `${busos}/${unicolor}/${mangaLarga}/delante-verde-turquesa.jpg`,
-    ]
+      `${buzos}/${unicolor}/${mangaLarga}/delante-amarillo-brillante.jpg`,
+      `${buzos}/${unicolor}/${mangaLarga}/delante-amarillo-claro.jpg`,
+      `${buzos}/${unicolor}/${mangaLarga}/delante-amarillo-mostaza.jpg`,
+      `${buzos}/${unicolor}/${mangaLarga}/delante-azul-cielo.jpg`,
+      `${buzos}/${unicolor}/${mangaLarga}/delante-azul-oscuro.jpg`,
+      `${buzos}/${unicolor}/${mangaLarga}/delante-azul-rey.jpg`,
+      `${buzos}/${unicolor}/${mangaLarga}/delante-fucsia.jpg`,
+      `${buzos}/${unicolor}/${mangaLarga}/delante-naranja.jpg`,
+      `${buzos}/${unicolor}/${mangaLarga}/delante-negro.jpg`,
+      `${buzos}/${unicolor}/${mangaLarga}/delante-terracota.jpg`,
+      `${buzos}/${unicolor}/${mangaLarga}/delante-verde-bosque.jpg`,
+      `${buzos}/${unicolor}/${mangaLarga}/delante-verde-manzana.jpg`,
+      `${buzos}/${unicolor}/${mangaLarga}/delante-verde-turquesa.jpg`,
+    ],
+    descuento: true
   },
   {
     id: 5,
@@ -119,6 +126,7 @@ export const productos = [
     genero: "dama",
     precio: 29000,
     precio_compra: 16000,
+    precio_anterior:35000,
     descripcion: "Azul, Negro, Verde, Gris, Fucsia",
     currentImage: `${shorts}/${pushUp}/${corazon}/delante-fucsia.jpg`,
     imagenes: [
@@ -132,53 +140,59 @@ export const productos = [
       `${shorts}/${pushUp}/${corazon}/atras-azul-oscuro.jpg`,
       `${shorts}/${pushUp}/${corazon}/delante-verde-bosque.jpg`,
       `${shorts}/${pushUp}/${corazon}/atras-verde-bosque.jpg`,
-    ]
+    ],
+    descuento: true
   },
 {
     id: 6,
     nombre: "Blusa",
-    modelo: "Basica",
+    modelo: "Libelula",
     genero: "dama",
-    precio: 18000,
+    precio: 20000,
     precio_compra: 10000,
+    precio_anterior:27000,
     descripcion: "",
-    currentImage: `${blusas}/${basicas}/delante-rosado-calido.jpg`,
+    currentImage: `${blusas}/${basicas}/${libelula}/delante-rosado-calido.jpg`,
     imagenes: [
-      `${blusas}/${basicas}/delante-rosado-calido.jpg`,
-      `${blusas}/${basicas}/delante-morado.jpg`,
-      `${blusas}/${basicas}/delante-negro.jpg`,
-      `${blusas}/${basicas}/delante-fucsia.jpg`,
-      `${blusas}/${basicas}/delante-rojo.jpg`,
-      `${blusas}/${basicas}/delante-rosado.jpg`,
-      `${blusas}/${basicas}/delante-azul.jpg`,
-      `${blusas}/${basicas}/delante-azul-cielo.jpg`,
-      `${blusas}/${basicas}/delante-blanco.jpg`,
-    ]
+      `${blusas}/${basicas}/${libelula}/delante-rosado-calido.jpg`,
+      `${blusas}/${basicas}/${libelula}/delante-morado.jpg`,
+      `${blusas}/${basicas}/${libelula}/delante-negro.jpg`,
+      `${blusas}/${basicas}/${libelula}/delante-fucsia.jpg`,
+      `${blusas}/${basicas}/${libelula}/delante-rojo.jpg`,
+      `${blusas}/${basicas}/${libelula}/delante-rosado.jpg`,
+      `${blusas}/${basicas}/${libelula}/delante-azul.jpg`,
+      `${blusas}/${basicas}/${libelula}/delante-azul-cielo.jpg`,
+      `${blusas}/${basicas}/${libelula}/delante-blanco.jpg`,
+    ],
+    descuento: true
   },
   {
     id: 7,
     nombre: "Enterizo",
-    modelo: "En V Power",
+    modelo: "Largo Push Up Luxury",
     genero: "dama",
-    precio: 60000,
+    precio: 75000,
     precio_compra: 40500,
+    precio_anterior:83000,
     // descripcion: "Rojo, Negro, Verde Militar, Lila, Habano",
     descripcion: "",
-    currentImage: `${enterizos}/${largo}/${pushUp}/${enV}/delante-negro.jpg`,
+    currentImage: `${enterizos}/${largo}/${pushUp}/${luxury}/delante-negro.jpg`,
     imagenes: [
-      `${enterizos}/${largo}/${pushUp}/${enV}/delante-negro.jpg`,
-      `${enterizos}/${largo}/${pushUp}/${enV}/atras-negro.jpg`,
-      `${enterizos}/${largo}/${pushUp}/${enV}/atras-azul.jpg`,
-    ]
+      `${enterizos}/${largo}/${pushUp}/${luxury}/delante-negro.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${luxury}/atras-negro.jpg`,
+      `${enterizos}/${largo}/${pushUp}/${luxury}/atras-azul.jpg`,
+    ],
+    descuento: true
   },
   {
     id: 8,
     nombre: "Short + Top",
     modelo: "Bolsillo",
     genero: "dama",
-    precio: 38000,
+    precio: 49000,
     precio_compra: 23000,
-    descripcion: "Tela suplex polimida",
+    precio_anterior:55000,
+    descripcion: "",
     currentImage: `${shortMastop}/${bolsillo}/delante-habano-claro.jpg`,
     imagenes: [
       `${shortMastop}/${bolsillo}/delante-habano-claro.jpg`,
@@ -188,15 +202,17 @@ export const productos = [
       `${shortMastop}/${bolsillo}/atras-negro.jpg`,
       `${shortMastop}/${bolsillo}/delante-habano-oscuro.jpg`,
       `${shortMastop}/${bolsillo}/atras-habano-oscuro.jpg`,
-    ]
+    ],
+    descuento: true
   },
   {
     id: 9,
     nombre: "Licra + Top",
-    modelo: "Falta definir",
+    modelo: "Cuatro Tiras",
     genero: "dama",
-    precio: 39000,
-    precio_compra: 23000,
+    precio: 64000,
+    precio_compra: 32000,
+    precio_anterior:75000,
     descripcion: "Talla Plus",
     currentImage: `${licraMastop}/${plus}/delante-negro.jpg`,
     imagenes: [
@@ -204,51 +220,57 @@ export const productos = [
       `${licraMastop}/${plus}/atras-rojo.jpg`,
       `${licraMastop}/${plus}/muestra-azul-rey.jpg`,
       `${licraMastop}/${plus}/muestra-azul-oscuro.jpg`,
-    ]
+    ],
+    descuento: true
   },
-  {
-    id: 10,
-    nombre: "Enterizo",
-    modelo: "Push-up Corto Ela",
-    genero: "dama",
-    precio: 75000,
-    precio_compra: 41500,
-    // descripcion: "Rojo, Negro, Verde Militar, Lila, Azul Bebe, Cocoa, Vainilla",
-    descripcion: "",
-    currentImage: `${enterizos}/${corto}/${pushUp}/${ela}/delante-rojo.jpg`,
-    imagenes: [
-      `${enterizos}/${corto}/${pushUp}/${ela}/delante-rojo.jpg`,
-    ]
-  },
+  // {
+  //   id: 10,
+  //   nombre: "Enterizo",
+  //   modelo: "Push-up Corto Ela",
+  //   genero: "dama",
+  //   precio: 75000,
+  //   precio_compra: 41500,
+  //   precio_anterior:85000,
+  //   // descripcion: "Rojo, Negro, Verde Militar, Lila, Azul Bebe, Cocoa, Vainilla",
+  //   descripcion: "",
+  //   currentImage: `${enterizos}/${corto}/${pushUp}/${ela}/delante-rojo.jpg`,
+  //   imagenes: [
+  //     `${enterizos}/${corto}/${pushUp}/${ela}/delante-rojo.jpg`,
+  //   ],
+  //   descuento: true
+  // },
   {
     id: 11,
     nombre: "Bluson",
-    modelo: "Capriati",
+    modelo: "Oversize Capriati",
     genero: "dama",
-    precio: 25000,
+    precio: 35000,
     precio_compra: 16000,
-    descripcion: "Negro, Verde, Gris, Fucsia",
-    currentImage: `${blusones}/${capriati}/delante-fucsia-claro.jpg`,
+    precio_anterior: 45000,
+    descripcion: "",
+    currentImage: `${blusones}/${oversizeCapriati}/delante-fucsia-claro.jpg`,
     imagenes: [
-      `${blusones}/${capriati}/delante-fucsia-claro.jpg`,
-      `${blusones}/${capriati}/delante-fucsia-oscuro.jpg`,
-      `${blusones}/${capriati}/delante-negro.jpg`,
-      `${blusones}/${capriati}/delante-gris.jpg`,
-      `${blusones}/${capriati}/delante-blanco.jpg`,
-      `${blusones}/${capriati}/delante-verde-bosque.jpg`,
-      `${blusones}/${capriati}/delante-verde-claro.jpg`,
-      `${blusones}/${capriati}/delante-verde-manzana.jpg`,
-      `${blusones}/${capriati}/delante-rosado.jpg`,
-    ]
+      `${blusones}/${oversizeCapriati}/delante-fucsia-claro.jpg`,
+      `${blusones}/${oversizeCapriati}/delante-fucsia-oscuro.jpg`,
+      `${blusones}/${oversizeCapriati}/delante-negro.jpg`,
+      `${blusones}/${oversizeCapriati}/delante-gris.jpg`,
+      `${blusones}/${oversizeCapriati}/delante-blanco.jpg`,
+      `${blusones}/${oversizeCapriati}/delante-verde-bosque.jpg`,
+      `${blusones}/${oversizeCapriati}/delante-verde-claro.jpg`,
+      `${blusones}/${oversizeCapriati}/delante-verde-manzana.jpg`,
+      `${blusones}/${oversizeCapriati}/delante-rosado.jpg`,
+    ],
+    descuento: true
   },
   {
     id: 12,
     nombre: "Enterizo",
     modelo: "Corto Sin Push-up Talego",
     genero: "dama",
-    precio: 59000,
+    precio: 75000,
     precio_compra: 37500,
-    descripcion: "Tela nylon power",
+    precio_anterior:83000,
+    descripcion: "",
     currentImage: `${enterizos}/${corto}/${sinPushUp}/${talego}/delante-rojo.jpg`,
     imagenes: [
       `${enterizos}/${corto}/${sinPushUp}/${talego}/delante-rojo.jpg`,
@@ -260,7 +282,8 @@ export const productos = [
       `${enterizos}/${corto}/${sinPushUp}/${talego}/delante-azul-claro.jpg`,
       `${enterizos}/${corto}/${sinPushUp}/${talego}/atras-verde-claro.jpg`,
       `${enterizos}/${corto}/${sinPushUp}/${talego}/delante-rosado.jpg`,
-    ]
+    ],
+    descuento: true
   },
   //
   {
@@ -268,13 +291,28 @@ export const productos = [
     nombre: "Licra (Solo)",
     modelo: "Push Up Corazon",
     genero: "dama",
-    precio: 38000,
+    precio: 50000,
     precio_compra: 24000,
+    precio_anterior:60000,
     descripcion: "",
-    currentImage: `${licra}/${pushUp}/${corazon}/atras-azul-rey.jpg`,
+    currentImage: `${licra}/${pushUp}/${corazon}/atras-azul-petroleo.jpg`,
     imagenes: [
+      `${licra}/${pushUp}/${corazon}/atras-azul-petroleo.jpg`,
+      `${licra}/${pushUp}/${corazon}/atras-cafe.jpg`,
+      `${licra}/${pushUp}/${corazon}/atras-fucsia.jpg`,
+      `${licra}/${pushUp}/${corazon}/atras-gris.jpg`,
+      `${licra}/${pushUp}/${corazon}/atras-lila.jpg`,
+      `${licra}/${pushUp}/${corazon}/atras-negro.jpg`,
+      `${licra}/${pushUp}/${corazon}/atras-rojo.jpg`,
+      `${licra}/${pushUp}/${corazon}/atras-terracota.jpg`,
+      `${licra}/${pushUp}/${corazon}/atras-uva.jpg`,
+      `${licra}/${pushUp}/${corazon}/atras-vainilla.jpg`,
+      `${licra}/${pushUp}/${corazon}/atras-verde-esmeralda.jpg`,
       `${licra}/${pushUp}/${corazon}/atras-azul-rey.jpg`,
-    ]
+      `${licra}/${pushUp}/${corazon}/atras-verde-militar.jpg`,
+      `${licra}/${pushUp}/${corazon}/atras-azul-turqui.jpg`,
+    ],
+    descuento: true
   },
   {
     id: 14,
@@ -283,13 +321,15 @@ export const productos = [
     genero: "dama",
     precio: 59000,
     precio_compra: 39000,
+    precio_anterior:65000,
     descripcion: "",
     currentImage: `${shorts}/${seamless}/delante-negro.jpg`,
     imagenes: [
       `${shorts}/${seamless}/delante-negro.jpg`,
       `${shorts}/${seamless}/delante-terracota.jpg`,
       `${shorts}/${seamless}/delante-rosado.jpg`,
-    ]
+    ],
+    descuento: true
   },
   {
     id: 15,
@@ -298,11 +338,13 @@ export const productos = [
     genero: "dama",
     precio: 15000,
     precio_compra: 7000,
+    precio_anterior:20000,
     descripcion: "",
     currentImage: `${top}/delante-terracota.jpg`,
     imagenes: [
       `${top}/delante-terracota.jpg`,
-    ]
+    ],
+    descuento: true
   },
   {
     id: 16,
@@ -311,19 +353,22 @@ export const productos = [
     genero: "dama",
     precio: 19000,
     precio_compra: 11000,
+    precio_anterior:25000,
     descripcion: "",
     currentImage: `${top}/delante-rojo.jpg`,
     imagenes: [
       `${top}/delante-rojo.jpg`,
-    ]
+    ],
+    descuento: true
   },
   {
     id: 17,
     nombre: "Medias",
     modelo: "Calentadoras",
     genero: "dama",
-    precio: 18000,
+    precio: 15000,
     precio_compra: 9000,
+    precio_anterior:18000,
     descripcion: "",
     currentImage: `${medias}/${calentadoras}/delante-azul-celeste.jpg`,
     imagenes: [
@@ -337,7 +382,8 @@ export const productos = [
       `${medias}/${calentadoras}/delante-rosado-claro.jpg`,
       `${medias}/${calentadoras}/delante-rosado-oscuro.jpg`,
       `${medias}/${calentadoras}/delante-verde-menta.jpg`,
-    ]
+    ],
+    descuento: true
   },
   {
     id: 18,
@@ -346,6 +392,7 @@ export const productos = [
     genero: "dama",
     precio: 20000,
     precio_compra: 10000,
+    precio_anterior:25000,
     descripcion: "",
     currentImage: `${top}/${unicolor}/${picapiedras}/delante-fucsia.jpg`,
     imagenes: [
@@ -365,7 +412,8 @@ export const productos = [
       `${top}/${unicolor}/${picapiedras}/delante-verde-cali.jpg`,
       `${top}/${unicolor}/${picapiedras}/delante-verde-militar.jpg`,
       `${top}/${unicolor}/${picapiedras}/delante-verde-neon.jpg`,
-    ]
+    ],
+    descuento: true
   },
   {
     id: 19,
@@ -374,6 +422,7 @@ export const productos = [
     genero: "dama",
     precio: 20000,
     precio_compra: 10000,
+    precio_anterior:25000,
     descripcion: "",
     currentImage: `${top}/${unicolor}/${angie}/delante-verde-cali.jpg`,
     imagenes: [
@@ -388,7 +437,8 @@ export const productos = [
       `${top}/${unicolor}/${angie}/delante-gris.jpg`,
       `${top}/${unicolor}/${angie}/delante-terracota.jpg`,
       `${top}/${unicolor}/${angie}/delante-verde-militar.jpg`,
-    ]
+    ],
+    descuento: true
   },
   {
     id: 20,
@@ -396,43 +446,53 @@ export const productos = [
     modelo: "Corto Push-up Luxury",
     genero: "dama",
     precio: 60000,
-    precio_compra: 45000,
+    precio_compra: 38500,
+    precio_anterior:68000,
     descripcion: "",
     currentImage: `${enterizos}/${corto}/${pushUp}/${luxury}/delante-rojo.jpg`,
     imagenes: [
       `${enterizos}/${corto}/${pushUp}/${luxury}/delante-rojo.jpg`,
       `${enterizos}/${corto}/${pushUp}/${luxury}/atras-rojo.jpg`,
       `${enterizos}/${corto}/${pushUp}/${luxury}/atras-azul.jpg`,
-    ]
+      `${enterizos}/${corto}/${pushUp}/${luxury}/atras-morado.jpg`,
+      `${enterizos}/${corto}/${pushUp}/${luxury}/atras-negro.jpg`,
+      `${enterizos}/${corto}/${pushUp}/${luxury}/delante-terracota.jpg`,
+    ],
+    descuento: true
   },
-  // {
-  //   id: 21,
-  //   nombre: "Short+Top",
-  //   modelo: "short bolsillo+top poliamida",
-  //   genero: "dama",
-  //   precio: 38000,
-  //   descripcion: "",
-  //   currentImage: '/assets/images/short-bolsillo-poli.jpeg',
-  //   imagenes: [
-  //     '/assets/images/short-bolsillo-poli.jpeg',
-  //     '/assets/images/short-bolsillo-atras.jpeg',
-  //     '/assets/images/short-bolsillo-azul-petrolio.jpeg',
-  //   ]
-  // },
-  // {
-  //   id: 22,
-  //   nombre: "Short+Top",
-  //   modelo: "short bolsillo+top poliamida",
-  //   genero: "dama",
-  //   precio: 38000,
-  //   descripcion: "",
-  //   currentImage: '/assets/images/short-bolsillo-poli.jpeg',
-  //   imagenes: [
-  //     '/assets/images/short-bolsillo-poli.jpeg',
-  //     '/assets/images/short-bolsillo-atras.jpeg',
-  //     '/assets/images/short-bolsillo-azul-petrolio.jpeg',
-  //   ]
-  // },
+  {
+    id: 21,
+    nombre: "Cinturilla",
+    modelo: "Latex",
+    genero: "dama",
+    precio: 76000,
+    precio_compra: 38000,
+    precio_anterior:84000,
+    descripcion: "Hasta 2XL",
+    currentImage: `${cinturillas}/${latex}/delante-negra.jpg`,
+    imagenes: [
+      `${cinturillas}/${latex}/delante-negra.jpg`,
+      `${cinturillas}/${latex}/guia-negra.jpg`,
+      `${cinturillas}/${latex}/calibre-negra.jpg`,
+    ],
+    descuento: true
+  },
+  {
+    id: 22,
+  nombre: "Cinturilla",
+    modelo: "Power Net Premium",
+    genero: "dama",
+    precio: 98000,
+    precio_compra: 45000,
+    precio_anterior:110000,
+    descripcion: "Hasta 2XL",
+    currentImage: `${cinturillas}/${powernet}/delante-negra.jpg`,
+    imagenes: [
+      `${cinturillas}/${powernet}/delante-negra.jpg`,
+      `${cinturillas}/${powernet}/guia-negra.jpg`,
+    ],
+    descuento: true
+  },
   // {
   //   id: 23,
   //   nombre: "Short+Top",

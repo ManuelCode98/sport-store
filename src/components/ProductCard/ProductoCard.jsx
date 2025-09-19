@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import './ProductCard.css';
+import { formatPrices } from "../../helpers/formatPrices";
 
 
 export default function ProductoCard({ producto }) {
@@ -31,7 +32,16 @@ export default function ProductoCard({ producto }) {
             Modelo: {producto.modelo}
           </div>
           <div className="product-card-price">
-            Cop ${producto.precio.toFixed(2)}
+            {
+              producto.descuento
+                ? 
+                  <>
+                    <div className="previous-price">Cop ${ formatPrices( producto.precio_anterior ) }</div>
+                    <div className="price">Cop ${ formatPrices( producto.precio ) }</div>
+                  </>
+                :
+                  <div className="price">Cop ${ formatPrices( producto.precio ) }</div>
+            }
           </div>
         </div>
       </Link> 
