@@ -1,42 +1,4 @@
-// import enterizos  from '../data./assets/catalog/enterizos';
-const enterizos = '/assets/catalogo/enterizos';
-const buzos = '/assets/catalogo/buzos';
-const shorts = '/assets/catalogo/shorts';
-const blusas = '/assets/catalogo/blusas';
-const blusones = '/assets/catalogo/blusones';
-const shortMastop = '/assets/catalogo/short+top';
-const licraMastop = '/assets/catalogo/licra+top';
-const licra = '/assets/catalogo/licra';
-const top = '/assets/catalogo/top';
-const medias = '/assets/catalogo/medias';
-const cinturillas = '/assets/catalogo/cinturillas';
-
-const basicas = 'basicas';
-const pushUp = 'push-up';
-const calentadoras = 'calentadoras';
-const unicolor = 'unicolor';
-const enV = 'en-v';
-const bolsillo = 'bolsillo-suplex';
-const plus = 'plus';
-const seamless = 'seamless';
-const corto = 'corto';
-const largo = 'largo';
-const latex = 'latex';
-const powernet = 'powernet';
-
-const serenity = 'serenity';
-const ela = 'ela';
-const mangaLarga = 'manga-larga';
-const martina = 'martina';
-const oversizeCapriati = 'oversize-capriati';
-const talego = 'talego';
-const sinPushUp = 'sin-push-up';
-const corazon = 'corazon';
-const picapiedras = 'picapiedras';
-const angie = 'angie';
-const luxury = 'luxury';
-
-const libelula = 'libelula'
+import { top, alejandra, angie, asimetrica, basicas, blusas, blusones, bolsillo, buzos, calentadoras, cinturillas, corazon, corto, enterizos, largo, latex, libelula, licra, licraMastop, luxury, mangaLarga, medias, mora, oversizeCapriati, picapiedras, plus, powernet, premium, pushUp, seamless, serenity, shortMastop, shorts, sinPushUp, talego, unicolor } from "./path";
 
 export const productos = [
   // {
@@ -355,9 +317,9 @@ export const productos = [
     precio_compra: 11000,
     precio_anterior:25000,
     descripcion: "",
-    currentImage: `${top}/delante-rojo.jpg`,
+    currentImage: `${top}/${unicolor}/${alejandra}/delante-rojo.jpg`,
     imagenes: [
-      `${top}/delante-rojo.jpg`,
+      `${top}/${unicolor}/${alejandra}/delante-rojo.jpg`,
     ],
     descuento: true
   },
@@ -493,46 +455,327 @@ export const productos = [
     ],
     descuento: true
   },
-  // {
-  //   id: 23,
-  //   nombre: "Short+Top",
-  //   modelo: "short bolsillo+top poliamida",
-  //   genero: "dama",
-  //   precio: 38000,
-  //   descripcion: "",
-  //   currentImage: '/assets/images/short-bolsillo-poli.jpeg',
-  //   imagenes: [
-  //     '/assets/images/short-bolsillo-poli.jpeg',
-  //     '/assets/images/short-bolsillo-atras.jpeg',
-  //     '/assets/images/short-bolsillo-azul-petrolio.jpeg',
-  //   ]
-  // },
-  // {
-  //   id: 24,
-  //   nombre: "Short+Top",
-  //   modelo: "short bolsillo+top poliamida",
-  //   genero: "dama",
-  //   precio: 38000,
-  //   descripcion: "",
-  //   currentImage: '/assets/images/short-bolsillo-poli.jpeg',
-  //   imagenes: [
-  //     '/assets/images/short-bolsillo-poli.jpeg',
-  //     '/assets/images/short-bolsillo-atras.jpeg',
-  //     '/assets/images/short-bolsillo-azul-petrolio.jpeg',
-  //   ]
-  // },
+  {
+    id: 23,
+    nombre: "Blusa",
+    modelo: "Unicolor Asimetrica",
+    genero: "dama",
+    precio: 23000,
+    precio_compra: 10000,
+    precio_anterior:28000,
+    descripcion: "De la talla 14 a la 16",
+    currentImage: `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-amarillo-claro.jpg`,
+    imagenes: [
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-amarillo-claro.jpg`,
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-amarillo-colombia.jpg`,
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-azul-celeste.jpg`,
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-amarillo-neon.jpg`,
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-azul-turqui.jpg`,
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-blanco.jpg`,
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-azul-bebe.jpg`,
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-cafe.jpg`,
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-coral.jpg`,
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-naranja.jpg`,
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-negro.jpg`,
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-verde-cali.jpg`,
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-verde-militar.jpg`,
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-palo-de-rosa.jpg`,
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-verde-menta.jpg`,
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-rosado.jpg`,
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-morado.jpg`,
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-lila.jpg`,
+      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-rojo.jpg`,
+    ],
+    descuento: true
+  },
+  {
+    id: 24,
+    nombre: "Blusa",
+    modelo: "Unicolor Mora",
+    genero: "dama",
+    precio: 23000,
+    precio_compra: 10000,
+    precio_anterior:28000,
+    descripcion: "De la talla 14 a la 16",
+    currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+    imagenes: [
+      `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+      `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
+      `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
+    ],
+    descuento: true
+  },
   // {
   //   id: 25,
-  //   nombre: "Short+Top",
-  //   modelo: "short bolsillo+top poliamida",
+  //   nombre: "Blusa",
+  //   modelo: "Unicolor Mora",
   //   genero: "dama",
-  //   precio: 38000,
-  //   descripcion: "",
-  //   currentImage: '/assets/images/short-bolsillo-poli.jpeg',
+  //   precio: 23000,
+  //   precio_compra: 10000,
+  //   precio_anterior:28000,
+  //   descripcion: "De la talla 14 a la 16",
+  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
   //   imagenes: [
-  //     '/assets/images/short-bolsillo-poli.jpeg',
-  //     '/assets/images/short-bolsillo-atras.jpeg',
-  //     '/assets/images/short-bolsillo-azul-petrolio.jpeg',
-  //   ]
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
+  //   ],
+  //   descuento: true
   // },
+  // {
+  //   id: 26,
+  //   nombre: "Blusa",
+  //   modelo: "Unicolor Mora",
+  //   genero: "dama",
+  //   precio: 23000,
+  //   precio_compra: 10000,
+  //   precio_anterior:28000,
+  //   descripcion: "De la talla 14 a la 16",
+  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //   imagenes: [
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
+  //   ],
+  //   descuento: true
+  // },
+  // {
+  //   id: 27,
+  //   nombre: "Blusa",
+  //   modelo: "Unicolor Mora",
+  //   genero: "dama",
+  //   precio: 23000,
+  //   precio_compra: 10000,
+  //   precio_anterior:28000,
+  //   descripcion: "De la talla 14 a la 16",
+  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //   imagenes: [
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
+  //   ],
+  //   descuento: true
+  // },
+  // {
+  //   id: 28,
+  //   nombre: "Blusa",
+  //   modelo: "Unicolor Mora",
+  //   genero: "dama",
+  //   precio: 23000,
+  //   precio_compra: 10000,
+  //   precio_anterior:28000,
+  //   descripcion: "De la talla 14 a la 16",
+  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //   imagenes: [
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
+  //   ],
+  //   descuento: true
+  // },
+  // {
+  //   id: 29,
+  //   nombre: "Blusa",
+  //   modelo: "Unicolor Mora",
+  //   genero: "dama",
+  //   precio: 23000,
+  //   precio_compra: 10000,
+  //   precio_anterior:28000,
+  //   descripcion: "De la talla 14 a la 16",
+  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //   imagenes: [
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
+  //   ],
+  //   descuento: true
+  // },
+  // {
+  //   id: 30,
+  //   nombre: "Blusa",
+  //   modelo: "Unicolor Mora",
+  //   genero: "dama",
+  //   precio: 23000,
+  //   precio_compra: 10000,
+  //   precio_anterior:28000,
+  //   descripcion: "De la talla 14 a la 16",
+  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //   imagenes: [
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
+  //   ],
+  //   descuento: true
+  // },
+  // {
+  //   id: 31,
+  //   nombre: "Blusa",
+  //   modelo: "Unicolor Mora",
+  //   genero: "dama",
+  //   precio: 23000,
+  //   precio_compra: 10000,
+  //   precio_anterior:28000,
+  //   descripcion: "De la talla 14 a la 16",
+  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //   imagenes: [
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
+  //   ],
+  //   descuento: true
+  // },
+  // {
+  //   id: 32,
+  //   nombre: "Blusa",
+  //   modelo: "Unicolor Mora",
+  //   genero: "dama",
+  //   precio: 23000,
+  //   precio_compra: 10000,
+  //   precio_anterior:28000,
+  //   descripcion: "De la talla 14 a la 16",
+  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //   imagenes: [
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
+  //   ],
+  //   descuento: true
+  // },
+  // {
+  //   id: 33,
+  //   nombre: "Blusa",
+  //   modelo: "Unicolor Mora",
+  //   genero: "dama",
+  //   precio: 23000,
+  //   precio_compra: 10000,
+  //   precio_anterior:28000,
+  //   descripcion: "De la talla 14 a la 16",
+  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //   imagenes: [
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
+  //   ],
+  //   descuento: true
+  // },
+  // {
+  //   id: 34,
+  //   nombre: "Blusa",
+  //   modelo: "Unicolor Mora",
+  //   genero: "dama",
+  //   precio: 23000,
+  //   precio_compra: 10000,
+  //   precio_anterior:28000,
+  //   descripcion: "De la talla 14 a la 16",
+  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //   imagenes: [
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
+  //   ],
+  //   descuento: true
+  // },
+  // {
+  //   id: 35,
+  //   nombre: "Blusa",
+  //   modelo: "Unicolor Mora",
+  //   genero: "dama",
+  //   precio: 23000,
+  //   precio_compra: 10000,
+  //   precio_anterior:28000,
+  //   descripcion: "De la talla 14 a la 16",
+  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //   imagenes: [
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
+  //   ],
+  //   descuento: true
+  // },
+  // {
+  //   id: 36,
+  //   nombre: "Blusa",
+  //   modelo: "Unicolor Mora",
+  //   genero: "dama",
+  //   precio: 23000,
+  //   precio_compra: 10000,
+  //   precio_anterior:28000,
+  //   descripcion: "De la talla 14 a la 16",
+  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //   imagenes: [
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
+  //   ],
+  //   descuento: true
+  // },
+  // {
+  //   id: 37,
+  //   nombre: "Blusa",
+  //   modelo: "Unicolor Mora",
+  //   genero: "dama",
+  //   precio: 23000,
+  //   precio_compra: 10000,
+  //   precio_anterior:28000,
+  //   descripcion: "De la talla 14 a la 16",
+  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //   imagenes: [
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
+  //   ],
+  //   descuento: true
+  // },
+  // {
+  //   id: 38,
+  //   nombre: "Blusa",
+  //   modelo: "Unicolor Mora",
+  //   genero: "dama",
+  //   precio: 23000,
+  //   precio_compra: 10000,
+  //   precio_anterior:28000,
+  //   descripcion: "De la talla 14 a la 16",
+  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //   imagenes: [
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
+  //   ],
+  //   descuento: true
+  // },
+  // {
+  //   id: 39,
+  //   nombre: "Blusa",
+  //   modelo: "Unicolor Mora",
+  //   genero: "dama",
+  //   precio: 23000,
+  //   precio_compra: 10000,
+  //   precio_anterior:28000,
+  //   descripcion: "De la talla 14 a la 16",
+  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //   imagenes: [
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
+  //   ],
+  //   descuento: true
+  // },
+  // {
+  //   id: 40,
+  //   nombre: "Blusa",
+  //   modelo: "Unicolor Mora",
+  //   genero: "dama",
+  //   precio: 23000,
+  //   precio_compra: 10000,
+  //   precio_anterior:28000,
+  //   descripcion: "De la talla 14 a la 16",
+  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //   imagenes: [
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
+  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
+  //   ],
+  //   descuento: true
+  // },
+
 ]
