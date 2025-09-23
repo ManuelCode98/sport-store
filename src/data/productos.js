@@ -40,7 +40,7 @@ export const productos = [
     precio: 85000,
     precio_compra: 48500,
     precio_anterior:100000,
-    sizes: [ 'S','M','L' ],
+    sizes: [ 'U' ],
     descripcion: "Rojo, Negro, Verde Militar, Lila, Habano",
     currentImage: `${enterizos}/${largo}/${pushUp}/${serenity}/delante-negro.jpg`,
     imagenes: [
@@ -63,8 +63,7 @@ export const productos = [
     precio: 32000,
     precio_compra: 16000,
     precio_anterior:42000,
-    sizes: [ 'S','M','L' ],
-    descripcion: "",
+    sizes: [ 'U' ],cripcion: "",
     currentImage: `${buzos}/${unicolor}/${mangaLarga}/delante-amarillo-brillante.jpg`,
     imagenes: [
       `${buzos}/${unicolor}/${mangaLarga}/delante-amarillo-brillante.jpg`,
@@ -91,7 +90,7 @@ export const productos = [
     precio: 29000,
     precio_compra: 16000,
     precio_anterior:35000,
-    sizes: [ 'S','M','L' ],
+    sizes: [ 'U' ],
     descripcion: "Azul, Negro, Verde, Gris, Fucsia",
     currentImage: `${shorts}/${pushUp}/${corazon}/delante-fucsia.jpg`,
     imagenes: [
@@ -116,7 +115,7 @@ export const productos = [
     precio: 20000,
     precio_compra: 10000,
     precio_anterior:27000,
-    sizes: [ 'S','M','L' ],
+    sizes: [ 'U' ],
     descripcion: "",
     currentImage: `${blusas}/${basicas}/${libelula}/delante-rosado-calido.jpg`,
     imagenes: [
@@ -142,7 +141,7 @@ export const productos = [
     precio_anterior:83000,
     // descripcion: "Rojo, Negro, Verde Militar, Lila, Habano",
     descripcion: "",
-    sizes: [ 'S','M','L' ],
+    sizes: [ 'U' ],
     currentImage: `${enterizos}/${largo}/${pushUp}/${luxury}/delante-negro.jpg`,
     imagenes: [
       `${enterizos}/${largo}/${pushUp}/${luxury}/delante-negro.jpg`,
@@ -160,7 +159,7 @@ export const productos = [
     precio_compra: 23000,
     precio_anterior:48000,
     descripcion: "",
-    sizes: [ 'S','M','L' ],
+    sizes: [ 'U' ],
     currentImage: `${shortMastop}/${bolsillo}/delante-habano-claro.jpg`,
     imagenes: [
       `${shortMastop}/${bolsillo}/delante-habano-claro.jpg`,
@@ -182,8 +181,7 @@ export const productos = [
     precio_compra: 32000,
     precio_anterior:69000,
     descripcion: "Talla Plus",
-    sizes: [ 'L','XL' ],
-    currentImage: `${licraMastop}/${plus}/delante-negro.jpg`,
+    sizes: [ 'U' ],  currentImage: `${licraMastop}/${plus}/delante-negro.jpg`,
     imagenes: [
       `${licraMastop}/${plus}/delante-negro.jpg`,
       `${licraMastop}/${plus}/atras-rojo.jpg`,
@@ -218,7 +216,7 @@ export const productos = [
     precio_compra: 16000,
     precio_anterior: 45000,
     descripcion: "",
-    sizes: [ 'S','M','L' ],
+    sizes: [ 'U' ],
     currentImage: `${blusones}/${oversizeCapriati}/delante-fucsia-claro.jpg`,
     imagenes: [
       `${blusones}/${oversizeCapriati}/delante-fucsia-claro.jpg`,
@@ -242,7 +240,7 @@ export const productos = [
     precio_compra: 37500,
     precio_anterior:83000,
     descripcion: "",
-    sizes: [ 'S','M','L' ],
+    sizes: [ 'U' ],
     currentImage: `${enterizos}/${corto}/${sinPushUp}/${talego}/delante-rojo.jpg`,
     imagenes: [
       `${enterizos}/${corto}/${sinPushUp}/${talego}/delante-rojo.jpg`,
@@ -267,7 +265,7 @@ export const productos = [
     precio_compra: 24000,
     precio_anterior:44000,
     descripcion: "",
-    sizes: [ 'S','M','L' ],
+    sizes: [ 'U' ],
     currentImage: `${licra}/${pushUp}/${corazon}/atras-azul-petroleo.jpg`,
     imagenes: [
       `${licra}/${pushUp}/${corazon}/atras-azul-petroleo.jpg`,
@@ -296,7 +294,7 @@ export const productos = [
     precio_compra: 39000,
     precio_anterior:65000,
     descripcion: "",
-    sizes: [ 'S','M','L' ],
+    sizes: [ 'U' ],
     currentImage: `${shorts}/${seamless}/delante-negro.jpg`,
     imagenes: [
       `${shorts}/${seamless}/delante-negro.jpg`,
@@ -314,7 +312,7 @@ export const productos = [
     precio_compra: 7000,
     precio_anterior:20000,
     descripcion: "",
-    sizes: [ 'S','M','L' ],
+    sizes: [ 'U' ],
     currentImage: `${top}/delante-terracota.jpg`,
     imagenes: [
       `${top}/delante-terracota.jpg`,
@@ -330,7 +328,7 @@ export const productos = [
     precio_compra: 11000,
     precio_anterior:25000,
     descripcion: "",
-    sizes: [ 'S','M','L' ],
+    sizes: [ 'U' ],
     currentImage: `${top}/${unicolor}/${alejandra}/delante-rojo.jpg`,
     imagenes: [
       `${top}/${unicolor}/${alejandra}/delante-rojo.jpg`,
@@ -346,7 +344,7 @@ export const productos = [
     precio_compra: 9000,
     precio_anterior:18000,
     descripcion: "",
-    sizes: [ 'S','M','L' ],
+    sizes: [ 'U' ],
     currentImage: `${medias}/${calentadoras}/delante-azul-celeste.jpg`,
     imagenes: [
       `${medias}/${calentadoras}/delante-azul-celeste.jpg`,
@@ -371,7 +369,7 @@ export const productos = [
     precio_compra: 10000,
     precio_anterior:25000,
     descripcion: "",
-    sizes: [ 'S','M','L' ],
+    sizes: [ 'U' ],
     currentImage: `${top}/${unicolor}/${picapiedras}/delante-fucsia.jpg`,
     imagenes: [
       `${top}/${unicolor}/${picapiedras}/delante-fucsia.jpg`,
@@ -402,7 +400,7 @@ export const productos = [
     precio_compra: 10000,
     precio_anterior:25000,
     descripcion: "",
-    sizes: [ 'S','M','L' ],
+    sizes: [ 'U' ],
     currentImage: `${top}/${unicolor}/${angie}/delante-verde-cali.jpg`,
     imagenes: [
       `${top}/${unicolor}/${angie}/delante-verde-cali.jpg`,
@@ -428,7 +426,7 @@ export const productos = [
     precio_compra: 38500,
     precio_anterior:68000,
     descripcion: "",
-    sizes: [ 'S','M','L' ],
+    sizes: [ 'U' ],
     currentImage: `${enterizos}/${corto}/${pushUp}/${luxury}/delante-rojo.jpg`,
     imagenes: [
       `${enterizos}/${corto}/${pushUp}/${luxury}/delante-rojo.jpg`,
@@ -484,7 +482,7 @@ export const productos = [
     precio_compra: 10000,
     precio_anterior:28000,
     descripcion: "De la talla 14 a la 16",
-    sizes: [ 'S','M','L' ],
+    sizes: [ 'U' ],
     currentImage: `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-amarillo-claro.jpg`,
     imagenes: [
       `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-amarillo-claro.jpg`,
@@ -518,7 +516,7 @@ export const productos = [
     precio_compra: 10000,
     precio_anterior:28000,
     descripcion: "De la talla 14 a la 16",
-    sizes: [ 'S','M','L' ],
+    sizes: [ 'U' ],
     currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
     imagenes: [
       `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
@@ -536,7 +534,7 @@ export const productos = [
     precio_compra: 33500,
     precio_anterior:63000,
     descripcion: "Tela suplex poliamida, estira hasta la talla L",
-    sizes: [ 'S','M','L' ],
+    sizes: [ 'U' ],
     currentImage: `${shortMastop}/${suplex}/${nudoPoliamida}/delante-rojo.jpg`,
     imagenes: [
       `${shortMastop}/${suplex}/${nudoPoliamida}/delante-rojo.jpg`,
