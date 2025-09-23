@@ -24,6 +24,7 @@ export const largo = 'largo';
 export const latex = 'latex';
 export const powernet = 'powernet';
 export const premium = 'premium';
+export const suplex = 'suplex';
 
 export const serenity = 'serenity';
 export const ela = 'ela';
@@ -41,3 +42,4 @@ export const alejandra = 'alejandra';
 export const libelula = 'libelula';
 export const asimetrica = 'asimetrica';
 export const mora = 'mora';
+export const nudoPoliamida = 'nudo-poliamida';

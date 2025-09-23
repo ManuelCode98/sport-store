@@ -1,4 +1,4 @@
-import { top, alejandra, angie, asimetrica, basicas, blusas, blusones, bolsillo, buzos, calentadoras, cinturillas, corazon, corto, enterizos, largo, latex, libelula, licra, licraMastop, luxury, mangaLarga, medias, mora, oversizeCapriati, picapiedras, plus, powernet, premium, pushUp, seamless, serenity, shortMastop, shorts, sinPushUp, talego, unicolor } from "./path";
+import { top, alejandra, angie, asimetrica, basicas, blusas, blusones, bolsillo, buzos, calentadoras, cinturillas, corazon, corto, enterizos, largo, latex, libelula, licra, licraMastop, luxury, mangaLarga, medias, mora, oversizeCapriati, picapiedras, plus, powernet, premium, pushUp, seamless, serenity, shortMastop, shorts, sinPushUp, talego, unicolor, suplex, nudoPoliamida } from "./path";
 
 export const productos = [
   // {
@@ -505,23 +505,34 @@ export const productos = [
     ],
     descuento: true
   },
-  // {
-  //   id: 25,
-  //   nombre: "Blusa",
-  //   modelo: "Unicolor Mora",
-  //   genero: "dama",
-  //   precio: 23000,
-  //   precio_compra: 10000,
-  //   precio_anterior:28000,
-  //   descripcion: "De la talla 14 a la 16",
-  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
-  //   imagenes: [
-  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
-  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
-  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
-  //   ],
-  //   descuento: true
-  // },
+  {
+    id: 25,
+    nombre: "Short + Top",
+    modelo: "Nudo Poliamida",
+    genero: "dama",
+    precio: 50000,
+    precio_compra: 33500,
+    precio_anterior:63000,
+    descripcion: "Tela suplex poliamida, estira hasta la talla L",
+    currentImage: `${shortMastop}/${suplex}/${nudoPoliamida}/delante-rojo.jpg`,
+    imagenes: [
+      `${shortMastop}/${suplex}/${nudoPoliamida}/delante-rojo.jpg`,
+      `${shortMastop}/${suplex}/${nudoPoliamida}/atras-rojo.jpg`,
+      `${shortMastop}/${suplex}/${nudoPoliamida}/delante-azul-bebe.jpg`,
+      `${shortMastop}/${suplex}/${nudoPoliamida}/atras-azul-bebe.jpg`,
+      `${shortMastop}/${suplex}/${nudoPoliamida}/delante-beige.jpg`,
+      `${shortMastop}/${suplex}/${nudoPoliamida}/atras-beige.jpg`,
+      `${shortMastop}/${suplex}/${nudoPoliamida}/delante-habano.jpg`,
+      `${shortMastop}/${suplex}/${nudoPoliamida}/atras-habano.jpg`,
+      `${shortMastop}/${suplex}/${nudoPoliamida}/delante-lila.jpg`,
+      `${shortMastop}/${suplex}/${nudoPoliamida}/atras-lila.jpg`,
+      `${shortMastop}/${suplex}/${nudoPoliamida}/delante-negro.jpg`,
+      `${shortMastop}/${suplex}/${nudoPoliamida}/atras-negro.jpg`,
+      `${shortMastop}/${suplex}/${nudoPoliamida}/delante-verde-militar.jpg`,
+      `${shortMastop}/${suplex}/${nudoPoliamida}/atras-verde-militar.jpg`,
+    ],
+    descuento: true
+  },
   // {
   //   id: 26,
   //   nombre: "Blusa",
