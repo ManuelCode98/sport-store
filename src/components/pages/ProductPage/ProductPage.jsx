@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { productos } from '../../data/productos';
+import { productos } from '../../../data/productos';
 import './ProductPage.css';
 
 

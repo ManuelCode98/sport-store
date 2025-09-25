@@ -44,6 +44,8 @@ const ShoppingCart = ({ products, setProducts }) => {
 
   const placeAnOrderOnWhatsApp = async ( shoppingCartProducts )=>{
 
+    if( numberProductState <= 0 ) return;
+
     const numberWhatsapp = '573157382433';
     
     // Solo mapeo las cantidades y los precios para poder multiplicar cade uno de ellos
@@ -75,6 +77,8 @@ const ShoppingCart = ({ products, setProducts }) => {
 
   
   const emptyCart = (  )=>{
+
+    if( numberProductState <= 0 ) return;
 
     // Borrar el localStorage
     localStorage.removeItem('products');

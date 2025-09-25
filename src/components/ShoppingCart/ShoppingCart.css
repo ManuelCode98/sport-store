@@ -52,12 +52,12 @@
 }
 
 .button-shopping-cart.place-an-order {
-  background-color: #7A5CFA;
+  background-color: rgb(57, 190, 57);
   box-shadow: 0 4px 10px rgba(122, 92, 250, 0.2);
 }
 
 .button-shopping-cart.place-an-order:hover {
-  background-color: #6a4dfb;
+  background-color: rgb(41, 133, 41);
   box-shadow: 0 6px 14px rgba(122, 92, 250, 0.3);
   transform: translateY(-2px);
 }

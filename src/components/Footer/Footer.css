@@ -1,0 +1,144 @@
+.footer {
+  background-color: transparent;
+  color: black;
+  margin-top: 1rem;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ======================
+   TOP SECTION (BENEFICIOS)
+   ====================== */
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.footer-feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 7.5rem;
+}
+
+.footer-feature > p{
+  text-align: center;
+}
+
+.icon-footer {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #00c853;
+}
+
+/* ======================
+   MAIN SECTION
+   ====================== */
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-brand h2 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.footer-brand p {
+  margin: 0.3rem 0;
+  color: rgb(77, 77, 77);
+}
+
+.footer-brand > p > a {
+  text-decoration: none;
+  color: rgb(77, 77, 77);
+}
+
+.footer-brand > p:hover a {
+    color: black;
+}
+
+.footer-links h3 {
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 0.3rem 0;
+}
+
+.footer-links a {
+  color: rgb(77, 77, 77);
+  text-decoration: none;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.footer-links a:hover {
+  color: black;
+}
+
+/* ======================
+   BOTTOM SECTION
+   ====================== */
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: black;
+  color: white;
+}
+
+/* ======================
+   RESPONSIVE
+   ====================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .footer-main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    margin-top: 1rem;
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-feature {
+    max-width: 100%;
+  }
+
+  .footer-main {
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+}

@@ -1,16 +1,21 @@
 // src/App.jsx
 import { useState } from 'react';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Filtros from './components/FilterCategories/Filtros';
 import ProductosGrid from './components/ProductosGrid';
-import ProductPage from './components/ProductPage/ProductPage';
+import ProductPage from './components/pages/ProductPage/ProductPage';
 // const { productos } = require('./data/productos');
 import { productos } from './data/productos';
 import ButtonWhatsapp from './components/ButtonWhatsapp/ButtonWhatsapp';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 import ShowModel from './components/ShowModel/ShowModel';
+import Footer from './components/Footer/Footer';
+import TermsModal from './components/TermsModal/TermsModal';
+import Shipments from './components/pages/Shipments/Shipments';
+import Returns from './components/pages/Returns/Returns';
+import Privacy from './components/pages/Privacy/Privacy';
 // import { ProductsCartProvider, useProducts } from './context/ProductsCartContext';
 
 // import '../styles.css';
@@ -23,6 +28,7 @@ export default function App() {
   const [ productsCartState, setProductsCartState ] = useState([]);
   const [ currentImageState, setCurrentImageState ] = useState('');
   const [ currentIdState, setCurrentIdState ] = useState(0);
+  const [ termsModal, setTermsModal ] = useState(false);
 
   // Importamos los productos
 
@@ -58,6 +64,12 @@ export default function App() {
               <ProductosGrid productos={productosFiltrados} />
             </div>
             <ButtonWhatsapp/>
+            <Footer openTermsModal={ termsModal } setOpenTermsModal={ setTermsModal } />
+            { termsModal 
+              ?
+                <TermsModal openTermsModal={ termsModal } setOpenTermsModal={ setTermsModal } />  
+              : '' 
+            }
           </>
         }/>
 
@@ -78,6 +90,22 @@ export default function App() {
             />
           } 
         />
+
+        <Route 
+          path='/shipments' 
+          element={ <Shipments/> }
+        />
+
+        <Route 
+          path='/returns' 
+          element={ <Returns/> }
+        />
+
+        <Route 
+          path='/privacy' 
+          element={ <Privacy/> }
+        />
+
       </Routes>
     </BrowserRouter>
   );
