@@ -1,20 +1,27 @@
-
-
-
-
-/* .container-window-model {
+.container-button-start {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100vh;
+    width: 3rem;
+    height: 2rem;
+    background-color: rgb(190, 42, 5);
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
 }
-.open-photo-model {
-    width: 20%;
-    height: 80vh;
-} */
-
+.button-start {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+.container-button-start:active {
+    transform: scale(1.2);
+}
 
 .container-show-product {
     position: absolute;
@@ -108,13 +115,42 @@
     font-size: 1.15rem;
     font-weight: 600;
     color: #333;
-    /* margin: 0.8rem 0; */
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
 }
 
 .home-page-sale-price span {
     color: #2e7d32; /* Verde profesional para el número */
 }
+
+/* Inicio de los estilos de los botones de la talla */
+
+.home-page-container-size {
+    font-weight: 600;
+    color: #333;
+}
+
+.size-buttons {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #333;
+    margin: 0 6px;
+    margin-bottom: 1rem;
+}
+.select-size {
+    background-color: rgb(182, 180, 180);
+}
+
+/* Fin de los estilos de los botones de la talla */
+
+
 
 /* === BOTÓN COMPRAR (estilo elegante con tu color #7A5CFA) === */
 /* Este estilo asume que ya tienes el CSS del botón aplicado a .button-name-buy */
@@ -139,14 +175,9 @@
     letter-spacing: 0.5px;
 }
 
-.button-name-buy:hover {
-    background-color: #6a4dfb;
-    box-shadow: 0 6px 14px rgba(122, 92, 250, 0.3);
-    transform: translateY(-2px);
-}
 
 .button-name-buy:active {
-    transform: translateY(0);
+    transform: scale(1.1);
     box-shadow: 0 3px 6px rgba(122, 92, 250, 0.15);
 }
 
@@ -231,6 +262,12 @@
 
 @media ( max-width: 768px) {
 
+    .container-button-start{
+        position: relative;
+        z-index: 2;
+        float: right;
+        margin-right: 1rem;
+    }
     .container-show-product {
         top: 5%;
         left: 5%;
@@ -251,6 +288,12 @@
 }
 
 @media ( max-width: 430px) {
+
+    .container-button-start{
+        position: absolute;
+        right: 1%;
+        bottom: 1%;
+    }
 
     .container-show-product {
         top: 5%;
@@ -282,13 +325,22 @@
         font-size: 1rem;
 
     }
+
+    
 }
 
-@media ( max-width: 430px) {
+@media ( max-width: 393px) {
 
+    .container-button-start{
+        margin-right: 0rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+    
     .button-name-buy {
         padding: 15px 5px;
         font-size: 0.8rem;
     }
+    
 
 }

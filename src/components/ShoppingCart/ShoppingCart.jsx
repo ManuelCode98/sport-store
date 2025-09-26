@@ -62,7 +62,7 @@ const ShoppingCart = ({ products, setProducts }) => {
 
     let message = `Hola quiero hacer este pedido: \n\n\n`;
     shoppingCartProducts.forEach( ( product, index ) => {
-      message += `${ index + 1 }) ${ product.nombre } ${ product.modelo } para ${ product.genero } valor: ${ formatPrices( product.precio ) } cantidad: ${ product.amount } color: ${ product.color } total = ${ formatPrices( (product.precio * product.amount) ) } \n\n`;
+      message += `${ index + 1 }) ${ product.nombre } ${ product.modelo } para ${ product.genero } ${ formatPrices( product.precio ) } X ${ product.amount } Talla: ${product.size} Color: ${ product.color } Total = ${ formatPrices( (product.precio * product.amount) ) } \n\n`;
     });
 
 
@@ -166,7 +166,7 @@ const ShoppingCart = ({ products, setProducts }) => {
                       <div key={index} className="products-cart">
                         <img className="product-photo-cart" src={product.currentImage} />
                         <div>
-                          {product.nombre} {product.modelo} <span className="amount-shopping-cart">{product.amount}</span> X <span className="result-shopping-cart">{formatPrices( product.precio )}</span> Color: {product.color} total = <span className="result-shopping-cart">{formatPrices( ( product.precio * product.amount) )}</span>
+                          {product.nombre} {product.modelo} <span className="result-shopping-cart">{formatPrices( product.precio )}</span> X <span className="amount-shopping-cart">{product.amount}</span> Talla: { product.size } Color: {product.color} Total = <span className="result-shopping-cart">{formatPrices( ( product.precio * product.amount) )}</span>
 
                           <button 
                             className="btn-trash"

@@ -227,6 +227,11 @@
 
 @media (max-width: 430px) {
 
+  .container-shopping-card {
+
+    top: -8%
+
+  }
   .container-buttons-shopping-cart{
     padding: 1rem 0.5rem 1rem 0.5rem;
     justify-content: center;

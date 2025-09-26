@@ -1,4 +1,4 @@
-import iconSvg from '../../../public/assets/icon/logo.svg';
+import iconSvg from '/assets/icon/logo.svg';
 import './Header.css';
 
 
