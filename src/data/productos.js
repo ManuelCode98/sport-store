@@ -1,4 +1,4 @@
-import { top, alejandra, angie, asimetrica, basicas, blusas, blusones, bolsillo, buzos, calentadoras, cinturillas, corazon, corto, enterizos, largo, latex, libelula, licras, licraMastop, luxury, mangaLarga, medias, mora, oversizeCapriati, picapiedras, plus, powernet, premium, pushUp, seamless, serenity, shortMastop, shorts, sinPushUp, talego, unicolor, suplex, nudoPoliamida } from "./path";
+import { top, alejandra, angie, asimetrica, basicas, blusas, blusones, bolsillo, buzos, calentadoras, cinturillas, corazon, corto, enterizos, largo, latex, libelula, licras, licraMastop, luxury, mangaLarga, medias, mora, oversizeCapriati, picapiedras, plus, powernet, premium, pushUp, seamless, serenity, shortMastop, shorts, sinPushUp, talego, unicolor, suplex, nudoPoliamida, cropTop, martina, aqua, glamCrochet, rib } from "./path";
 
 export const productos = [
   // {
@@ -567,79 +567,74 @@ export const productos = [
       `${licras}/${pushUp}/${basicas}/atras-azul-petroleo.jpg`,
     ],
     descuento: true
-  }
-  // {
-  //   id: 27,
-  //   nombre: "Blusa",
-  //   modelo: "Unicolor Mora",
-  //   genero: "dama",
-  //   precio: 23000,
-  //   precio_compra: 10000,
-  //   precio_anterior:28000,
-  //   descripcion: "De la talla 14 a la 16",
-  // sizes: [ 'S','M','L' ],
-  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
-  //   imagenes: [
-  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
-  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
-  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
-  //   ],
-  //   descuento: true
-  // },
-  // {
-  //   id: 28,
-  //   nombre: "Blusa",
-  //   modelo: "Unicolor Mora",
-  //   genero: "dama",
-  //   precio: 23000,
-  //   precio_compra: 10000,
-  //   precio_anterior:28000,
-  //   descripcion: "De la talla 14 a la 16",
-  // sizes: [ 'S','M','L' ],
-  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
-  //   imagenes: [
-  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
-  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
-  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
-  //   ],
-  //   descuento: true
-  // },
-  // {
-  //   id: 29,
-  //   nombre: "Blusa",
-  //   modelo: "Unicolor Mora",
-  //   genero: "dama",
-  //   precio: 23000,
-  //   precio_compra: 10000,
-  //   precio_anterior:28000,
-  //   descripcion: "De la talla 14 a la 16",
-  // sizes: [ 'S','M','L' ],
-  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
-  //   imagenes: [
-  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
-  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
-  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
-  //   ],
-  //   descuento: true
-  // },
-  // {
-  //   id: 30,
-  //   nombre: "Blusa",
-  //   modelo: "Unicolor Mora",
-  //   genero: "dama",
-  //   precio: 23000,
-  //   precio_compra: 10000,
-  //   precio_anterior:28000,
-  //   descripcion: "De la talla 14 a la 16",
-  // sizes: [ 'S','M','L' ],
-  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
-  //   imagenes: [
-  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
-  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
-  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
-  //   ],
-  //   descuento: true
-  // },
+  },
+  {
+    id: 27,
+    nombre: "Crop Top",
+    modelo: "Unicolor Martina",
+    genero: "dama",
+    precio: 30000,
+    precio_compra: 14000,
+    precio_anterior:33000,
+    descripcion: "",
+    sizes: [ 'U' ],
+    currentImage: `${cropTop}/${martina}/${unicolor}/delante-naranja.jpg`,
+    imagenes: [
+      `${cropTop}/${martina}/${unicolor}/delante-naranja.jpg`,
+      `${cropTop}/${martina}/${unicolor}/delante-verde-neon.jpg`,
+    ],
+    descuento: true
+  },
+  {
+    id: 28,
+    nombre: "Bluson",
+    modelo: "Unicolor Aqua",
+    genero: "dama",
+    precio: 32000,
+    precio_compra: 19000,
+    precio_anterior:36000,
+    descripcion: "",
+    sizes: [ 'U' ],
+    currentImage: `${blusones}/${aqua}/${unicolor}/delante-azul-turqui.jpg`,
+    imagenes: [
+      `${blusones}/${aqua}/${unicolor}/delante-azul-turqui.jpg`,
+    ],
+    descuento: true
+  },
+  {
+    id: 29,
+    nombre: "Blusa",
+    modelo: "Unicolor Glam Crochet",
+    genero: "dama",
+    precio: 30000,
+    precio_compra: 16000,
+    precio_anterior:35000,
+    descripcion: "",
+  sizes: [ 'U' ],
+    currentImage: `${blusas}/${glamCrochet}/${unicolor}/delante-palo-de-rosa.jpg`,
+    imagenes: [
+      `${blusas}/${glamCrochet}/${unicolor}/delante-palo-de-rosa.jpg`,
+      `${blusas}/${glamCrochet}/${unicolor}/delante-blanco.jpg`,
+      `${blusas}/${glamCrochet}/${unicolor}/delante-negro.jpg`,
+    ],
+    descuento: true
+  },
+  {
+    id: 30,
+    nombre: "Licra (Solo)",
+    modelo: "Unicolor Seamless Rib",
+    genero: "dama",
+    precio: 64000,
+    precio_compra: 46000,
+    precio_anterior:70000,
+    descripcion: "",
+    sizes: [ 'U' ],
+    currentImage: `${licras}/${seamless}/${rib}/delante-lila.jpg`,
+    imagenes: [
+      `${licras}/${seamless}/${rib}/delante-lila.jpg`,
+    ],
+    descuento: true
+  },
   // {
   //   id: 31,
   //   nombre: "Blusa",

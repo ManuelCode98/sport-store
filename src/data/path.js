@@ -8,6 +8,7 @@ export const shortMastop = '/assets/catalogo/short+top';
 export const licraMastop = '/assets/catalogo/licra+top';
 export const licras = '/assets/catalogo/licras';
 export const top = '/assets/catalogo/top';
+export const cropTop = '/assets/catalogo/crop-top';
 export const medias = '/assets/catalogo/medias';
 export const cinturillas = '/assets/catalogo/cinturillas';
 
@@ -38,7 +39,11 @@ export const picapiedras = 'picapiedras';
 export const angie = 'angie';
 export const luxury = 'luxury';
 export const alejandra = 'alejandra';
+export const aqua = 'aqua';
+export const glamCrochet = 'glam-crochet';
 
+
+export const rib = 'rib';
 export const libelula = 'libelula';
 export const asimetrica = 'asimetrica';
 export const mora = 'mora';
