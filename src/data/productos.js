@@ -1,4 +1,4 @@
-import { top, alejandra, angie, asimetrica, basicas, blusas, blusones, bolsillo, buzos, calentadoras, cinturillas, corazon, corto, enterizos, largo, latex, libelula, licra, licraMastop, luxury, mangaLarga, medias, mora, oversizeCapriati, picapiedras, plus, powernet, premium, pushUp, seamless, serenity, shortMastop, shorts, sinPushUp, talego, unicolor, suplex, nudoPoliamida } from "./path";
+import { top, alejandra, angie, asimetrica, basicas, blusas, blusones, bolsillo, buzos, calentadoras, cinturillas, corazon, corto, enterizos, largo, latex, libelula, licras, licraMastop, luxury, mangaLarga, medias, mora, oversizeCapriati, picapiedras, plus, powernet, premium, pushUp, seamless, serenity, shortMastop, shorts, sinPushUp, talego, unicolor, suplex, nudoPoliamida } from "./path";
 
 export const productos = [
   // {
@@ -84,7 +84,7 @@ export const productos = [
   },
   {
     id: 5,
-    nombre: "Short (Solo)",
+    nombre: "Short",
     modelo: "Push-up Corazon",
     genero: "dama",
     precio: 29000,
@@ -123,11 +123,12 @@ export const productos = [
       `${blusas}/${basicas}/${libelula}/delante-morado.jpg`,
       `${blusas}/${basicas}/${libelula}/delante-negro.jpg`,
       `${blusas}/${basicas}/${libelula}/delante-fucsia.jpg`,
-      `${blusas}/${basicas}/${libelula}/delante-rojo.jpg`,
-      `${blusas}/${basicas}/${libelula}/delante-rosado.jpg`,
-      `${blusas}/${basicas}/${libelula}/delante-azul.jpg`,
-      `${blusas}/${basicas}/${libelula}/delante-azul-cielo.jpg`,
+      `${blusas}/${basicas}/${libelula}/delante-cereza.jpg`,
+      `${blusas}/${basicas}/${libelula}/delante-azul-rey.jpg`,
+      `${blusas}/${basicas}/${libelula}/delante-azul-turqui.jpg`,
+      `${blusas}/${basicas}/${libelula}/delante-azul-celeste.jpg`,
       `${blusas}/${basicas}/${libelula}/delante-blanco.jpg`,
+      `${blusas}/${basicas}/${libelula}/delante-verde-militar.jpg`,
     ],
     descuento: true
   },
@@ -255,10 +256,9 @@ export const productos = [
     ],
     descuento: true
   },
-  //
   {
     id: 13,
-    nombre: "Licra (Solo)",
+    nombre: "Licra",
     modelo: "Push Up Corazon",
     genero: "dama",
     precio: 38000,
@@ -266,22 +266,21 @@ export const productos = [
     precio_anterior:44000,
     descripcion: "",
     sizes: [ 'U' ],
-    currentImage: `${licra}/${pushUp}/${corazon}/atras-azul-petroleo.jpg`,
+    currentImage: `${licras}/${pushUp}/${corazon}/atras-uva.jpg`,
     imagenes: [
-      `${licra}/${pushUp}/${corazon}/atras-azul-petroleo.jpg`,
-      `${licra}/${pushUp}/${corazon}/atras-cafe.jpg`,
-      `${licra}/${pushUp}/${corazon}/atras-fucsia.jpg`,
-      `${licra}/${pushUp}/${corazon}/atras-gris.jpg`,
-      `${licra}/${pushUp}/${corazon}/atras-lila.jpg`,
-      `${licra}/${pushUp}/${corazon}/atras-negro.jpg`,
-      `${licra}/${pushUp}/${corazon}/atras-rojo.jpg`,
-      `${licra}/${pushUp}/${corazon}/atras-terracota.jpg`,
-      `${licra}/${pushUp}/${corazon}/atras-uva.jpg`,
-      `${licra}/${pushUp}/${corazon}/atras-vainilla.jpg`,
-      `${licra}/${pushUp}/${corazon}/atras-verde-esmeralda.jpg`,
-      `${licra}/${pushUp}/${corazon}/atras-azul-rey.jpg`,
-      `${licra}/${pushUp}/${corazon}/atras-verde-militar.jpg`,
-      `${licra}/${pushUp}/${corazon}/atras-azul-turqui.jpg`,
+      `${licras}/${pushUp}/${corazon}/atras-uva.jpg`,
+      `${licras}/${pushUp}/${corazon}/atras-cafe.jpg`,
+      `${licras}/${pushUp}/${corazon}/atras-fucsia.jpg`,
+      `${licras}/${pushUp}/${corazon}/atras-gris.jpg`,
+      `${licras}/${pushUp}/${corazon}/atras-lila.jpg`,
+      `${licras}/${pushUp}/${corazon}/atras-negro.jpg`,
+      `${licras}/${pushUp}/${corazon}/atras-rojo.jpg`,
+      `${licras}/${pushUp}/${corazon}/atras-terracota.jpg`,
+      `${licras}/${pushUp}/${corazon}/atras-vainilla.jpg`,
+      `${licras}/${pushUp}/${corazon}/atras-verde-esmeralda.jpg`,
+      `${licras}/${pushUp}/${corazon}/atras-azul-rey.jpg`,
+      `${licras}/${pushUp}/${corazon}/atras-verde-militar.jpg`,
+      `${licras}/${pushUp}/${corazon}/atras-azul-turqui.jpg`,
     ],
     descuento: true
   },
@@ -385,7 +384,6 @@ export const productos = [
       `${top}/${unicolor}/${picapiedras}/delante-gris.jpg`,
       `${top}/${unicolor}/${picapiedras}/delante-naranja.jpg`,
       `${top}/${unicolor}/${picapiedras}/delante-terracota.jpg`,
-      `${top}/${unicolor}/${picapiedras}/delante-verde-cali.jpg`,
       `${top}/${unicolor}/${picapiedras}/delante-verde-militar.jpg`,
       `${top}/${unicolor}/${picapiedras}/delante-verde-neon.jpg`,
     ],
@@ -554,24 +552,22 @@ export const productos = [
     ],
     descuento: true
   },
-  // {
-  //   id: 26,
-  //   nombre: "Blusa",
-  //   modelo: "Unicolor Mora",
-  //   genero: "dama",
-  //   precio: 23000,
-  //   precio_compra: 10000,
-  //   precio_anterior:28000,
-  //   descripcion: "De la talla 14 a la 16",
-  // sizes: [ 'S','M','L' ],
-  //   currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
-  //   imagenes: [
-  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
-  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
-  //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
-  //   ],
-  //   descuento: true
-  // },
+  {
+    id: 26,
+    nombre: "Licra",
+    modelo: "Push Up",
+    genero: "dama",
+    precio: 38000,
+    precio_compra: 24000,
+    precio_anterior:44000,
+    descripcion: "",
+    sizes: [ 'U' ],
+    currentImage: `${licras}/${pushUp}/${basicas}/atras-azul-petroleo.jpg`,
+    imagenes: [
+      `${licras}/${pushUp}/${basicas}/atras-azul-petroleo.jpg`,
+    ],
+    descuento: true
+  }
   // {
   //   id: 27,
   //   nombre: "Blusa",
