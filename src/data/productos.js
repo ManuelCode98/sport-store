@@ -323,7 +323,7 @@ export const productos = [
     nombre: "Top",
     modelo: "",
     genero: "dama",
-    precio: 19500,
+    precio: 20000,
     precio_compra: 11000,
     precio_anterior:25000,
     descripcion: "",
@@ -479,7 +479,7 @@ export const productos = [
     precio: 20000,
     precio_compra: 10000,
     precio_anterior:25000,
-    descripcion: "De la talla 14 a la 16",
+    descripcion: "",
     sizes: [ 'U' ],
     currentImage: `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-amarillo-claro.jpg`,
     imagenes: [
@@ -513,7 +513,7 @@ export const productos = [
     precio: 20000,
     precio_compra: 10000,
     precio_anterior:25000,
-    descripcion: "De la talla 14 a la 16",
+    descripcion: "",
     sizes: [ 'U' ],
     currentImage: `${blusas}/${premium}/${unicolor}/${mora}/delante-azul-cielo.jpg`,
     imagenes: [
@@ -531,7 +531,7 @@ export const productos = [
     precio: 53250,
     precio_compra: 33500,
     precio_anterior:60350,
-    descripcion: "Tela suplex poliamida, estira hasta la talla L",
+    descripcion: "Tela suplex poliamida",
     sizes: [ 'U' ],
     currentImage: `${shortMastop}/${suplex}/${nudoPoliamida}/delante-rojo.jpg`,
     imagenes: [
