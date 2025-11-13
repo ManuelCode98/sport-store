@@ -4,7 +4,8 @@ export const buzos = '/assets/catalogo/buzos';
 export const shorts = '/assets/catalogo/shorts';
 export const blusas = '/assets/catalogo/blusas';
 export const blusones = '/assets/catalogo/blusones';
-export const shortMastop = '/assets/catalogo/short+top';
+export const shortMasTop = '/assets/catalogo/short+top';
+export const shortMasCropTop = '/assets/catalogo/short+crop-top';
 export const licraMastop = '/assets/catalogo/licra+top';
 export const licras = '/assets/catalogo/licras';
 export const top = '/assets/catalogo/top';
@@ -26,6 +27,9 @@ export const latex = 'latex';
 export const powernet = 'powernet';
 export const premium = 'premium';
 export const suplex = 'suplex';
+export const nylon = 'nylon';
+export const estampado = 'estampado';
+export const texturizado = 'texturizado';
 
 export const serenity = 'serenity';
 export const ela = 'ela';
@@ -41,6 +45,10 @@ export const luxury = 'luxury';
 export const alejandra = 'alejandra';
 export const aqua = 'aqua';
 export const glamCrochet = 'glam-crochet';
+export const linley = 'linley';
+export const cristina = 'cristina';
+export const naim = 'naim';
+export const karin = 'karin';
 
 
 export const rib = 'rib';
