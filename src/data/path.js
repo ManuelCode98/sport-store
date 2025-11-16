@@ -12,6 +12,7 @@ export const top = '/assets/catalogo/top';
 export const cropTop = '/assets/catalogo/crop-top';
 export const medias = '/assets/catalogo/medias';
 export const cinturillas = '/assets/catalogo/cinturillas';
+export const bicicleteroMasBuzo = '/assets/catalogo/bicicletero+buzo';
 
 export const basicas = 'basicas';
 export const pushUp = 'push-up';
@@ -49,7 +50,7 @@ export const linley = 'linley';
 export const cristina = 'cristina';
 export const naim = 'naim';
 export const karin = 'karin';
-export const bicicleteroMasBuzo = 'bicicletero+buzo';
+
 
 
 export const rib = 'rib';

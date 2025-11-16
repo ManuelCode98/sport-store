@@ -876,4 +876,21 @@ export const productos = [
     ],
     descuento: true
   },
+  // {
+  //   id: 44,
+  //   nombre: "Bicicletero + Buzo",
+  //   modelo: "Estampado Manga Larga",
+  //   genero: "dama",
+  //   precio: 30000,
+  //   precio_compra: 0,
+  //   precio_anterior: 38000,
+  //   sizes: [ 'U' ],
+  //   descripcion: "",
+  //   currentImage: `${bicicleteroMasBuzo}/${estampado}/${mangaLarga}/delante-verde.jpg`,
+  //   imagenes: [
+  //     `${bicicleteroMasBuzo}/${estampado}/${mangaLarga}/delante-verde.jpg`,
+
+  //   ],
+  //   descuento: true
+  // },
 ]
