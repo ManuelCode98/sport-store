@@ -890,6 +890,6 @@ export const productos = [
     imagenes: [
       `${shorts}/${suplex}/delante-rojo.jpg`,
     ],
-    descuento: false
+    descuento: true
   },
 ]
