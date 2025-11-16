@@ -53,7 +53,7 @@ export const productos = [
       // `${enterizos}/${largo}/${pushUp}/${serenity}/delante-lila.jpg`,
       // `${enterizos}/${largo}/${pushUp}/${serenity}/atras-lila.jpg`,
     ],
-    descuento: true
+    descuento: false
   },
   // {
   //   id: 4,
@@ -80,7 +80,7 @@ export const productos = [
   //     `${buzos}/${unicolor}/${mangaLarga}/delante-verde-manzana.jpg`,
   //     `${buzos}/${unicolor}/${mangaLarga}/delante-verde-turquesa.jpg`,
   //   ],
-  //   descuento: true
+  //   descuento: false
   // },
   // {
   //   id: 5,
@@ -105,7 +105,7 @@ export const productos = [
   //     `${shorts}/${pushUp}/${corazon}/delante-verde-bosque.jpg`,
   //     `${shorts}/${pushUp}/${corazon}/atras-verde-bosque.jpg`,
   //   ],
-  //   descuento: true
+  //   descuento: false
   // },
 // {
 //     id: 6,
@@ -130,7 +130,7 @@ export const productos = [
 //       `${blusas}/${basicas}/${libelula}/delante-blanco.jpg`,
 //       `${blusas}/${basicas}/${libelula}/delante-verde-militar.jpg`,
 //     ],
-//     descuento: true
+//     descuento: false
 //   },
   {
     id: 7,
@@ -149,7 +149,7 @@ export const productos = [
       `${enterizos}/${largo}/${pushUp}/${luxury}/atras-negro.jpg`,
       // `${enterizos}/${largo}/${pushUp}/${luxury}/atras-azul.jpg`,
     ],
-    descuento: true
+    descuento: false
   },
   // {
   //   id: 8,
@@ -171,7 +171,7 @@ export const productos = [
   //     `${shortMastop}/${bolsillo}/delante-habano-oscuro.jpg`,
   //     `${shortMastop}/${bolsillo}/atras-habano-oscuro.jpg`,
   //   ],
-  //   descuento: true
+  //   descuento: false
   // },
   // {
   //   id: 9,
@@ -189,7 +189,7 @@ export const productos = [
   //     `${licraMastop}/${plus}/muestra-azul-rey.jpg`,
   //     `${licraMastop}/${plus}/muestra-azul-oscuro.jpg`,
   //   ],
-  //   descuento: true
+  //   descuento: false
   // },
   // {
   //   id: 10,
@@ -206,7 +206,7 @@ export const productos = [
   //   imagenes: [
   //     `${enterizos}/${corto}/${pushUp}/${ela}/delante-rojo.jpg`,
   //   ],
-  //   descuento: true
+  //   descuento: false
   // },
   // {
   //   id: 11,
@@ -230,7 +230,7 @@ export const productos = [
   //     `${blusones}/${oversizeCapriati}/delante-verde-manzana.jpg`,
   //     `${blusones}/${oversizeCapriati}/delante-rosado.jpg`,
   //   ],
-  //   descuento: true
+  //   descuento: false
   // },
   // {
   //   id: 12,
@@ -254,7 +254,7 @@ export const productos = [
   //     `${enterizos}/${corto}/${sinPushUp}/${talego}/atras-verde-claro.jpg`,
   //     `${enterizos}/${corto}/${sinPushUp}/${talego}/delante-rosado.jpg`,
   //   ],
-  //   descuento: true
+  //   descuento: false
   // },
   {
     id: 13,
@@ -284,7 +284,7 @@ export const productos = [
       `${licras}/${pushUp}/${corazon}/atras-azul-turqui.jpg`,
       
     ],
-    descuento: true
+    descuento: false
   },
   {
     id: 14,
@@ -308,7 +308,7 @@ export const productos = [
       // `${shorts}/${seamless}/${rib}/${unicolor}/delante-terracota.jpg`,
       // `${shorts}/${seamless}/${rib}/${unicolor}/delante-rosado.jpg`,
     ],
-    descuento: true
+    descuento: false
   },
   // {
   //   id: 15,
@@ -324,7 +324,7 @@ export const productos = [
   //   imagenes: [
   //     `${top}/delante-terracota.jpg`,
   //   ],
-  //   descuento: true
+  //   descuento: false
   // },
   {
     id: 16,
@@ -346,7 +346,7 @@ export const productos = [
       `${top}/${unicolor}/${alejandra}/atras-vinotinto.jpg`,
       // `${top}/${unicolor}/${alejandra}/delante-rojo.jpg`,
     ],
-    descuento: true
+    descuento: false
   },
   // {
   //   id: 17,
@@ -371,7 +371,7 @@ export const productos = [
   //     `${medias}/${calentadoras}/delante-rosado-oscuro.jpg`,
   //     `${medias}/${calentadoras}/delante-verde-menta.jpg`,
   //   ],
-  //   descuento: true
+  //   descuento: false
   // },
   // {
   //   id: 18,
@@ -401,7 +401,7 @@ export const productos = [
   //     `${top}/${unicolor}/${picapiedras}/delante-verde-militar.jpg`,
   //     `${top}/${unicolor}/${picapiedras}/delante-verde-neon.jpg`,
   //   ],
-  //   descuento: true
+  //   descuento: false
   // },
   // {
   //   id: 19,
@@ -427,7 +427,7 @@ export const productos = [
   //     `${top}/${unicolor}/${angie}/delante-terracota.jpg`,
   //     `${top}/${unicolor}/${angie}/delante-verde-militar.jpg`,
   //   ],
-  //   descuento: true
+  //   descuento: false
   // },
   {
     id: 20,
@@ -448,7 +448,7 @@ export const productos = [
       // `${enterizos}/${corto}/${pushUp}/${luxury}/atras-negro.jpg`,
       // `${enterizos}/${corto}/${pushUp}/${luxury}/delante-terracota.jpg`,
     ],
-    descuento: true
+    descuento: false
   },
   {
     id: 21,
@@ -466,7 +466,7 @@ export const productos = [
       `${cinturillas}/${latex}/guia-negra.jpg`,
       `${cinturillas}/${latex}/calibre-negra.jpg`,
     ],
-    descuento: true
+    descuento: false
   },
   {
     id: 22,
@@ -483,7 +483,7 @@ export const productos = [
       `${cinturillas}/${powernet}/delante-negra.jpg`,
       `${cinturillas}/${powernet}/guia-negra.jpg`,
     ],
-    descuento: true
+    descuento: false
   },
   {
     id: 23,
@@ -517,7 +517,7 @@ export const productos = [
       // `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-morado.jpg`,
       // `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-rojo.jpg`,
     ],
-    descuento: true
+    descuento: false
   },
   // {
   //   id: 24,
@@ -535,7 +535,7 @@ export const productos = [
   //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
   //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
   //   ],
-  //   descuento: true
+  //   descuento: false
   // },
   // {
   //   id: 25,
@@ -564,7 +564,7 @@ export const productos = [
   //     `${shortMastop}/${suplex}/${nudoPoliamida}/delante-verde-militar.jpg`,
   //     `${shortMastop}/${suplex}/${nudoPoliamida}/atras-verde-militar.jpg`,
   //   ],
-  //   descuento: true
+  //   descuento: false
   // },
   {
     id: 26,
@@ -583,7 +583,7 @@ export const productos = [
       `${licras}/${unicolor}/delante-azul-petroleo.jpg`,
       `${licras}/${unicolor}/delante-vainilla.jpg`,
     ],
-    descuento: true
+    descuento: false
   },
   {
     id: 27,
@@ -634,7 +634,7 @@ export const productos = [
       // `${blusas}/${glamCrochet}/${unicolor}/delante-blanco.jpg`,
       // `${blusas}/${glamCrochet}/${unicolor}/delante-negro.jpg`,
     ],
-    descuento: true
+    descuento: false
   },
   // {
   //   id: 30,
@@ -650,7 +650,7 @@ export const productos = [
   //   imagenes: [
   //     `${licras}/${seamless}/${rib}/delante-lila.jpg`,
   //   ],
-  //   descuento: true
+  //   descuento: false
   // },
   {
     id: 31,
@@ -668,7 +668,7 @@ export const productos = [
       `${shortMasTop}/${pushUp}/${nylon}/${unicolor}/atras-negro.jpg`,
       `${shortMasTop}/${pushUp}/${nylon}/${unicolor}/atras-azul-turqui.jpg`,
     ],
-    descuento: true
+    descuento: false
   },
   // {
   //   id: 32,
@@ -686,7 +686,7 @@ export const productos = [
   //     `${blusas}/${premium}/${unicolor}/${mora}/delante-cafe.jpg`,
   //     `${blusas}/${premium}/${unicolor}/${mora}/delante-amarillo-claro.jpg`,
   //   ],
-  //   descuento: true
+  //   descuento: false
   // },
   {
     id: 33,
@@ -702,7 +702,7 @@ export const productos = [
     imagenes: [
       `${licras}/${seamless}/${pushUp}/${unicolor}/delante-azul-turqui.jpg`,
     ],
-    descuento: true
+    descuento: false
   },
   {
     id: 34,
@@ -720,7 +720,7 @@ export const productos = [
       `${shortMasCropTop}/${nylon}/${unicolor}/delante-cafe.jpg`,
       `${shortMasCropTop}/${nylon}/${unicolor}/delante-azul-petroleo.jpg`,
     ],
-    descuento: true
+    descuento: false
   },
   {
     id: 35,
@@ -736,7 +736,7 @@ export const productos = [
     imagenes: [
       `${shortMasTop}/${texturizado}/${estampado}/delante-azul-rey.jpg`,
     ],
-    descuento: true
+    descuento: false
   },
   {
     id: 36,
@@ -752,7 +752,7 @@ export const productos = [
     imagenes: [
       `${shortMasTop}/${nylon}/${linley}/delante-azul-celeste.jpg`,
     ],
-    descuento: true
+    descuento: false
   },
   {
     id: 37,
@@ -770,7 +770,7 @@ export const productos = [
       `${shortMasTop}/${nylon}/${cristina}/delante-azul-petroleo.jpg`,
       `${shortMasTop}/${nylon}/${cristina}/delante-vinotinto.jpg`,
     ],
-    descuento: true
+    descuento: false
   },
   {
     id: 38,
@@ -788,7 +788,7 @@ export const productos = [
       `${top}/${unicolor}/${cristina}/delante-blanco.jpg`,
       `${top}/${unicolor}/${cristina}/delante-negro.jpg`,
     ],
-    descuento: true
+    descuento: false
   },
   {
     id: 39,
@@ -808,7 +808,7 @@ export const productos = [
       `${top}/${unicolor}/${naim}/delante-cafe.jpg`,
       `${top}/${unicolor}/${naim}/delante-palo-de-rosa.jpg`,
     ],
-    descuento: true
+    descuento: false
   },
   {
     id: 40,
@@ -876,21 +876,20 @@ export const productos = [
     ],
     descuento: true
   },
-  // {
-  //   id: 44,
-  //   nombre: "Bicicletero + Buzo",
-  //   modelo: "Estampado Manga Larga",
-  //   genero: "dama",
-  //   precio: 30000,
-  //   precio_compra: 0,
-  //   precio_anterior: 38000,
-  //   sizes: [ 'U' ],
-  //   descripcion: "",
-  //   currentImage: `${bicicleteroMasBuzo}/${estampado}/${mangaLarga}/delante-verde.jpg`,
-  //   imagenes: [
-  //     `${bicicleteroMasBuzo}/${estampado}/${mangaLarga}/delante-verde.jpg`,
-
-  //   ],
-  //   descuento: true
-  // },
+  {
+    id: 44,
+    nombre: "Short (Solo)",
+    modelo: "Suplex",
+    genero: "dama",
+    precio: 22000,
+    precio_compra: 13000,
+    precio_anterior:27000,
+    descripcion: "",
+    sizes: [ 'U' ],
+    currentImage: `${shorts}/${suplex}/delante-rojo.jpg`,
+    imagenes: [
+      `${shorts}/${suplex}/delante-rojo.jpg`,
+    ],
+    descuento: false
+  },
 ]
