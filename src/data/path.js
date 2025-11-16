@@ -49,6 +49,7 @@ export const linley = 'linley';
 export const cristina = 'cristina';
 export const naim = 'naim';
 export const karin = 'karin';
+export const bicicleteroMasBuzo = 'bicicletero+buzo';
 
 
 export const rib = 'rib';

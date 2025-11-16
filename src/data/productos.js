@@ -1,4 +1,4 @@
-import { top, alejandra, angie, asimetrica, basicas, blusas, blusones, bolsillo, buzos, calentadoras, cinturillas, corazon, corto, enterizos, largo, latex, libelula, licras, licraMastop, luxury, mangaLarga, medias, mora, oversizeCapriati, picapiedras, plus, powernet, premium, pushUp, seamless, serenity, shortMasTop, shorts, sinPushUp, talego, unicolor, suplex, nudoPoliamida, cropTop, martina, aqua, glamCrochet, rib, nylon, shortMasCropTop, estampado, texturizado, linley, cristina, naim, karin } from "./path";
+import { top, alejandra, angie, asimetrica, basicas, blusas, blusones, bolsillo, buzos, calentadoras, cinturillas, corazon, corto, enterizos, largo, latex, libelula, licras, licraMastop, luxury, mangaLarga, medias, mora, oversizeCapriati, picapiedras, plus, powernet, premium, pushUp, seamless, serenity, shortMasTop, shorts, sinPushUp, talego, unicolor, suplex, nudoPoliamida, cropTop, martina, aqua, glamCrochet, rib, nylon, shortMasCropTop, estampado, texturizado, linley, cristina, naim, karin, bicicleteroMasBuzo } from "./path";
 
 export const productos = [
   // {
@@ -300,6 +300,8 @@ export const productos = [
     imagenes: [
       `${shorts}/${seamless}/${rib}/${unicolor}/delante-rojo.jpg`,
       `${shorts}/${seamless}/${rib}/${unicolor}/delante-pistacho.jpg`,
+      `${shorts}/${seamless}/${rib}/${unicolor}/delante-lila.jpg`,
+      `${shorts}/${seamless}/${rib}/${unicolor}/delante-nude.jpg`,
       // `${shorts}/${seamless}/${rib}/${unicolor}/delante-lila.jpg`,
       // `${shorts}/${seamless}/${rib}/${unicolor}/delante-nude.jpg`,
       // `${shorts}/${seamless}/${rib}/${unicolor}/delante-negro.jpg`,
@@ -824,5 +826,54 @@ export const productos = [
     ],
     descuento: true
   },
+  {
+    id: 41,
+    nombre: "Crop Top",
+    modelo: 'Estampado',
+    genero: "dama",
+    precio: 15000,
+    precio_compra: 7000,
+    precio_anterior:20000,
+    descripcion: "",
+    sizes: [ 'U' ],
+    currentImage: `${cropTop}/${estampado}/delante-rojo.jpg`,
+    imagenes: [
+      `${cropTop}/${estampado}/delante-rojo.jpg`,
+    ],
+    descuento: true
+  },
+  {
+    id: 42,
+    nombre: "Buzo",
+    modelo: "Estampado Manga Larga",
+    genero: "dama",
+    precio: 25000,
+    precio_compra: 0,
+    precio_anterior: 30000,
+    sizes: [ 'U' ],
+    descripcion: "",
+    currentImage: `${buzos}/${estampado}/${mangaLarga}/delante-azul.jpg`,
+    imagenes: [
+      `${buzos}/${estampado}/${mangaLarga}/delante-azul.jpg`,
 
+    ],
+    descuento: true
+  },
+  {
+    id: 43,
+    nombre: "Bicicletero + Buzo",
+    modelo: "Estampado Manga Larga",
+    genero: "dama",
+    precio: 30000,
+    precio_compra: 0,
+    precio_anterior: 38000,
+    sizes: [ 'U' ],
+    descripcion: "",
+    currentImage: `${bicicleteroMasBuzo}/${estampado}/${mangaLarga}/delante-verde.jpg`,
+    imagenes: [
+      `${bicicleteroMasBuzo}/${estampado}/${mangaLarga}/delante-verde.jpg`,
+
+    ],
+    descuento: true
+  },
 ]
