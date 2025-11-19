@@ -132,25 +132,25 @@ export const productos = [
 //     ],
 //     descuento: false
 //   },
-  {
-    id: 7,
-    nombre: "Enterizo",
-    modelo: "Largo Push Up Luxury",
-    genero: "dama",
-    precio: 63750,
-    precio_compra: 40500,
-    precio_anterior:72250,
-    // descripcion: "Rojo, Negro, Verde Militar, Lila, Habano",
-    descripcion: "",
-    sizes: [ 'U' ],
-    currentImage: `${enterizos}/${largo}/${pushUp}/${luxury}/delante-negro.jpg`,
-    imagenes: [
-      `${enterizos}/${largo}/${pushUp}/${luxury}/delante-negro.jpg`,
-      `${enterizos}/${largo}/${pushUp}/${luxury}/atras-negro.jpg`,
-      // `${enterizos}/${largo}/${pushUp}/${luxury}/atras-azul.jpg`,
-    ],
-    descuento: false
-  },
+  // {
+  //   id: 7,
+  //   nombre: "Enterizo",
+  //   modelo: "Largo Push Up Luxury",
+  //   genero: "dama",
+  //   precio: 63750,
+  //   precio_compra: 40500,
+  //   precio_anterior:72250,
+  //   // descripcion: "Rojo, Negro, Verde Militar, Lila, Habano",
+  //   descripcion: "",
+  //   sizes: [ 'U' ],
+  //   currentImage: `${enterizos}/${largo}/${pushUp}/${luxury}/delante-negro.jpg`,
+  //   imagenes: [
+  //     `${enterizos}/${largo}/${pushUp}/${luxury}/delante-negro.jpg`,
+  //     `${enterizos}/${largo}/${pushUp}/${luxury}/atras-negro.jpg`,
+  //     // `${enterizos}/${largo}/${pushUp}/${luxury}/atras-azul.jpg`,
+  //   ],
+  //   descuento: false
+  // },
   // {
   //   id: 8,
   //   nombre: "Short + Top",
@@ -500,7 +500,7 @@ export const productos = [
       `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-lila.jpg`,
       `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-palo-de-rosa.jpg`,
       // `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-cafe.jpg`,
-      `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-azul-turqui.jpg`,
+      // `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-azul-turqui.jpg`,
       // `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-amarillo-claro.jpg`,
       // `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-amarillo-colombia.jpg`,
       // `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-azul-celeste.jpg`,
