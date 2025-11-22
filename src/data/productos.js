@@ -576,12 +576,12 @@ export const productos = [
     precio_anterior:56000,
     descripcion: "Tela nylon",
     sizes: [ 'U' ],
-    currentImage: `${licras}/${unicolor}/delante-azul-bebe.jpg`,
+    currentImage: `${licraMastop}/${unicolor}/delante-azul-bebe.jpg`,
     imagenes: [
-      `${licras}/${unicolor}/delante-azul-bebe.jpg`,
-      `${licras}/${unicolor}/atras-azul-bebe.jpg`,
-      `${licras}/${unicolor}/delante-azul-petroleo.jpg`,
-      `${licras}/${unicolor}/delante-vainilla.jpg`,
+      `${licraMastop}/${unicolor}/delante-azul-bebe.jpg`,
+      `${licraMastop}/${unicolor}/atras-azul-bebe.jpg`,
+      `${licraMastop}/${unicolor}/delante-azul-petroleo.jpg`,
+      `${licraMastop}/${unicolor}/delante-vainilla.jpg`,
     ],
     descuento: false
   },
