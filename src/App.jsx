@@ -1,5 +1,7 @@
 // src/App.jsx
-import { useState } from 'react';
+import { useState, useEffect  } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { initFacebookPixel } from "./metaPixel";
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Filtros from './components/FilterCategories/Filtros';
@@ -8,7 +10,6 @@ import ProductPage from './components/pages/ProductPage/ProductPage';
 // const { productos } = require('./data/productos');
 import { productos } from './data/productos';
 import ButtonWhatsapp from './components/ButtonWhatsapp/ButtonWhatsapp';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 import ShowModel from './components/ShowModel/ShowModel';
 import Footer from './components/Footer/Footer';
@@ -30,8 +31,20 @@ export default function App() {
   const [ currentIdState, setCurrentIdState ] = useState(0);
   const [ termsModal, setTermsModal ] = useState(false);
 
-  // Importamos los productos
 
+  const location = useLocation();
+  useEffect(() => {
+    initFacebookPixel();
+  }, []);
+
+  useEffect(() => {
+    if (window.fbq) {
+      window.fbq('track', 'PageView');
+    }
+  }, [location.pathname]);
+
+
+  // Importamos los productos
   const productosFiltrados = productos.filter(p => {
     return (
       (!genero || p.genero === genero) &&
@@ -40,9 +53,9 @@ export default function App() {
     );
   });
 
-
   return (
-    <BrowserRouter>
+    <>
+    
       <ShoppingCart 
         products={productsCartState}
         setProducts={setProductsCartState}
@@ -107,6 +120,7 @@ export default function App() {
         />
 
       </Routes>
-    </BrowserRouter>
+      
+    </>
   );
 }
