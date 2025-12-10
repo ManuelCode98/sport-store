@@ -53,7 +53,7 @@ export const productos = [
       // `${enterizos}/${largo}/${pushUp}/${serenity}/delante-lila.jpg`,
       // `${enterizos}/${largo}/${pushUp}/${serenity}/atras-lila.jpg`,
     ],
-    descuento: false
+    descuento: true
   },
   // {
   //   id: 4,
@@ -284,7 +284,7 @@ export const productos = [
       `${licras}/${pushUp}/${corazon}/atras-azul-turqui.jpg`,
       
     ],
-    descuento: false
+    descuento: true
   },
   {
     id: 14,
@@ -308,7 +308,7 @@ export const productos = [
       // `${shorts}/${seamless}/${rib}/${unicolor}/delante-terracota.jpg`,
       // `${shorts}/${seamless}/${rib}/${unicolor}/delante-rosado.jpg`,
     ],
-    descuento: false
+    descuento: true
   },
   // {
   //   id: 15,
@@ -346,7 +346,7 @@ export const productos = [
       `${top}/${unicolor}/${alejandra}/atras-vinotinto.jpg`,
       // `${top}/${unicolor}/${alejandra}/delante-rojo.jpg`,
     ],
-    descuento: false
+    descuento: true
   },
   // {
   //   id: 17,
@@ -448,7 +448,7 @@ export const productos = [
       // `${enterizos}/${corto}/${pushUp}/${luxury}/atras-negro.jpg`,
       // `${enterizos}/${corto}/${pushUp}/${luxury}/delante-terracota.jpg`,
     ],
-    descuento: false
+    descuento: true
   },
   {
     id: 21,
@@ -466,7 +466,7 @@ export const productos = [
       `${cinturillas}/${latex}/guia-negra.jpg`,
       `${cinturillas}/${latex}/calibre-negra.jpg`,
     ],
-    descuento: false
+    descuento: true
   },
   {
     id: 22,
@@ -483,7 +483,7 @@ export const productos = [
       `${cinturillas}/${powernet}/delante-negra.jpg`,
       `${cinturillas}/${powernet}/guia-negra.jpg`,
     ],
-    descuento: false
+    descuento: true
   },
   {
     id: 23,
@@ -517,7 +517,7 @@ export const productos = [
       // `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-morado.jpg`,
       // `${blusas}/${premium}/${unicolor}/${asimetrica}/delante-rojo.jpg`,
     ],
-    descuento: false
+    descuento: true
   },
   // {
   //   id: 24,
@@ -583,7 +583,7 @@ export const productos = [
       `${licraMastop}/${unicolor}/delante-azul-petroleo.jpg`,
       `${licraMastop}/${unicolor}/delante-vainilla.jpg`,
     ],
-    descuento: false
+    descuento: true
   },
   {
     id: 27,
@@ -634,7 +634,7 @@ export const productos = [
       // `${blusas}/${glamCrochet}/${unicolor}/delante-blanco.jpg`,
       // `${blusas}/${glamCrochet}/${unicolor}/delante-negro.jpg`,
     ],
-    descuento: false
+    descuento: true
   },
   // {
   //   id: 30,
@@ -668,7 +668,7 @@ export const productos = [
       `${shortMasTop}/${pushUp}/${nylon}/${unicolor}/atras-negro.jpg`,
       `${shortMasTop}/${pushUp}/${nylon}/${unicolor}/atras-azul-turqui.jpg`,
     ],
-    descuento: false
+    descuento: true
   },
   // {
   //   id: 32,
@@ -702,7 +702,7 @@ export const productos = [
     imagenes: [
       `${licras}/${seamless}/${pushUp}/${unicolor}/delante-azul-turqui.jpg`,
     ],
-    descuento: false
+    descuento: true
   },
   {
     id: 34,
@@ -720,7 +720,7 @@ export const productos = [
       `${shortMasCropTop}/${nylon}/${unicolor}/delante-cafe.jpg`,
       `${shortMasCropTop}/${nylon}/${unicolor}/delante-azul-petroleo.jpg`,
     ],
-    descuento: false
+    descuento: true
   },
   {
     id: 35,
@@ -736,7 +736,7 @@ export const productos = [
     imagenes: [
       `${shortMasTop}/${texturizado}/${estampado}/delante-azul-rey.jpg`,
     ],
-    descuento: false
+    descuento: true
   },
   {
     id: 36,
@@ -752,7 +752,7 @@ export const productos = [
     imagenes: [
       `${shortMasTop}/${nylon}/${linley}/delante-azul-celeste.jpg`,
     ],
-    descuento: false
+    descuento: true
   },
   {
     id: 37,
@@ -770,7 +770,7 @@ export const productos = [
       `${shortMasTop}/${nylon}/${cristina}/delante-azul-petroleo.jpg`,
       `${shortMasTop}/${nylon}/${cristina}/delante-vinotinto.jpg`,
     ],
-    descuento: false
+    descuento: true
   },
   {
     id: 38,
@@ -788,7 +788,7 @@ export const productos = [
       `${top}/${unicolor}/${cristina}/delante-blanco.jpg`,
       `${top}/${unicolor}/${cristina}/delante-negro.jpg`,
     ],
-    descuento: false
+    descuento: true
   },
   {
     id: 39,
@@ -808,7 +808,7 @@ export const productos = [
       `${top}/${unicolor}/${naim}/delante-cafe.jpg`,
       `${top}/${unicolor}/${naim}/delante-palo-de-rosa.jpg`,
     ],
-    descuento: false
+    descuento: true
   },
   {
     id: 40,
