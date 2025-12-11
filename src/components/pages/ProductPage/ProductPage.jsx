@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { productos } from '../../../data/productos';
 import './ProductPage.css';
 import { formatPrices } from '../../../helpers/formatPrices';
+import { informationAlert } from '../../../helpers/informationAlert';
 
 
 const ProductPage = ({ products, setProducts, setCurrentImage, setCurrentId }) => {
@@ -69,6 +70,14 @@ const ProductPage = ({ products, setProducts, setCurrentImage, setCurrentId }) =
   }
 
   const addToCart = ( { currentTarget }, product, productUnits, size )=>{
+
+  if(!size){
+    informationAlert(
+      'Información',
+      'Tienes que elegir una talla!'
+    )
+    return
+  }    
 
     const color = product.currentImage
     .split('/').pop() 
@@ -192,7 +201,7 @@ const ProductPage = ({ products, setProducts, setCurrentImage, setCurrentId }) =
                       className='button-name-buy' 
                       // Aca debe de ir agregando productos al carro
                       onClick={ (e)=> addToCart(e, productState, amountProductState, selectSizeState ) }
-                      disabled={ !selectSizeState}
+                      // disabled={ !selectSizeState}
                     >
                       Añadir al carrito
                     </button>

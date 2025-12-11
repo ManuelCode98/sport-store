@@ -1,6 +1,6 @@
 
 import "./Footer.css";
-import { FaWhatsapp, FaInstagram, FaEnvelope, FaTiktok } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaEnvelope, FaTiktok, FaFacebook } from "react-icons/fa";
 import { FaTruck, FaUndoAlt, FaShieldAlt, FaMoneyBillWave } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -8,6 +8,7 @@ const Footer = ({ openTermsModal, setOpenTermsModal }) => {
 
   const linkCorreo = 'mailto:fitness.mati098@gmail.com';
   const linkWhatsapp = 'https://wa.me/3157382433';
+  const linkFacebook = 'https://www.facebook.com/profile.php?id=61584623556525';
   const linkInstagram = 'https://www.instagram.com/fitness.mati_/';
   const linkTikTok = 'https://www.tiktok.com/@fitness.mati_';
 
@@ -55,6 +56,9 @@ const Footer = ({ openTermsModal, setOpenTermsModal }) => {
           </p>
           <p>
             <FaWhatsapp /> <a href={linkWhatsapp} target='_blank'>whatsapp</a>
+          </p>
+          <p>
+            <FaFacebook /> <a href={linkFacebook} target='_blank'>Siguenos Fitness Mati</a>
           </p>
           <p>
             <FaInstagram /> <a href={linkInstagram} target='_blank'>Siguenos @fitness.mati_</a>
