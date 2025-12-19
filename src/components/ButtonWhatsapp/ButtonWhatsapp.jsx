@@ -3,7 +3,7 @@ import './ButtonWhatsapp.css';
 
 const ButtonWhatsapp = () => {
 
-    const linkWhatsapp = 'https://wa.me/3157382433';
+    const linkWhatsapp = import.meta.env.VITE_LINK_WHATSAPP;
 
     return (
          <div className='icons-contact'>
