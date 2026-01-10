@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
 import './ShoppingCart.css';
 import { formatPrices } from "../../helpers/formatPrices";
+import { useAllDataProduct } from "../../context/useAllDataProduct";
 
-const ShoppingCart = ({ products, setProducts }) => {
+// todo aca ya no debo de enviar la props importa mi estado global y borro eso
+// Ya lo implemente voy a mirar a ver si sirve
 
+const ShoppingCart = () => {
+
+  const { products, setProducts } = useAllDataProduct();
   const [ numberProductState, setNumberProductState ] = useState(0);
   const [ resultsState, setResultsState ] = useState([]);
   const [ openCartState, setOpenCartState ] = useState(false);

@@ -2,17 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 3rem;
-    height: 2rem;
-    background-color: rgb(190, 42, 5);
-    border: 1px solid #eee;
-    border-radius: 5px;
-    padding: 0.2rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    margin-top: 1.5rem;
-    margin-left: 2rem;
+    width: 5vw;
+    height: 8vh;
     cursor: pointer;
+    margin-top: 2rem;
+    margin-left: 1rem;
 }
 .button-start {
     text-decoration: none;
@@ -291,8 +285,8 @@
 
     .container-button-start{
         position: absolute;
-        right: 1%;
-        bottom: 1%;
+        right: 10%;
+        bottom: 1.5%;
     }
 
     .container-show-product {

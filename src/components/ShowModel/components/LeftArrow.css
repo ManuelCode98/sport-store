@@ -1,0 +1,7 @@
+.LeftArrow {
+    cursor: pointer;
+}
+
+.LeftArrow:active {
+    transform: scale(1.2);
+}

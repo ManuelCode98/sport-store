@@ -1,0 +1,7 @@
+.RightArrow {
+    cursor: pointer;
+}
+
+.RightArrow:active {
+    transform: scale(1.2);
+}

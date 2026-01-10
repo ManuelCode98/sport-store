@@ -7,34 +7,28 @@ import Hero from './components/Hero/Hero';
 import Filtros from './components/FilterCategories/Filtros';
 import ProductosGrid from './components/ProductosGrid';
 import ProductPage from './components/pages/ProductPage/ProductPage';
-// const { productos } = require('./data/productos');
 import { productos } from './data/productos';
 import ButtonWhatsapp from './components/ButtonWhatsapp/ButtonWhatsapp';
 import ShoppingCart from './components/ShoppingCart/ShoppingCart';
-import ShowModel from './components/ShowModel/ShowModel';
 import Footer from './components/Footer/Footer';
 import TermsModal from './components/TermsModal/TermsModal';
 import Shipments from './components/pages/Shipments/Shipments';
 import Returns from './components/pages/Returns/Returns';
 import Privacy from './components/pages/Privacy/Privacy';
-// import { ProductsCartProvider, useProducts } from './context/ProductsCartContext';
 
-// import '../styles.css';
 
 
 export default function App() {
   const [genero, setGenero] = useState('');
   const [nombre, setNombre] = useState('');
   const [modelo, setModelo] = useState('');
-  const [ productsCartState, setProductsCartState ] = useState([]);
-  const [ currentImageState, setCurrentImageState ] = useState('');
-  const [ currentIdState, setCurrentIdState ] = useState(0);
   const [ termsModal, setTermsModal ] = useState(false);
 
 
   const location = useLocation();
   useEffect(() => {
-    initFacebookPixel();
+    //!activar pixel despues de terminar el desarrollo
+    // initFacebookPixel();
   }, []);
 
   useEffect(() => {
@@ -56,10 +50,7 @@ export default function App() {
   return (
     <>
     
-      <ShoppingCart 
-        products={productsCartState}
-        setProducts={setProductsCartState}
-      />
+      <ShoppingCart/>
       <Routes>
         <Route path='/' element={
           <>
@@ -87,20 +78,7 @@ export default function App() {
         }/>
 
         <Route path='/product/:id' element={
-          <ProductPage  
-            products={productsCartState}
-            setProducts={setProductsCartState}
-            setCurrentImage={setCurrentImageState}  
-            setCurrentId={setCurrentIdState}  
-            />
-          } 
-        />
-
-        <Route path='/product/:id/show-model' element={
-          <ShowModel  
-            currentImage={currentImageState} 
-            currentId={currentIdState}
-            />
+          <ProductPage/>
           } 
         />
 

@@ -4,28 +4,21 @@ import { productos } from '../../../data/productos';
 import './ProductPage.css';
 import { formatPrices } from '../../../helpers/formatPrices';
 import { informationAlert } from '../../../helpers/informationAlert';
+import { useAllDataProduct } from '../../../context/useAllDataProduct';
+import { useProduct } from '../../../context/useProduct';
+import ShowModel from '../../ShowModel/ShowModel';
+import HomeArrow from './components/HomeArrow';
 
 
-const ProductPage = ({ products, setProducts, setCurrentImage, setCurrentId }) => {
+const ProductPage = () => {
 
   const localtion = useLocation();
   const currentPaht = localtion.pathname;
   const [ windowImageOpen, setWindowImageOpen ] = useState(false);
-  const [ showModelState, setShowModelState ] = useState(false);
   const [ amountProductState, setAmountProductState ] = useState(1);
   const [ selectSizeState, setSelectSizeState ] = useState(null);
- 
-
-  const [ productState, setProductState ] = useState({
-    descripcion: '',
-    genero: '',
-    id: 0,
-    currentImage: '',
-    imagenes: '',
-    modelo: '',
-    nombre : '',
-    precio : ''
-  })
+  const { productsCart, setProductsCart, currentImage, setCurrentImage, setCurrentId } = useAllDataProduct();
+  const { productState, setProductState } = useProduct();
    
 
   useEffect(()=>{
@@ -38,15 +31,16 @@ const ProductPage = ({ products, setProducts, setCurrentImage, setCurrentId }) =
             const getProduct = ( id ) => productos.find( product => product.id === id );
 
             setProductState( getProduct( id ) );
+            
         })();
 
   },[]);
 
   const changeImage = ( {currentTarget} )=>{
-
-
+  
     // Aca seleccionamos todos las imagenes por su clase y le borramos la clase "opacity"
     const images = document.querySelectorAll('.image-model');
+  
     images.forEach( (image)=>(
       image.classList.add('opacity')
     ))
@@ -55,16 +49,16 @@ const ProductPage = ({ products, setProducts, setCurrentImage, setCurrentId }) =
     currentTarget.classList.remove('opacity');
 
     setProductState( { ...productState, currentImage: currentTarget.src } );
-    
-
   }
 
   const showImage = ( { currentTarget }, id )=>{
 
-    const currentImage = currentTarget.src;
+    // Agrega la imagen que se le dio clic
+    setCurrentImage( currentTarget.src );
+  
+    //Abre la ventana para mostrar solo la imagen
+    setWindowImageOpen(true);
 
-    setCurrentImage( currentImage );
-    setCurrentId( id );
 
     return
   }
@@ -86,7 +80,7 @@ const ProductPage = ({ products, setProducts, setCurrentImage, setCurrentId }) =
 
     const { precio_compra, imagenes, sizes, ...newProduct } = product
 
-    setProducts( prevProducts => [ ...prevProducts, {
+    setProductsCart( prevProducts => [ ...prevProducts, {
       ...newProduct,
       amount : amountProductState,
       color,
@@ -98,7 +92,7 @@ const ProductPage = ({ products, setProducts, setCurrentImage, setCurrentId }) =
 
     // Creo una copia del array original y le quito la propieda "precio_compra"
     // Creo una copia del array de products y luego le agrego agrego el producto que viene en la funcion 
-    const newArrayProducts = [...products];
+    const newArrayProducts = [...productsCart];
     newArrayProducts.push( {
       ...newProduct, 
         amount : amountProductState, 
@@ -126,106 +120,95 @@ const ProductPage = ({ products, setProducts, setCurrentImage, setCurrentId }) =
 
   return (
     <>
-      <>
-        <div className='container-button-start'>
-            <Link to={ '/' } className='button-start'><svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+      <div className='container-button-start'>
+          <Link to={ '/' } 
+          className='button-start'
           >
-          <path
-            d="M10 20V14H14V20H18V12H22L12 3L2 12H6V20H10Z"
-            fill="currentColor"
+            <HomeArrow/>
+        </Link>
+      </div>
+
+      <div className="container-show-product">{ productState.id > 0 && 
+        <div key={ productState.id } className='container-product' >
+
+          <img
+            className='product-page-photo' 
+            src={ productState.currentImage } 
+            onClick={ (e)=> showImage(e, productState.id ) }
           />
-          </svg>
-          </Link>
-        </div>
 
-        <div className="container-show-product">{ productState.id > 0 && 
-          <div key={ productState.id } className='container-product' >
+          <div className='product-features'>
+            <div className='container-data'>
+                <h4 className='home-page-product-name'>{ productState.nombre }</h4>
+                <h4 className='home-page-model'>{ productState.modelo }</h4>
+                <h4 className='home-page-gender'>{ productState.genero }</h4>
 
-          <Link to={`show-model`}>
-            <img 
-              className='product-page-photo' 
-              src={ productState.currentImage } 
-              onClick={ (e)=> showImage(e, productState.id ) }
-            />
-          </Link>
+                <div className="rating" aria-label="Calificación: 4.5 de 5 estrellas">
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star-half-alt"></i>
+                    <span className="rating-text">{/*4.5*/}</span>
+                </div>
 
-            <div className='product-features'>
-              <div className='container-data'>
-                  <h4 className='home-page-product-name'>{ productState.nombre }</h4>
-                  <h4 className='home-page-model'>{ productState.modelo }</h4>
-                  <h4 className='home-page-gender'>{ productState.genero }</h4>
+                <h4 className='home-page-model'>{ productState.descripcion }</h4>
+                
+                <h4 className='home-page-sale-price'>Cop <span style={{ 'color':'green' }}>{ formatPrices( productState.precio ) }</span> </h4>
 
-                  <div className="rating" aria-label="Calificación: 4.5 de 5 estrellas">
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star"></i>
-                      <i className="fas fa-star-half-alt"></i>
-                      <span className="rating-text">{/*4.5*/}</span>
+                <div className='home-page-container-size'>
+                  <p className='home-page-size'>Talla</p>
+
+                  {
+                    productState.sizes.map( size => (
+                      <button 
+                        key={ `${productState.id}${size}` }
+                        className={`size-buttons ${ selectSizeState === size ? 'select-size' : '' }`}
+                        onClick={()=>setSelectSizeState(size)}
+                        >
+                          {size}
+                        </button>
+                    ))
+                  }
+
+                </div>
+
+                <div className='container-button-buy' >
+                  <div className='container-button-handle-amount'>
+                    <button className='button-handle-amount' onClick={ (e)=> amountProduct(e) }>-</button>
+                      <span>{amountProductState}</span>
+                    <button className='button-handle-amount' onClick={ (e)=> amountProduct(e) }>+</button>
                   </div>
 
-                  <h4 className='home-page-model'>{ productState.descripcion }</h4>
-                  
-                  <h4 className='home-page-sale-price'>Cop <span style={{ 'color':'green' }}>{ formatPrices( productState.precio ) }</span> </h4>
-
-                  <div className='home-page-container-size'>
-                    <p className='home-page-size'>Talla</p>
-
-                    {
-                      productState.sizes.map( size => (
-                        <button 
-                          key={ `${productState.id}${size}` }
-                          className={`size-buttons ${ selectSizeState === size ? 'select-size' : '' }`}
-                          onClick={()=>setSelectSizeState(size)}
-                          >
-                            {size}
-                          </button>
-                      ))
-                    }
-
-                  </div>
-
-                  <div className='container-button-buy' >
-                    <div className='container-button-handle-amount'>
-                      <button className='button-handle-amount' onClick={ (e)=> amountProduct(e) }>-</button>
-                        <span>{amountProductState}</span>
-                      <button className='button-handle-amount' onClick={ (e)=> amountProduct(e) }>+</button>
-                    </div>
-
-                    <button 
-                      className='button-name-buy' 
-                      // Aca debe de ir agregando productos al carro
-                      onClick={ (e)=> addToCart(e, productState, amountProductState, selectSizeState ) }
-                      // disabled={ !selectSizeState}
-                    >
-                      Añadir al carrito
-                    </button>
-                  </div>
-              </div>
+                  <button 
+                    className='button-name-buy' 
+                    // Aca debe de ir agregando productos al carro
+                    onClick={ (e)=> addToCart(e, productState, amountProductState, selectSizeState ) }
+                    // disabled={ !selectSizeState}
+                  >
+                    Añadir al carrito
+                  </button>
+                </div>
             </div>
-
           </div>
-        }
-      </div>
-      <div className='container-model'>
-        {
-          productState.imagenes.length > 0 && productState.imagenes.map( ( image, index )=>(
-            <img
-              key={image}
-              src={image}
-              className={`image-model ${ index === 0 ? '' : 'opacity' }`}
-              onClick={(e) => changeImage(e)}
-            />  
-          ))
-        
-        }
-      </div>
-      </>
+
+        </div>
+      }
+    </div>
+    <div className='container-model'>
+      {
+        productState.imagenes.length > 0 && productState.imagenes.map( ( image, index )=>(
+          <img
+            key={image}
+            src={image}
+            className={`image-model ${ index === 0 ? '' : 'opacity' }`}
+            onClick={(e) => changeImage(e)}
+          />  
+        ))
+      
+      }
+    </div>
+    { windowImageOpen && <ShowModel setWindowsOpen={ setWindowImageOpen }/> }
     </>
   );
 }
