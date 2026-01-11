@@ -1,4 +1,3 @@
-// src/components/Filtros.jsx
 import { productos } from '../../data/productos';
 import './FilterCategories.css';
 
@@ -11,7 +10,6 @@ export default function Filtros({ genero, setGenero, nombre, setNombre, modelo, 
       <select
         value={genero}
         onChange={(e) => setGenero(e.target.value)}
-        // style={selectStyle}
       >
         <option value="">Todos los géneros</option>
         <option value="dama">Dama</option>
@@ -21,7 +19,6 @@ export default function Filtros({ genero, setGenero, nombre, setNombre, modelo, 
       <select
         value={nombre}
         onChange={(e) => setNombre(e.target.value)}
-        // style={selectStyle}
       >
         <option value="">Todos los nombres</option>
         {nombresUnicos.map(n => (
@@ -32,7 +29,6 @@ export default function Filtros({ genero, setGenero, nombre, setNombre, modelo, 
       <select
         value={modelo}
         onChange={(e) => setModelo(e.target.value)}
-        // style={selectStyle}
       >
         <option value="">Todos los modelos</option>
         {modelosUnicos.map(m => (

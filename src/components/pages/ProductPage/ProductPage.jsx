@@ -8,7 +8,14 @@ import { useAllDataProduct } from '../../../context/useAllDataProduct';
 import { useProduct } from '../../../context/useProduct';
 import ShowModel from '../../ShowModel/ShowModel';
 import HomeArrow from './components/HomeArrow';
+import { motion } from 'framer-motion';
 
+const scrollAnimation = {
+  initial: { opacity: 0, y: 15 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: false, amount: 0.1 },
+  transition: { duration: 0.5 }
+};
 
 const ProductPage = () => {
 
@@ -121,86 +128,116 @@ const ProductPage = () => {
             {productState.id > 0 && (
                 <div key={productState.id} className='container-product'>
                     
-                    {/* COLUMNA IZQUIERDA: FOTOS */}
                     <div className='container-product-photo-and-models'>
-                        <div className='container-photo'>
-                            <img
-                                className='product-page-photo'
-                                src={productState.currentImage}
-                                onClick={(e) => showImage(e, productState.id)}
-                            />
-                        </div>
-
-                        <div className='container-model'>
-                            {productState.imagenes.length > 0 && productState.imagenes.map((image, index) => (
+                        <motion.div { ...scrollAnimation }>
+                            <div className='container-photo'>
                                 <img
-                                    key={image}
-                                    src={image}
-                                    className={`image-model ${index === 0 ? '' : 'opacity'}`}
-                                    onClick={(e) => changeImage(e)}
+                                    className='product-page-photo'
+                                    src={productState.currentImage}
+                                    onClick={(e) => showImage(e, productState.id)}
                                 />
-                            ))}
-                        </div>
-                        {windowImageOpen && <ShowModel setWindowsOpen={setWindowImageOpen} />}
+                            </div>
+
+                            <div className='container-model'>
+                                {productState.imagenes.length > 0 && productState.imagenes.map((image, index) => (
+                                    <img
+                                        key={image}
+                                        src={image}
+                                        className={`image-model ${index === 0 ? '' : 'opacity'}`}
+                                        onClick={(e) => changeImage(e)}
+                                    />
+                                ))}
+                            </div>
+                            {windowImageOpen && <ShowModel setWindowsOpen={setWindowImageOpen} />}
+                        </motion.div>
                     </div>
 
                     {/* COLUMNA DERECHA: CARACTERÍSTICAS */}
                     <div className='product-features'>
-                        <div className='container-data'>
-                            
-                            <div className="group-header">
-                                <h4 className='home-page-product-name'>{productState.nombre}</h4>
-                                <h4 className='home-page-model'>{productState.modelo}</h4>
-                                <h4 className='home-page-gender'>{productState.genero}</h4>
-                                <div className="rating">
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star"></i>
-                                    <i className="fas fa-star-half-alt"></i>
-                                    <span className="rating-text">4.5</span>
+                            <div className='container-data'>
+                                
+                                <div className="group-header">
+                                    <motion.div { ...scrollAnimation }>
+                                        <h4 className='home-page-product-name'>{productState.nombre}</h4>
+                                    </motion.div>
+                                    
+                                    <motion.div { ...scrollAnimation }>
+                                        <h4 className='home-page-model'>{productState.modelo}</h4>
+                                    </motion.div>
+                                    
+                                    <motion.div { ...scrollAnimation }>
+                                        <h4 className='home-page-gender'>{productState.genero}</h4>
+                                    </motion.div>
+
+                                    <motion.div { ...scrollAnimation }>
+                                        <div className="rating">
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star"></i>
+                                            <i className="fas fa-star-half-alt"></i>
+                                            <span className="rating-text">4.5</span>
+                                        </div>
+                                    </motion.div>
+                                    
                                 </div>
-                            </div>
 
-                            <h4 className='home-page-model'>{productState.descripcion}</h4>
+                                <motion.div { ...scrollAnimation }>
+                                    <h4 className='home-page-model'>{productState.descripcion}</h4>
+                                </motion.div>
 
-                            <div className='group-sale-row'>
-                                <h4 className='home-page-sale-price'>
-                                    Cop <span style={{ 'color': 'green' }}>{formatPrices(productState.precio)}</span>
-                                </h4>
+                                <div className='group-sale-row'>
 
-                                <div className='home-page-container-size'>
-                                    <p className='home-page-size'>Talla</p>
-                                    <div className="sizes-wrapper">
-                                        {productState.sizes.map(size => (
-                                            <button
-                                                key={`${productState.id}${size}`}
-                                                className={`size-buttons ${selectSizeState === size ? 'select-size' : ''}`}
-                                                onClick={() => setSelectSizeState(size)}
-                                            >
-                                                {size}
-                                            </button>
-                                        ))}
+                                    <motion.div { ...scrollAnimation }>
+                                        <h4 className='home-page-sale-price'>
+                                            Cop <span style={{ 'color': 'green' }}>{formatPrices(productState.precio)}</span>
+                                        </h4>
+                                    </motion.div>
+                                    
+
+                                    <div className='home-page-container-size'>
+                                        <motion.div { ...scrollAnimation }>
+                                            <p className='home-page-size'>Talla</p>
+                                            <div className="sizes-wrapper">
+                                                {productState.sizes.map(size => (
+                                                    <button
+                                                        key={`${productState.id}${size}`}
+                                                        className={`size-buttons ${selectSizeState === size ? 'select-size' : ''}`}
+                                                        onClick={() => setSelectSizeState(size)}
+                                                    >
+                                                        {size}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        </motion.div>
+                                        
                                     </div>
                                 </div>
-                            </div>
 
-                            <div className='container-button-buy'>
-                                <div className='container-button-handle-amount'>
-                                    <button className='button-handle-amount' onClick={(e) => amountProduct(e)}>-</button>
-                                    <span>{amountProductState}</span>
-                                    <button className='button-handle-amount' onClick={(e) => amountProduct(e)}>+</button>
+                                <div className='container-button-buy'>
+
+                                    <motion.div { ...scrollAnimation }>
+                                        <div className='container-button-handle-amount'>
+                                            <button className='button-handle-amount' onClick={(e) => amountProduct(e)}>-</button>
+                                            <span>{amountProductState}</span>
+                                            <button className='button-handle-amount' onClick={(e) => amountProduct(e)}>+</button>
+                                        </div>
+                                    </motion.div>
+
+                                    <motion.div { ...scrollAnimation }>
+                                            <button
+                                                className='button-name-buy'
+                                                onClick={(e) => addToCart(e, productState, amountProductState, selectSizeState)}
+                                            >
+                                                Añadir al carrito
+                                            </button>
+                                    </motion.div>
+                                        
+                                    
+                                    
                                 </div>
 
-                                <button
-                                    className='button-name-buy'
-                                    onClick={(e) => addToCart(e, productState, amountProductState, selectSizeState)}
-                                >
-                                    Añadir al carrito
-                                </button>
                             </div>
-
-                        </div>
                     </div> 
 
                 </div> 

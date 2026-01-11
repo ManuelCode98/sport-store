@@ -1,6 +1,7 @@
 // src/App.jsx
 import { useState, useEffect  } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { initFacebookPixel } from "./metaPixel";
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
@@ -16,6 +17,13 @@ import Shipments from './components/pages/Shipments/Shipments';
 import Returns from './components/pages/Returns/Returns';
 import Privacy from './components/pages/Privacy/Privacy';
 
+
+const scrollAnimation = {
+  initial: { opacity: 0, y: 15 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: false, amount: 0.1 },
+  transition: { duration: 0.5 }
+};
 
 
 export default function App() {
@@ -53,8 +61,15 @@ export default function App() {
       <Routes>
         <Route path='/' element={
           <>
+          <motion.div { ...scrollAnimation }>
             <Header />
+          </motion.div>
+          
+          <motion.div { ...scrollAnimation }>
             <Hero />
+          </motion.div>
+          
+          <motion.div { ...scrollAnimation }>
             <Filtros
               genero={genero}
               setGenero={setGenero}
@@ -63,11 +78,20 @@ export default function App() {
               modelo={modelo}
               setModelo={setModelo}
             />
-            <div className="container">
+          </motion.div>
+
+          <div className="container">
+            {/* <motion.div { ...scrollAnimation }> */}
               <ProductosGrid productos={productosFiltrados} />
-            </div>
+            {/* </motion.div>   */}
+          </div>
+
             <ButtonWhatsapp/>
+
+          <motion.div { ...scrollAnimation }>
             <Footer openTermsModal={ termsModal } setOpenTermsModal={ setTermsModal } />
+          </motion.div>
+            
             { termsModal 
               ?
                 <TermsModal openTermsModal={ termsModal } setOpenTermsModal={ setTermsModal } />  

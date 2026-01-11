@@ -1,5 +1,7 @@
-// src/components/ProductosGrid.jsx
+
+import { motion } from 'framer-motion';
 import ProductoCard from './ProductCard/ProductoCard';
+
 
 export default function ProductosGrid({ productos }) {
   return (
@@ -10,8 +12,16 @@ export default function ProductosGrid({ productos }) {
       padding: '3rem 0'
     }}>
       {productos.length > 0 ? (
-        productos.map(producto => (
-          <ProductoCard key={producto.id} producto={producto} />
+        productos.map((producto, index) => (
+          <motion.div  
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }} 
+            transition={{ duration: 0.4, delay: (index % 3) * 0.1 }}
+            key={producto.id}
+            >
+              <ProductoCard producto={producto} />
+          </motion.div>
         ))
       ) : (
         <p style={{
