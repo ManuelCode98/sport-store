@@ -27,8 +27,7 @@ export default function App() {
 
   const location = useLocation();
   useEffect(() => {
-    //!activar pixel despues de terminar el desarrollo
-    // initFacebookPixel();
+    initFacebookPixel();
   }, []);
 
   useEffect(() => {

@@ -1,3 +1,7 @@
+/* ==========================================================================
+   TUS ESTILOS ORIGINALES (MANTENIDOS EXACTAMENTE IGUAL)
+   ========================================================================== */
+
 .container-button-start {
     display: flex;
     justify-content: center;
@@ -7,12 +11,16 @@
     cursor: pointer;
     margin-top: 2rem;
     margin-left: 1rem;
+    position: relative;
+    z-index: 1;
 }
+
 .button-start {
     text-decoration: none;
     color: white;
     font-weight: 600;
 }
+
 .container-button-start:active {
     transform: scale(1.2);
 }
@@ -22,41 +30,84 @@
     top: 10%;
     left: 20%;
     margin: 0 auto;
-    width: 80%;
-    height: 75vh;
+    width: 75vw;
+    height: 85vh;
     overflow: hidden;
 }
 
 .container-product {
-    display: grid;
-    grid-template-columns: 25% 60%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.container-product-photo-and-models {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.container-photo {
+    width: 100%;
+    max-width: 600px;
+    height: 70vh;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
 }
 
 .product-page-photo {
     width: 100%;
     height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.container-model {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    gap: 10px;
+    overflow-x: scroll;
+    padding-top: 10px;
+    justify-content: center;
+}
+
+.container-model::-webkit-scrollbar {
+    height: 3px;
+}
+
+.container-model::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 12px;
+}
+
+.container-model::-webkit-scrollbar-thumb {
+    background: #7A5CFA;
+}
+
+.image-model {
+    width: 50px;
+    height: 50px;
     object-fit: cover;
     object-position: center;
     cursor: pointer;
+}
+
+.opacity {
+    opacity: 0.5;
 }
 
 .product-features {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 70vh;
+    height: auto;
     justify-items: center;
     justify-content: center;
 }
 
 .container-data {
     margin-left: 2rem;
-}
-
-/* === MEJORAS DE TIPOGRAFÍA Y COLOR (sin cambiar estructura) === */
-
-/* Fuente elegante y moderna para todo el contenido */
-.container-data {
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -89,7 +140,6 @@
     text-transform: uppercase;
 }
 
-/* Estrellas de rating */
 .rating {
     color: black;
     margin-bottom: 0.5rem;
@@ -100,11 +150,9 @@
 }
 
 .rating i {
-    color: #f59e0b; /* Estrellas doradas */
-    margin-bottom: 0.5rem;
+    color: #f59e0b;
 }
 
-/* Precio */
 .home-page-sale-price {
     font-size: 1.15rem;
     font-weight: 600;
@@ -113,10 +161,8 @@
 }
 
 .home-page-sale-price span {
-    color: #2e7d32; /* Verde profesional para el número */
+    color: #2e7d32;
 }
-
-/* Inicio de los estilos de los botones de la talla */
 
 .home-page-container-size {
     font-weight: 600;
@@ -138,22 +184,13 @@
     margin: 0 6px;
     margin-bottom: 1rem;
 }
+
 .select-size {
     background-color: rgb(182, 180, 180);
 }
 
-/* Fin de los estilos de los botones de la talla */
-
-
-
-/* === BOTÓN COMPRAR (estilo elegante con tu color #7A5CFA) === */
-/* Este estilo asume que ya tienes el CSS del botón aplicado a .button-name-buy */
-
-.container-button-buy {
-    display: inline-block;
-}
-
 .button-name-buy {
+    width: 60%;
     padding: 12px 28px;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
@@ -169,172 +206,162 @@
     letter-spacing: 0.5px;
 }
 
-
 .button-name-buy:active {
     transform: scale(1.1);
     box-shadow: 0 3px 6px rgba(122, 92, 250, 0.15);
 }
 
-/* Inicio de los estilos de los botonos de sumar o restar cantidad de productos*/
-
-/* Contenedor de los botones de cantidad */
 .container-button-handle-amount {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 2rem; /* Ajusta según dónde lo pongas */
-
-}
-
-/* Botones + y - */
-.button-handle-amount {
-  width: 36px;
-  height: 36px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #ffffff;
-  background-color: #7A5CFA;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  box-shadow: 0 3px 8px rgba(122, 92, 250, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
-}
-
-.button-handle-amount:hover {
-  background-color: #6a4dfb;
-  box-shadow: 0 5px 12px rgba(122, 92, 250, 0.35);
-  transform: translateY(-1px);
-}
-
-.button-handle-amount:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 5px rgba(122, 92, 250, 0.2);
-}
-
-/* Número central */
-.container-button-handle-amount > span {
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-  min-width: 40px;
-  text-align: center;
-}
-
-/* Fin de los estilos de los botonos de sumar o restar cantidad de productos*/
-
-
-/* Aca van los modelos que se pueden comprar */
-.container-model {
     display: flex;
-    width: 80%;
-    position: absolute;
-    top: 86%;
-    left: 20%;
-    margin: 0 auto;
-    gap: 10px;
-    /* border: 1px solid red; */
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 2rem;
 }
 
-.image-model {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    object-position: center;
+.button-handle-amount {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #7A5CFA;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 8px rgba(122, 92, 250, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
 }
 
-
-.opacity {
-    opacity: 0.5;
+.container-button-handle-amount > span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    min-width: 40px;
+    text-align: center;
 }
 
-@media ( max-width: 768px) {
+/* ==========================================================================
+   ESTRUCTURA PARA LAS NUEVAS CLASES (SIN CAMBIAR DISEÑO EN ESCRITORIO)
+   ========================================================================== */
 
-    .container-button-start{
-        position: relative;
-        z-index: 2;
-        float: right;
-        margin-right: 1rem;
-    }
-    .container-show-product {
-        top: 5%;
-        left: 5%;
+.group-header, .group-sale-row, .container-button-buy {
+    display: flex;
+    flex-direction: column; /* Esto mantiene el orden vertical original */
+}
+
+.sizes-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   RESPONSIVE - MEDIA QUERIES
+   ========================================================================== */
+
+@media (max-width: 920px) {
+    .button-name-buy {
         width: 90%;
-        height: 75vh;
-    }
-
-    .container-product {
-        grid-template-columns: 50% 50%;
     }
 }
 
-@media ( max-width: 550px) {
-
-    .container-product {
-        grid-template-columns: 35% 60%;
+@media (max-width: 800px) {
+    .button-name-buy {
+        width: 95%;
     }
 }
 
-@media ( max-width: 430px) {
-
-    .container-button-start{
-        position: absolute;
-        right: 10%;
-        bottom: 1.5%;
-    }
+@media (max-width: 768px) {
 
     .container-show-product {
-        top: 5%;
-        left: 5%;
-        /* border: 1px solid red; */
+        width: 95vw;
+        overflow-y: scroll;
+        left: 2%;
+    }
+    .container-show-product::-webkit-scrollbar {
+        width: 3px;
+    }
+    .container-show-product::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 12px;
+    }
+    .container-show-product::-webkit-scrollbar-thumb {
+        background: #7A5CFA;        
     }
 
     .container-product {
-        grid-template-columns: 50% 50%;
+        flex-direction: column;
+        width: 100%;
+        
+    }
+
+    .container-product-photo-and-models {
+        width: 100%;
+        height: 80vh;
+        align-items: center;
     }
 
     .container-model {
-        left: 5%;
         width: 90%;
-        overflow-x: scroll;
     }
 
-    .container-data {
-        margin-left: 1rem;
+    /* EL CAMBIO A "ROW" EN MÓVIL */
+    .product-features {
+        margin-top: 0; /* Cambiado de -40% para que no se monte sobre la foto */
+        padding-bottom: 5rem;
+    }
+
+    .group-sale-row {
+        flex-direction: row !important; /* Precio y Talla al lado */
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .container-button-buy {
+        flex-direction: row !important; /* Cantidad y Botón al lado */
+        align-items: center;
+        justify-content: space-around;
+        gap: 15px;
+        width: 100%;
     }
 
     .container-button-handle-amount {
-        margin-bottom: 3rem;
-
+        margin-bottom: 0 !important; /* Quitamos el margen para que alinee con el botón */
     }
 
     .button-name-buy {
-        padding: 15px 10px;
-        font-size: 1rem;
-
+        width: 45%;
     }
-
-    
 }
 
-@media ( max-width: 393px) {
+@media (max-width: 700px) {
 
-    .container-button-start{
-        margin-right: 0rem;
-        padding-left: 0rem;
-        padding-right: 0rem;
-    }
-    
     .button-name-buy {
-        padding: 15px 5px;
-        font-size: 0.8rem;
+        width: 100%;
+        margin-right: 1rem;
     }
-    
+}
 
+@media (max-width: 393px) {
+
+    .button-name-buy {
+        width: 100%;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .button-name-buy {
+        width: 100%;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
 }

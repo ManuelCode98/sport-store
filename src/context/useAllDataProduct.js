@@ -8,7 +8,7 @@ export const useAllDataProduct = create( (set)=>({
     currentImage: null,
 
     setProductsCart: ( newProducts )=>(
-        set({ products: newProducts })
+        set({ productsCart: newProducts })
     ),
     setCurrentId: ( newId )=>(
         set({ currentId: newId })
