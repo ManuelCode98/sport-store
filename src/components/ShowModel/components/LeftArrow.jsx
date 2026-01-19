@@ -13,10 +13,10 @@ const LeftArrow = () => {
     const { imagenes, currentImage } = productState;
     
 
-    if( productState.imagenes.length === 1 ) return;
+    if( imagenes.length === 1 ) return;
 
-    if( productState.imagenes.length > 1 ){
-      
+    if( imagenes.length > 1 ){
+
       const indexImage = imagenes.findIndex((element)=> element === currentImage );
       
       if( indexImage === 0 ){

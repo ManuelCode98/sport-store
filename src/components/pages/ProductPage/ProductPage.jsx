@@ -43,8 +43,8 @@ const ProductPage = () => {
 
   },[]);
 
-  const changeImage = ( {currentTarget} )=>{
-  
+  const changeImage = ( {currentTarget}, image )=>{
+
     // Aca seleccionamos todos las imagenes por su clase y le borramos la clase "opacity"
     const images = document.querySelectorAll('.image-model');
   
@@ -55,13 +55,13 @@ const ProductPage = () => {
     // Aca le agregamos la clase solo al elemento que se clico
     currentTarget.classList.remove('opacity');
 
-    setProductState( { ...productState, currentImage: currentTarget.src } );
+    setProductState( { ...productState, currentImage: image } );
   }
 
-  const showImage = ( { currentTarget }, id )=>{
+  const showImage = ( image )=>{
 
     // Agrega la imagen que se le dio clic
-    setCurrentImage( currentTarget.src );
+    setCurrentImage( image );
   
     //Abre la ventana para mostrar solo la imagen
     setWindowImageOpen(true);
@@ -134,7 +134,7 @@ const ProductPage = () => {
                                 <img
                                     className='product-page-photo'
                                     src={productState.currentImage}
-                                    onClick={(e) => showImage(e, productState.id)}
+                                    onClick={() => showImage(productState.currentImage)}
                                 />
                             </div>
 
@@ -144,7 +144,7 @@ const ProductPage = () => {
                                         key={image}
                                         src={image}
                                         className={`image-model ${index === 0 ? '' : 'opacity'}`}
-                                        onClick={(e) => changeImage(e)}
+                                        onClick={(e) => changeImage(e, image)}
                                     />
                                 ))}
                             </div>

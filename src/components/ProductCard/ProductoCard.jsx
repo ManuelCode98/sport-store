@@ -1,8 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import './ProductCard.css';
 import { formatPrices } from "../../helpers/formatPrices";
-import { motion } from "framer-motion";  
-
 
 
 export default function ProductoCard({ producto }) {
@@ -10,7 +8,7 @@ export default function ProductoCard({ producto }) {
 
   return (
 
-      <div
+      <div 
         className="producto-card"
         onMouseEnter={e => {
           e.currentTarget.style.transform = 'translateY(-5px)';

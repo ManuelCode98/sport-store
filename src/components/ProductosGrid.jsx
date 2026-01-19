@@ -1,9 +1,26 @@
 
 import { motion } from 'framer-motion';
 import ProductoCard from './ProductCard/ProductoCard';
+import { useEffect, useRef } from 'react';
+import { useProduct } from '../context/useProduct';
 
 
 export default function ProductosGrid({ productos }) {
+
+   const { productState, setProductState } = useProduct();
+  const refs = useRef({});
+     
+  useEffect(() => {
+
+    if( productState.id ){
+
+      const id = Number( productState.id );
+      refs.current[id].scrollIntoView({ behavior: 'smooth' });
+    }
+
+  }, [ ]);
+
+
   return (
     <section style={{
       display: 'grid',
@@ -19,6 +36,7 @@ export default function ProductosGrid({ productos }) {
             viewport={{ once: false, amount: 0.2 }} 
             transition={{ duration: 0.4, delay: (index % 3) * 0.1 }}
             key={producto.id}
+            ref={ dom => refs.current[producto.id] = dom }
             >
               <ProductoCard producto={producto} />
           </motion.div>
