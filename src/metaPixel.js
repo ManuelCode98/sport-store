@@ -19,3 +19,9 @@ export const initFacebookPixel = () => {
 
   window.fbq('init', '4116261898592423');
 };
+
+export const fbqEvent = (name, data = {}) => {
+  if (window.fbq) {
+    window.fbq('track', name, data);
+  }
+};

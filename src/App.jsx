@@ -16,6 +16,7 @@ import TermsModal from './components/TermsModal/TermsModal';
 import Shipments from './components/pages/Shipments/Shipments';
 import Returns from './components/pages/Returns/Returns';
 import Privacy from './components/pages/Privacy/Privacy';
+import CookiesBanner from './components/CookiesBanner/CookiesBanner';
 
 
 const scrollAnimation = {
@@ -56,7 +57,7 @@ export default function App() {
 
   return (
     <>
-    
+      <CookiesBanner/>
       <ShoppingCart/>
       <Routes>
         <Route path='/' element={

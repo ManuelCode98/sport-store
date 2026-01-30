@@ -9,6 +9,7 @@ import { useProduct } from '../../../context/useProduct';
 import ShowModel from '../../ShowModel/ShowModel';
 import HomeArrow from './components/HomeArrow';
 import { motion } from 'framer-motion';
+import { fbqEvent } from '../../../metaPixel';
 
 const scrollAnimation = {
   initial: { opacity: 0, y: 15 },
@@ -36,8 +37,24 @@ const ProductPage = () => {
         (async()=>{
           
             const getProduct = ( id ) => productos.find( product => product.id === id );
+            const productFound = getProduct(id);
 
-            setProductState( getProduct( id ) );
+            setProductState( productFound );
+
+            fbqEvent('ViewContent', {
+                content_ids: [productFound.id],          
+                content_name: productFound.nombre,       
+                content_category: productFound.genero,   
+                content_type: 'product',
+                value: productFound.precio,              
+                currency: 'COP',
+                content_image: productFound.currentImage,
+                extended_info: {
+                    modelo: productFound.modelo,          
+                    en_oferta: productFound.descuento,    
+                    precio_original: productFound.precio_anterior 
+                }
+            });
             
         })();
 
@@ -100,6 +117,22 @@ const ProductPage = () => {
     // Guarda los productos en el localStorage
     localStorage.setItem( 'products', JSON.stringify( updatedCart ) );
 
+
+    // Evento de boton añadir al carrito que lo enviamos a las estadisticas de facebook
+    fbqEvent('AddToCart', {
+        content_ids: [productToAdd.id],          
+        content_name: productToAdd.nombre,       
+        content_category: productToAdd.genero,   
+        content_type: 'product',
+        value: productToAdd.precio,              
+        currency: 'COP',
+        num_items: productToAdd.amount,          
+        extended_info: {
+            modelo: productToAdd.modelo,           
+            talla: productToAdd.size,              
+            color: productToAdd.color              
+        }
+    });
     setAmountProductState( 1 );
 
   }
