@@ -50,7 +50,7 @@ const Footer = ({ openTermsModal, setOpenTermsModal }) => {
       <div className="footer-main">
         <div className="footer-brand">
           <h2>FITNESS MATI</h2>
-          <p>Ropa deportiva en Colombia</p>
+          <h4>Ropa deportiva en Colombia</h4>
           <p>
             <FaEnvelope /> <a href={linkCorreo}>Contactanos al correo</a>
           </p>

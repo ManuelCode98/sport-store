@@ -37,11 +37,11 @@ export default function ProductoCard({ producto }) {
                 producto.descuento
                   ? 
                     <>
-                      <div className="previous-price">Cop ${ formatPrices( producto.precio_anterior ) }</div>
-                      <div className="price">Cop ${ formatPrices( producto.precio ) }</div>
+                      <div className="previous-price">Cop { formatPrices( producto.precio_anterior ) }</div>
+                      <div className="price">Cop { formatPrices( producto.precio ) }</div>
                     </>
                   :
-                    <div className="price">Cop ${ formatPrices( producto.precio ) }</div>
+                    <div className="price">Cop { formatPrices( producto.precio ) }</div>
               }
             </div>
           </div>

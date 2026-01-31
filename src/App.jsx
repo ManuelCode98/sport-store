@@ -17,6 +17,7 @@ import Shipments from './components/pages/Shipments/Shipments';
 import Returns from './components/pages/Returns/Returns';
 import Privacy from './components/pages/Privacy/Privacy';
 import CookiesBanner from './components/CookiesBanner/CookiesBanner';
+import './App.css';
 
 
 const scrollAnimation = {
@@ -33,14 +34,21 @@ export default function App() {
   const [modelo, setModelo] = useState('');
   const [ termsModal, setTermsModal ] = useState(false);
 
-
+  
   const location = useLocation();
+  const isProduction = process.env.NODE_ENV;
   useEffect(() => {
-    initFacebookPixel();
-  }, []);
+
+
+    if( isProduction === 'production' ){
+
+      initFacebookPixel();
+    }
+
+  }, [ ]);
 
   useEffect(() => {
-    if (window.fbq) {
+    if ( isProduction === 'production' && window.fbq ) {
       window.fbq('track', 'PageView');
     }
   }, [location.pathname]);

@@ -21,7 +21,7 @@ export const initFacebookPixel = () => {
 };
 
 export const fbqEvent = (name, data = {}) => {
-  if (window.fbq) {
+  if (process.env.NODE_ENV === 'production' && typeof window.fbq === 'function') {
     window.fbq('track', name, data);
   }
 };

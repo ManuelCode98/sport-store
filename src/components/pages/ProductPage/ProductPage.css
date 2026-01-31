@@ -113,7 +113,7 @@
 .home-page-product-name {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #2c2c2c;
+    color: #7a5cfa;
     margin: 0 0 0.5rem 0;
     letter-spacing: -0.5px;
 }
@@ -121,7 +121,8 @@
 .home-page-model {
     font-size: 1rem;
     font-weight: 500;
-    color: #555;
+    /* color: #555; */
+    color: #7f8fa6;
     margin: 0.2rem 0;
     margin-bottom: 0.5rem;
 }
@@ -129,7 +130,8 @@
 .home-page-gender {
     text-transform: lowercase;
     font-size: 0.95rem;
-    color: #666;
+    /* color: #666; */
+    color: #7f8fa6;
     margin: 0.2rem 0;
     margin-bottom: 0.5rem;
     font-weight: 400;
@@ -154,18 +156,22 @@
 
 .home-page-sale-price {
     font-size: 1.15rem;
-    font-weight: 600;
-    color: #333;
+    font-weight: 400;
+    /* color: #333; */
+    color: #7f8fa6;
+    /* color: #000; */
     margin-bottom: 0rem;
 }
 
 .home-page-sale-price span {
-    color: #2e7d32;
+    color: #27ae60;
+    font-weight: 600;
 }
 
 .home-page-container-size {
-    font-weight: 600;
-    color: #333;
+    font-weight: 400;
+    /* color: #333; */
+    color: #7f8fa6;
 }
 
 .size-buttons {
@@ -179,7 +185,8 @@
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    color: #333;
+    /* color: #333; */
+    color: #000;
     margin: 0 6px;
     margin-bottom: 1rem;
 }

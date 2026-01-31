@@ -209,7 +209,7 @@ const ProductPage = () => {
                                             <i className="fas fa-star"></i>
                                             <i className="fas fa-star"></i>
                                             <i className="fas fa-star-half-alt"></i>
-                                            <span className="rating-text">4.5</span>
+                                            {/* <span className="rating-text">4.5</span> */}
                                         </div>
                                     </motion.div>
                                     

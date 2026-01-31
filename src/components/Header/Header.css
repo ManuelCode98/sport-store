@@ -2,11 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem 0;
+    padding: 1.5rem 1rem;
     background-color: #fff;
     border-bottom: 1px solid #eee;
-    color: #2c3e50;
-    font-weight: 500;
+
+    @media ( width <= 768px ) {
+        justify-content: flex-start;
+    }
 }
 
 .header-sub-title {
@@ -20,3 +22,4 @@
     border-radius: 50%;
     margin-right: 0.5rem;
 }
+
