@@ -170,8 +170,10 @@ const ProductPage = () => {
                                     onClick={() => showImage(productState.currentImage)}
                                 />
                             </div>
+                        </motion.div>
 
-                            <div className='container-model'>
+                        <motion.div { ...scrollAnimation }>
+                             <div className='container-model'>
                                 {productState.imagenes.length > 0 && productState.imagenes.map((image, index) => (
                                     <img
                                         key={image}
