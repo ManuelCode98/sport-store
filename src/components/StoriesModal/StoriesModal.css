@@ -1,0 +1,106 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #000c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.story-box {
+  width: 100%;
+  max-width: 420px;
+  height: 90vh;
+  background: black;
+  position: relative;
+
+  @media ( width <= 470px ){
+    width: 95%;
+  }
+}
+
+.progress {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  display: flex;
+  gap: 4px;
+}
+
+.bar {
+  flex: 1;
+  height: 2px;
+  background: #ffffff55;
+}
+
+.fill {
+  height: 100%;
+  background: white;
+}
+
+.sound-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  z-index: 4;
+}
+
+img, video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.tap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+}
+
+.tap.left { left: 0; }
+.tap.right { right: 0; }
+
+.cta {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 30px;
+  border-radius: 999px;
+  background: linear-gradient(45deg,#f09433,#dc2743,#bc1888);
+  color: white;
+  border: none;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 50%;
+  color: white;
+  font-size: 22px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
+
+@media (min-width: 768px) {
+  .arrow {
+    display: flex;
+  }
+}
